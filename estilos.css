@@ -88,6 +88,28 @@ nav.site-nav a[aria-current="page"]{color:var(--primary-hover);background:var(--
 }
 .btn-cart-head:hover{background:var(--green-hover);}
 
+/* El header (sticky, siempre visible) se armó pensado en desktop: con 5
+   links + el botón de carrito, en una pantalla angosta ".site-row" se
+   parte en 3 filas (marca / nav en 2 líneas / botón) y terminaba ocupando
+   más de la mitad de la pantalla de un celular, tapando casi todo el
+   contenido de forma permanente (reportado 2026-09-14, confirmado
+   midiendo con Playwright: ~470px de 844px de alto solo de header). Achica
+   todo y pasa el nav a una sola fila con scroll horizontal en vez de
+   wrappear, como ya hacía .chip-row con los rubros. */
+@media (max-width:640px){
+  .site-row{padding-block:10px;gap:8px;row-gap:6px;}
+  .brand-badge{height:32px;}
+  .wordmark{font-size:16px;}
+  .site-tag{display:none;}
+  nav.site-nav{
+    order:3;flex-basis:100%;margin-left:0;flex-wrap:nowrap;
+    overflow-x:auto;gap:2px;scrollbar-width:none;
+  }
+  nav.site-nav::-webkit-scrollbar{display:none;}
+  nav.site-nav a{padding:6px 10px;font-size:13px;white-space:nowrap;flex:none;}
+  .btn-cart-head{padding:8px 12px;font-size:13px;gap:6px;}
+}
+
 /* ---------- carrusel de marcas ---------- */
 .ticker-section{background:var(--surface);border-bottom:1px solid var(--line);padding-block:16px;overflow:hidden;}
 .ticker-head{font-size:13.5px;color:var(--muted);margin:0 0 11px;}
