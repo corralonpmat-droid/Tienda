@@ -52,7 +52,7 @@
     "desc": "CEMENTO BLANCO X KG. PREGO",
     "cat": "cemento",
     "unit": "unidad",
-    "price": 3125.92,
+    "price": 3164.79,
     "frac": true
   },
   {
@@ -252,7 +252,7 @@
     "desc": "ESMALTE SINTETICO X 1/2 LT. BLANCO VENTO",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 7089.15,
+    "price": 7175.29,
     "frac": true
   },
   {
@@ -260,7 +260,7 @@
     "desc": "LATEX INTERIOR X  1 LT. \"SOLAR\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 4623.68,
+    "price": 4676.86,
     "frac": true
   },
   {
@@ -268,7 +268,7 @@
     "desc": "PINTURA AL AGUA BLANCA \" VENTO \"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 7299.85,
+    "price": 7383.19,
     "frac": true
   },
   {
