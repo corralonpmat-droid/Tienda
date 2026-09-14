@@ -35,17 +35,10 @@
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{transition-duration:.01ms !important;animation:none !important;}
 }
-/* Salvavidas contra desbordes horizontales accidentales (reportado
-   2026-09-14: la página pedía scroll lateral en desktop). No debería
-   recortar nada legítimo — todo el contenido ya vive dentro de .wrap
-   (max-width:1220px) — pero si algo se pasa de ancho, esto lo esconde en
-   vez de abrir una barra de scroll para todo el body. */
-html{overflow-x:hidden;}
 body{
   margin:0;background:var(--ground);color:var(--ink);
   font-family:var(--font);font-size:16px;line-height:1.6;font-weight:400;
   -webkit-font-smoothing:antialiased;
-  max-width:100vw;overflow-x:hidden;
 }
 a{color:inherit;}
 :focus-visible{outline:3px solid var(--primary);outline-offset:2px;}
@@ -55,12 +48,6 @@ img{max-width:100%;}
 [hidden]{display:none !important;}
 .wrap{max-width:1220px;margin:0 auto;padding-inline:22px;}
 @media (max-width:480px){.wrap{padding-inline:16px;}}
-
-/* ---------- top bar ---------- */
-.topbar{background:var(--panel);color:var(--on-panel-soft);font-size:13px;}
-.topbar .wrap{display:flex;gap:14px;justify-content:space-between;align-items:center;padding-block:9px;flex-wrap:wrap;}
-.topbar a{text-decoration:none;font-weight:500;}
-.topbar a:hover{color:var(--on-panel);}
 
 /* ---------- header ---------- */
 header.site{background:var(--surface);position:sticky;top:0;z-index:40;box-shadow:0 2px 14px rgba(40,20,5,.08);}
@@ -316,33 +303,31 @@ details.faq summary::after{content:"+";color:var(--primary);font-size:22px;font-
 details.faq[open] summary::after{content:"–";}
 details.faq p{margin:0;padding:0 20px 18px;color:var(--muted);font-size:14.5px;}
 
-/* ---------- cart (modal en cualquier tamaño de pantalla, 2026-09-14) ----------
-   Antes era una barra lateral siempre visible en desktop; ahora el carrito es
-   siempre una tira angosta pegada abajo (asoma .cart-head nomás) que al
-   tocarla pasa a primer plano a pantalla completa con un fondo (.cart-backdrop)
-   que bloquea todo lo demás — mismo comportamiento en celular y en desktop. */
+/* ---------- cart (panel lateral derecho, 2026-09-14) ----------
+   El carrito no tiene presencia fija en la página — está totalmente afuera
+   de la pantalla (a la derecha) hasta que se abre desde "Mi pedido" en el
+   header (que sí queda fijo arriba, header.site ya es sticky). Al abrirse
+   ocupa toda la altura pegado al borde derecho, con un fondo (.cart-backdrop)
+   que bloquea el resto — mismo comportamiento en celular y en desktop. */
 #cartPanel{
-  background:var(--surface);border-radius:var(--r-lg) var(--r-lg) 0 0;box-shadow:0 -14px 38px rgba(20,10,4,.3);
+  background:var(--surface);box-shadow:-14px 0 38px rgba(20,10,4,.3);
   display:flex;flex-direction:column;overflow:hidden;
-  position:fixed;left:0;right:0;bottom:0;z-index:60;margin-inline:auto;max-width:480px;
-  max-height:86vh;
-  transform:translateY(calc(100% - 62px));
+  position:fixed;top:0;right:0;bottom:0;z-index:60;width:100%;max-width:420px;
+  transform:translateX(100%);
   transition:transform .24s ease;
 }
-#cartPanel.expanded{transform:translateY(0);}
+#cartPanel.expanded{transform:translateX(0);}
 .cart-backdrop{
   position:fixed;inset:0;background:rgba(20,10,4,.55);z-index:55;
   opacity:0;pointer-events:none;transition:opacity .2s ease;
 }
 .cart-backdrop.show{opacity:1;pointer-events:auto;}
-body{padding-bottom:78px;}
 .cart-head{display:flex;align-items:center;justify-content:space-between;padding:17px 20px;gap:10px;background:var(--panel);color:var(--on-panel);cursor:pointer;}
 .cart-head h2{font-size:19px;margin:0;font-weight:700;color:var(--on-panel);}
 .cart-count{font-size:13px;color:var(--on-panel-soft);}
 #cartToggle{border:0;background:transparent;color:var(--on-panel);width:32px;height:32px;cursor:pointer;flex:none;}
-#cartPanel.expanded #cartToggle svg{transform:rotate(180deg);}
 #cartToggle svg{transition:transform .2s ease;}
-.cart-scroll{overflow-y:auto;}
+.cart-scroll{overflow-y:auto;flex:1;}
 .cart-items{list-style:none;margin:0;padding:6px 20px;}
 .cart-line{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);}
 .cart-line:last-child{border-bottom:0;}
@@ -378,10 +363,6 @@ body{padding-bottom:78px;}
 .cart-note{font-size:12.5px;color:var(--muted);text-align:center;line-height:1.5;margin:0;}
 .cart-clear{border:0;background:transparent;color:var(--muted);font-size:13px;text-decoration:underline;cursor:pointer;}
 .cart-clear:hover{color:var(--price);}
-
-#cartPanel:not(.expanded) .cart-scroll,
-#cartPanel:not(.expanded) .cart-form,
-#cartPanel:not(.expanded) .cart-foot{display:none;}
 
 /* ---------- toast ---------- */
 #toast{
