@@ -224,7 +224,7 @@
           '<button type="button" data-act="inc" aria-label="Sumar">+</button>' +
         '</div>' +
         '<button type="button" class="item-quit" data-quit="'+item.id+'">Quitar</button>'
-      : '<button type="button" class="btn btn-primary btn-sm btn-block" data-add="'+item.id+'">Agregar</button>';
+      : '<button type="button" class="btn btn-yellow btn-sm btn-block" data-add="'+item.id+'">Agregar</button>';
     return '<article class="item'+(on?' in-cart':'')+'">' +
       (on ? '<span class="item-flag">En tu pedido</span>' : '') +
       '<div class="item-photo">'+fotoHtml(item,44)+'</div>' +
@@ -435,22 +435,34 @@
     state.q = e.target.value; renderCatalog();
   });
   document.getElementById("pasteBtn").addEventListener("click", runPaste);
-  document.getElementById("cartToggle").addEventListener("click", function(){
-    var panel = document.getElementById("cartPanel");
-    var open = panel.classList.toggle("expanded");
-    this.setAttribute("aria-expanded", open ? "true" : "false");
+
+  // Carrito como modal a pantalla completa (2026-09-14): abrirCarrito() lo
+  // trae a primer plano con fondo que bloquea el resto (clickearlo cierra),
+  // igual en celular que en desktop. cerrarCarrito() lo repliega a la tira
+  // angosta de abajo sin vaciar el pedido.
+  function abrirCarrito(){
+    document.getElementById("cartPanel").classList.add("expanded");
+    document.getElementById("cartBackdrop").classList.add("show");
+    document.getElementById("cartToggle").setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
+  function cerrarCarrito(){
+    document.getElementById("cartPanel").classList.remove("expanded");
+    document.getElementById("cartBackdrop").classList.remove("show");
+    document.getElementById("cartToggle").setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  }
+  document.getElementById("cartHead").addEventListener("click", function(){
+    var abierto = document.getElementById("cartPanel").classList.contains("expanded");
+    if(abierto) cerrarCarrito(); else abrirCarrito();
+  });
+  document.getElementById("cartBackdrop").addEventListener("click", cerrarCarrito);
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape") cerrarCarrito();
   });
   document.getElementById("headCart").addEventListener("click", function(){
-    var wasHidden = document.getElementById("view-inicio").hidden;
-    if(wasHidden) goTo("inicio", null);
-    requestAnimationFrame(function(){
-      var panel = document.getElementById("cartPanel");
-      panel.scrollIntoView({behavior:"smooth", block:"center"});
-      if(window.matchMedia("(max-width: 1019px)").matches){
-        panel.classList.add("expanded");
-        document.getElementById("cartToggle").setAttribute("aria-expanded","true");
-      }
-    });
+    if(document.getElementById("view-inicio").hidden) goTo("inicio", null);
+    abrirCarrito();
   });
   document.getElementById("cartClear").addEventListener("click", function(){
     state.cart = {}; state.extras = []; save(); render("all"); toast("Pedido vaciado");

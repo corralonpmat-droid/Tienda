@@ -190,7 +190,14 @@ section.band.tint{background:var(--surface-2);}
 
 /* ---------- catálogo ---------- */
 .catalog-layout{display:grid;grid-template-columns:1fr;gap:28px;align-items:start;}
-@media (min-width:1020px){.catalog-layout{grid-template-columns:1fr 348px;gap:32px;}}
+/* Sin esto, el ancho automático de una celda de grid es el de su CONTENIDO,
+   no el de la celda — y el .chip-row de abajo (8 rubros en una fila que no
+   puede partirse) fuerza esta columna a ~1272px en vez de los ~796px que le
+   tocan, empujando el carrito afuera de la pantalla (bug real 2026-09-14,
+   confirmado midiendo el layout con Playwright). min-width:0 deja que la
+   celda respete el ancho del grid y que overflow-x:auto de .chip-row haga
+   lo suyo (scroll horizontal interno) en vez de estirar todo lo de afuera. */
+.catalog-main{min-width:0;}
 .controls{display:flex;flex-direction:column;gap:14px;margin-bottom:24px;}
 .search-box{
   display:flex;align-items:center;gap:11px;background:var(--surface);border:1px solid var(--line-strong);
@@ -309,13 +316,32 @@ details.faq summary::after{content:"+";color:var(--primary);font-size:22px;font-
 details.faq[open] summary::after{content:"–";}
 details.faq p{margin:0;padding:0 20px 18px;color:var(--muted);font-size:14.5px;}
 
-/* ---------- cart ---------- */
-#cartPanel{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow);display:flex;flex-direction:column;overflow:hidden;}
-@media (min-width:1020px){#cartPanel{position:sticky;top:100px;max-height:calc(100vh - 120px);}}
-.cart-head{display:flex;align-items:center;justify-content:space-between;padding:17px 20px;gap:10px;background:var(--panel);color:var(--on-panel);}
+/* ---------- cart (modal en cualquier tamaño de pantalla, 2026-09-14) ----------
+   Antes era una barra lateral siempre visible en desktop; ahora el carrito es
+   siempre una tira angosta pegada abajo (asoma .cart-head nomás) que al
+   tocarla pasa a primer plano a pantalla completa con un fondo (.cart-backdrop)
+   que bloquea todo lo demás — mismo comportamiento en celular y en desktop. */
+#cartPanel{
+  background:var(--surface);border-radius:var(--r-lg) var(--r-lg) 0 0;box-shadow:0 -14px 38px rgba(20,10,4,.3);
+  display:flex;flex-direction:column;overflow:hidden;
+  position:fixed;left:0;right:0;bottom:0;z-index:60;margin-inline:auto;max-width:480px;
+  max-height:86vh;
+  transform:translateY(calc(100% - 62px));
+  transition:transform .24s ease;
+}
+#cartPanel.expanded{transform:translateY(0);}
+.cart-backdrop{
+  position:fixed;inset:0;background:rgba(20,10,4,.55);z-index:55;
+  opacity:0;pointer-events:none;transition:opacity .2s ease;
+}
+.cart-backdrop.show{opacity:1;pointer-events:auto;}
+body{padding-bottom:78px;}
+.cart-head{display:flex;align-items:center;justify-content:space-between;padding:17px 20px;gap:10px;background:var(--panel);color:var(--on-panel);cursor:pointer;}
 .cart-head h2{font-size:19px;margin:0;font-weight:700;color:var(--on-panel);}
 .cart-count{font-size:13px;color:var(--on-panel-soft);}
-#cartToggle{display:none;border:0;background:transparent;color:var(--on-panel);width:32px;height:32px;cursor:pointer;}
+#cartToggle{border:0;background:transparent;color:var(--on-panel);width:32px;height:32px;cursor:pointer;flex:none;}
+#cartPanel.expanded #cartToggle svg{transform:rotate(180deg);}
+#cartToggle svg{transition:transform .2s ease;}
 .cart-scroll{overflow-y:auto;}
 .cart-items{list-style:none;margin:0;padding:6px 20px;}
 .cart-line{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);}
@@ -353,27 +379,18 @@ details.faq p{margin:0;padding:0 20px 18px;color:var(--muted);font-size:14.5px;}
 .cart-clear{border:0;background:transparent;color:var(--muted);font-size:13px;text-decoration:underline;cursor:pointer;}
 .cart-clear:hover{color:var(--price);}
 
-@media (max-width:1019px){
-  #cartPanel{
-    position:fixed;left:0;right:0;bottom:0;z-index:50;border-radius:var(--r-lg) var(--r-lg) 0 0;
-    max-height:84vh;box-shadow:0 -14px 38px rgba(20,10,4,.3);
-  }
-  #cartToggle{display:block;}
-  #cartPanel:not(.expanded) .cart-scroll,
-  #cartPanel:not(.expanded) .cart-form,
-  #cartPanel:not(.expanded) .cart-foot{display:none;}
-  body{padding-bottom:80px;}
-}
+#cartPanel:not(.expanded) .cart-scroll,
+#cartPanel:not(.expanded) .cart-form,
+#cartPanel:not(.expanded) .cart-foot{display:none;}
 
 /* ---------- toast ---------- */
 #toast{
-  position:fixed;left:50%;transform:translateX(-50%) translateY(18px);bottom:96px;z-index:60;
+  position:fixed;left:50%;transform:translateX(-50%) translateY(18px);bottom:96px;z-index:70;
   background:var(--panel);color:var(--on-panel);padding:13px 20px;border-radius:var(--r-btn);
   font-size:14.5px;font-weight:600;opacity:0;pointer-events:none;
   transition:opacity .2s ease, transform .2s ease;box-shadow:0 14px 30px rgba(20,10,4,.4);
 }
 #toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
-@media (min-width:1020px){#toast{bottom:30px;}}
 
 footer.site-footer{background:var(--panel);color:var(--on-panel-soft);padding-block:34px 28px;font-size:14px;line-height:1.7;}
 footer.site-footer strong{color:var(--on-panel);display:block;margin-bottom:5px;font-size:15px;}
