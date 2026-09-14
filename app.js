@@ -418,10 +418,25 @@
     document.getElementById("headCartLabel").textContent = n ? ("Mi pedido · " + n) : "Mi pedido";
     document.getElementById("cartClear").hidden = !n;
 
-    if(!n){ waBtn.setAttribute("aria-disabled","true"); waBtn.removeAttribute("href"); }
-    else {
+    // Nombre siempre obligatorio; teléfono de contacto obligatorio solo con
+    // envío a obra (con retiro en el corralón no hace falta coordinar nada).
+    var faltaNombre = !(state.form.nombre || "").trim();
+    var faltaContacto = state.form.entrega === "envio" && !(state.form.contacto || "").trim();
+    var validationMsg = document.getElementById("cartValidation");
+
+    if(!n){
+      waBtn.setAttribute("aria-disabled","true"); waBtn.removeAttribute("href");
+      validationMsg.hidden = true;
+    } else if(faltaNombre || faltaContacto){
+      waBtn.setAttribute("aria-disabled","true"); waBtn.removeAttribute("href");
+      validationMsg.textContent = faltaNombre
+        ? "Falta tu nombre para poder enviar el pedido."
+        : "Falta un teléfono de contacto para coordinar el envío.";
+      validationMsg.hidden = false;
+    } else {
       waBtn.removeAttribute("aria-disabled");
       waBtn.href = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(buildMessage(lines, total));
+      validationMsg.hidden = true;
     }
   }
 
