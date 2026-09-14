@@ -1,471 +1,375 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Corralón — Materiales de Construcción</title>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg:      #f5f2ee;
-      --surface: #ffffff;
-      --dark:    #1a1a18;
-      --accent:  #e8500a;
-      --accent2: #f5a623;
-      --muted:   #8a8680;
-      --border:  #e0dbd4;
-      --text:    #2c2c2a;
-      --cond:    'Barlow Condensed', sans-serif;
-      --body:    'Barlow', sans-serif;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: var(--bg); color: var(--text); font-family: var(--body); min-height: 100vh; }
-
-    header {
-      background: var(--dark);
-      padding: 0 20px;
-      position: sticky; top: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 60px;
-    }
-    .logo { font-family: var(--cond); font-size: 22px; font-weight: 800; color: #fff; letter-spacing: 1px; text-transform: uppercase; }
-    .logo span { color: var(--accent); }
-    .carrito-btn {
-      background: var(--accent); border: none; border-radius: 6px;
-      color: #fff; font-family: var(--cond); font-size: 15px; font-weight: 700;
-      letter-spacing: 1px; padding: 8px 16px; cursor: pointer;
-      display: flex; align-items: center; gap: 8px; transition: background .2s;
-    }
-    .carrito-btn:hover { background: #c44008; }
-    .carrito-count {
-      background: var(--accent2); color: var(--dark); border-radius: 50%;
-      width: 20px; height: 20px; font-size: 11px; font-weight: 800;
-      display: flex; align-items: center; justify-content: center;
-    }
-
-    .hero {
-      background: var(--dark); padding: 40px 20px 50px;
-      text-align: center; border-bottom: 4px solid var(--accent);
-    }
-    .hero h1 {
-      font-family: var(--cond); font-size: clamp(36px, 8vw, 64px);
-      font-weight: 800; color: #fff; text-transform: uppercase;
-      line-height: 1; letter-spacing: 2px;
-    }
-    .hero h1 span { color: var(--accent); }
-    .hero p { color: #aaa; font-size: 14px; margin-top: 10px; font-weight: 300; }
-
-    .buscador-wrap {
-      padding: 14px 20px; background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      display: flex; gap: 10px; flex-wrap: wrap;
-    }
-    .buscador-wrap input {
-      flex: 1; min-width: 180px; background: var(--bg);
-      border: 1px solid var(--border); border-radius: 6px;
-      color: var(--text); font-family: var(--body); font-size: 15px;
-      padding: 10px 14px; outline: none;
-    }
-    .buscador-wrap input:focus { border-color: var(--accent); }
-    .buscador-wrap select {
-      background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
-      color: var(--text); font-family: var(--body); font-size: 14px;
-      padding: 10px 14px; outline: none; cursor: pointer; -webkit-appearance: none;
-    }
-
-    .contador {
-      padding: 10px 20px; font-size: 12px; color: var(--muted);
-      font-family: var(--cond); letter-spacing: 1px; text-transform: uppercase;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .grilla {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 1px; background: var(--border);
-    }
-    @media (min-width: 600px) {
-      .grilla { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
-    }
-
-    .producto-card {
-      background: var(--surface); display: flex; flex-direction: column;
-      cursor: pointer; transition: transform .15s; position: relative; overflow: hidden;
-    }
-    .producto-card:hover { z-index: 1; transform: scale(1.02); box-shadow: 0 8px 24px rgba(0,0,0,.12); }
-
-    .prod-img-wrap {
-      width: 100%; aspect-ratio: 1; background: var(--bg);
-      overflow: hidden; position: relative;
-    }
-    .prod-img-wrap img {
-      width: 100%; height: 100%; object-fit: contain; padding: 12px;
-      transition: transform .3s;
-    }
-    .producto-card:hover .prod-img-wrap img { transform: scale(1.05); }
-    .prod-img-placeholder {
-      width: 100%; height: 100%; display: flex; align-items: center;
-      justify-content: center; font-family: var(--cond); font-size: 13px;
-      color: var(--muted); text-align: center; padding: 12px;
-    }
-
-    .prod-info { padding: 12px; flex: 1; display: flex; flex-direction: column; }
-    .prod-codigo { font-family: var(--cond); font-size: 10px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
-    .prod-nombre { font-size: 13px; font-weight: 500; line-height: 1.3; flex: 1; margin-bottom: 8px; }
-    .prod-familia { font-size: 10px; color: var(--accent); font-family: var(--cond); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
-    .prod-precio { font-family: var(--cond); font-size: 20px; font-weight: 700; color: var(--dark); }
-
-    .btn-agregar {
-      margin: 0 12px 12px; padding: 9px;
-      background: var(--dark); color: #fff; border: none; border-radius: 5px;
-      font-family: var(--cond); font-size: 13px; font-weight: 700;
-      letter-spacing: 1px; text-transform: uppercase; cursor: pointer;
-      transition: background .2s;
-    }
-    .btn-agregar:hover { background: var(--accent); }
-    .btn-agregar.en-carrito { background: var(--accent); }
-
-    .loading {
-      grid-column: 1/-1; text-align: center; padding: 60px 20px;
-      font-family: var(--cond); font-size: 18px; color: var(--muted);
-      letter-spacing: 2px; text-transform: uppercase;
-    }
-    .spinner {
-      width: 36px; height: 36px; border: 3px solid var(--border);
-      border-top-color: var(--accent); border-radius: 50%;
-      animation: spin .8s linear infinite; margin: 0 auto 16px;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    .btn-mas {
-      display: block; width: calc(100% - 40px); margin: 20px auto;
-      padding: 14px; background: var(--dark); color: #fff; border: none;
-      border-radius: 8px; font-family: var(--cond); font-size: 16px;
-      font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
-      cursor: pointer; transition: background .2s;
-    }
-    .btn-mas:hover { background: var(--accent); }
-    .btn-mas:disabled { opacity: .4; cursor: not-allowed; }
-
-    /* CARRITO */
-    .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.5); z-index: 200; backdrop-filter: blur(2px); }
-    .overlay.show { display: block; }
-    .carrito-panel {
-      position: fixed; right: 0; top: 0; bottom: 0;
-      width: min(420px, 100vw); background: var(--surface); z-index: 201;
-      display: flex; flex-direction: column;
-      transform: translateX(100%); transition: transform .3s cubic-bezier(.4,0,.2,1);
-    }
-    .carrito-panel.show { transform: translateX(0); }
-    .carrito-header {
-      background: var(--dark); padding: 18px 20px;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .carrito-titulo { font-family: var(--cond); font-size: 20px; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 1px; }
-    .btn-cerrar { background: none; border: none; color: #fff; font-size: 24px; cursor: pointer; }
-    .carrito-items { flex: 1; overflow-y: auto; padding: 16px; }
-    .carrito-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
-    .ci-nombre { flex: 1; font-size: 13px; font-weight: 500; }
-    .ci-codigo { font-size: 10px; color: var(--muted); font-family: var(--cond); }
-    .ci-qty { display: flex; align-items: center; gap: 6px; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
-    .ci-qty button { background: var(--bg); border: none; width: 28px; height: 28px; font-size: 16px; cursor: pointer; color: var(--text); display: flex; align-items: center; justify-content: center; }
-    .ci-qty span { font-family: var(--cond); font-size: 15px; font-weight: 700; min-width: 24px; text-align: center; }
-    .ci-precio { font-family: var(--cond); font-size: 16px; font-weight: 700; min-width: 80px; text-align: right; }
-    .ci-delete { background: none; border: none; color: var(--muted); font-size: 18px; cursor: pointer; padding: 4px; }
-    .ci-delete:hover { color: var(--accent); }
-    .carrito-vacio { text-align: center; padding: 40px 20px; color: var(--muted); font-family: var(--cond); font-size: 16px; letter-spacing: 1px; }
-    .carrito-footer { border-top: 2px solid var(--border); padding: 16px 20px; }
-    .total-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
-    .total-label { font-family: var(--cond); font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
-    .total-valor { font-family: var(--cond); font-size: 28px; font-weight: 800; color: var(--dark); }
-    .form-pedido { display: flex; flex-direction: column; gap: 10px; margin-bottom: 12px; }
-    .form-pedido input { background: var(--bg); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-family: var(--body); font-size: 14px; padding: 10px 14px; outline: none; }
-    .form-pedido input:focus { border-color: var(--accent); }
-    .btn-whatsapp {
-      width: 100%; padding: 14px; background: #25D366; color: #fff; border: none;
-      border-radius: 8px; font-family: var(--cond); font-size: 16px; font-weight: 800;
-      letter-spacing: 1px; text-transform: uppercase; cursor: pointer;
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-      transition: background .2s;
-    }
-    .btn-whatsapp:hover { background: #1da851; }
-    .btn-whatsapp:disabled { opacity: .5; cursor: not-allowed; }
-
-    .toast {
-      position: fixed; bottom: 24px; left: 50%;
-      transform: translateX(-50%) translateY(80px);
-      background: var(--dark); color: #fff; padding: 10px 22px;
-      border-radius: 20px; font-family: var(--cond); font-size: 14px;
-      font-weight: 700; letter-spacing: 1px;
-      transition: transform .3s cubic-bezier(.34,1.56,.64,1);
-      z-index: 300; white-space: nowrap;
-    }
-    .toast.show { transform: translateX(-50%) translateY(0); }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corralón PMAT — Materiales de construcción en Salta</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="estilos.css?v=13">
 </head>
 <body>
 
-<header>
-  <div class="logo">Corra<span>lón</span></div>
-  <button class="carrito-btn" onclick="abrirCarrito()">
-    🛒 Carrito
-    <div class="carrito-count" id="carritoCount">0</div>
-  </button>
-</header>
-
-<div class="hero">
-  <h1>Materiales de<br><span>Construcción</span></h1>
-  <p>Salta · Entrega en zona</p>
-</div>
-
-<div class="buscador-wrap">
-  <input type="text" id="buscar" placeholder="Buscar producto o código…" oninput="filtrar()" />
-  <select id="filtroFamilia" onchange="filtrar()">
-    <option value="">Todas las categorías</option>
-  </select>
-</div>
-
-<div class="contador" id="contador">Cargando productos…</div>
-<div class="grilla" id="grilla">
-  <div class="loading"><div class="spinner"></div>Cargando catálogo…</div>
-</div>
-<button class="btn-mas" id="btnMas" style="display:none" onclick="mostrarMas()">VER MÁS PRODUCTOS</button>
-
-<div class="overlay" id="overlay" onclick="cerrarCarrito()"></div>
-<div class="carrito-panel" id="carritoPanel">
-  <div class="carrito-header">
-    <span class="carrito-titulo">Tu Pedido</span>
-    <button class="btn-cerrar" onclick="cerrarCarrito()">✕</button>
+<div class="topbar">
+  <div class="wrap">
+    <span>Salta Capital · entregas con flota propia</span>
+    <a href="https://wa.me/5493874493082" target="_blank" rel="noopener">WhatsApp (387) 449-3082</a>
   </div>
-  <div class="carrito-items" id="carritoItems"></div>
-  <div class="carrito-footer">
-    <div class="total-row">
-      <span class="total-label">Total</span>
-      <span class="total-valor" id="totalValor">$ 0</span>
-    </div>
-    <div class="form-pedido">
-      <input type="text" id="pedNombre"    placeholder="Tu nombre *" />
-      <input type="tel"  id="pedTelefono"  placeholder="Tu teléfono *" />
-      <input type="text" id="pedDireccion" placeholder="Dirección de entrega *" />
-    </div>
-    <button class="btn-whatsapp" id="btnWhatsapp" onclick="enviarPedido()">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Enviar Pedido
+</div>
+
+<header class="site">
+  <div class="wrap site-row">
+    <a class="brand route-link" data-view="inicio" href="#inicio">
+      <img class="brand-badge" src="logo.png" alt="Corralón PMAT">
+      <span>
+        <p class="wordmark">Corralón PMAT</p>
+        <p class="site-tag">Materiales de construcción · Salta</p>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a class="route-link" data-view="inicio" data-anchor="rubros" href="#inicio">Rubros</a>
+      <a class="route-link" data-view="inicio" data-anchor="lista" href="#inicio">Pegá tu lista</a>
+      <a class="route-link" data-view="inicio" data-anchor="catalogo" href="#inicio">Catálogo</a>
+      <a class="route-link" data-view="calculadoras" href="#calculadoras">Calculadoras</a>
+      <a class="route-link" data-view="contacto" href="#contacto">Contacto</a>
+    </nav>
+    <button class="btn-cart-head" id="headCart">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      <span id="headCartLabel">Mi pedido</span>
     </button>
   </div>
+</header>
+
+<div id="view-inicio">
+
+<section class="ticker-section">
+  <div class="wrap">
+    <p class="ticker-head"><strong>Marcas con las que trabajamos</strong> · stock permanente en el corralón</p>
+  </div>
+  <div class="ticker-viewport">
+    <div class="ticker-track" id="brandTrack"></div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Corralón · Ferretería · Áridos</p>
+      <h1>Armá tu pedido de materiales y te lo confirmamos por WhatsApp</h1>
+      <p class="lead">Precios reales y actualizados todos los días — elegí sin necesidad de ir hasta el corralón a preguntar.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary route-link" data-view="inicio" data-anchor="catalogo" href="#inicio">Ver catálogo con precios</a>
+        <a class="btn btn-outline route-link" data-view="inicio" data-anchor="lista" href="#inicio">Pegá tu lista de materiales</a>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <h2>Cómo funciona</h2>
+      <ul>
+        <li><span class="num">1</span><span><b>Elegís del catálogo</b>Agregás los materiales y ponés las cantidades.</span></li>
+        <li><span class="num">2</span><span><b>Nos lo mandás por WhatsApp</b>El mensaje se arma solo, con el detalle y el total.</span></li>
+        <li><span class="num">3</span><span><b>Te confirmamos y coordinamos</b>Precio final, stock, retiro en el corralón o envío a la obra.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="actions">
+  <div class="wrap action-grid">
+    <div class="action a-store">
+      <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></span>
+      <h3>Catálogo y pedido</h3>
+      <p>Con precio y stock actualizados.</p>
+      <a class="btn btn-primary btn-sm route-link" data-view="inicio" data-anchor="catalogo" href="#inicio">Ver catálogo</a>
+    </div>
+    <div class="action a-wa">
+      <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.11c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.11.11-1.79-.11-.41-.13-.94-.3-1.61-.6-2.84-1.23-4.7-4.08-4.84-4.27-.14-.19-1.16-1.54-1.16-2.94s.72-2.09.98-2.38c.24-.27.53-.33.7-.33h.5c.16 0 .38-.03.58.45.24.58.81 2 .88 2.14.07.14.11.3.02.49-.09.19-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.57.16.27.71 1.18 1.53 1.91 1.05.94 1.94 1.24 2.21 1.38.27.14.43.11.59-.07.16-.19.68-.79.86-1.06.18-.27.36-.22.6-.13.24.08 1.53.72 1.79.86.27.13.44.19.51.3.07.13.07.68-.17 1.35z"/></svg></span>
+      <h3>Consultá por WhatsApp</h3>
+      <p>Más de 3.400 artículos en total — si no lo ves acá, preguntanos.</p>
+      <a class="btn btn-green btn-sm" href="https://wa.me/5493874493082" target="_blank" rel="noopener">Escribinos</a>
+    </div>
+    <div class="action a-price">
+      <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg></span>
+      <h3>Pegá tu lista</h3>
+      <p>La de tu albañil o arquitecto, tal cual — la buscamos por vos.</p>
+      <a class="btn btn-yellow btn-sm route-link" data-view="inicio" data-anchor="lista" href="#inicio">Cargar lista</a>
+    </div>
+    <div class="action a-contact">
+      <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+      <h3>Envíos y acopio</h3>
+      <p>Acopiá hoy al precio de hoy y retirá cuando avance la obra.</p>
+      <a class="btn btn-dark btn-sm route-link" data-view="contacto" href="#contacto">Ver condiciones</a>
+    </div>
+  </div>
+</section>
+
+<section class="band tint" id="rubros">
+  <div class="wrap">
+    <div class="band-head">
+      <p class="eyebrow">Un solo lugar para toda la obra</p>
+      <h2>Elegí el rubro que estás buscando</h2>
+      <p>Tocá un rubro y te llevamos al catálogo filtrado. Lo que no esté publicado lo tenemos en el corralón: consultanos y te pasamos precio y disponibilidad.</p>
+    </div>
+    <div class="rubro-grid" id="rubroGrid"></div>
+  </div>
+</section>
+
+<section class="band" id="lista">
+  <div class="wrap">
+    <div class="band-head">
+      <p class="eyebrow">La forma más rápida</p>
+      <h2>Pegá tu lista de materiales</h2>
+      <p>¿Tenés la lista escrita por tu albañil o arquitecto? Pegala tal cual, una por línea, y la buscamos en el catálogo. Lo que no encontremos lo sumamos al pedido igual para cotizártelo a mano.</p>
+    </div>
+    <div class="paste-card">
+      <div class="field" style="gap:7px;">
+        <label for="pasteArea">Tu lista</label>
+        <textarea id="pasteArea" placeholder="10 bolsas de cemento
+200 ladrillones 12x18x30
+4 barras de hierro del 10
+2 llaves de paso 1/2
+15 m2 de ceramico"></textarea>
+      </div>
+      <div class="paste-side">
+        <button class="btn btn-primary btn-block" id="pasteBtn">Buscar en el catálogo</button>
+        <p>Escribí la cantidad al principio de cada línea. Reconocemos bolsas, barras, metros, m² y unidades.</p>
+        <div class="paste-result" id="pasteResult" hidden></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band tint" id="catalogo">
+  <div class="wrap">
+    <div class="band-head left">
+      <p class="eyebrow">Elegí, agregá y pedí por WhatsApp</p>
+      <h2>Catálogo con precio publicado</h2>
+      <p>Estos son los productos con <strong>precio publicado y actualizado</strong>. Sumalos a tu pedido y al confirmar te llevamos directo a WhatsApp con el detalle armado. Por el resto del catálogo, consultanos: tenemos mucho más en el corralón.</p>
+    </div>
+    <div class="catalog-layout">
+      <div>
+        <div class="controls">
+          <div class="search-box">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input id="searchInput" type="search" placeholder="Buscar: cemento, hierro del 6, látex, caño 3/4..." aria-label="Buscar artículos">
+          </div>
+          <div class="chip-row" id="chipRow" role="tablist" aria-label="Rubros"></div>
+        </div>
+        <div id="catalogRoot"></div>
+      </div>
+
+      <aside id="cartPanel">
+        <div class="cart-head">
+          <div>
+            <h2>Tu pedido</h2>
+            <div class="cart-count" id="cartCount">0 artículos</div>
+          </div>
+          <button id="cartToggle" aria-label="Mostrar u ocultar el pedido" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+          </button>
+        </div>
+        <div class="cart-scroll">
+          <ul class="cart-items" id="cartItems"></ul>
+        </div>
+        <div class="cart-form">
+          <div class="field">
+            <label for="fNombre">Apellido y nombre</label>
+            <input id="fNombre" type="text" placeholder="Nombre y apellido" autocomplete="name">
+          </div>
+          <div class="radio-row" id="entregaRow">
+            <label class="radio-pill sel" data-val="retiro"><input type="radio" name="entrega" value="retiro" checked>Retiro yo</label>
+            <label class="radio-pill" data-val="envio"><input type="radio" name="entrega" value="envio">Envío a obra</label>
+          </div>
+          <div class="envio-fields" id="envioFields" hidden>
+            <div class="field">
+              <label for="fDireccion">Dirección</label>
+              <input id="fDireccion" type="text" placeholder="Calle y número" autocomplete="street-address">
+            </div>
+            <div class="field">
+              <label for="fUbicacion">Ubicación</label>
+              <input id="fUbicacion" type="text" placeholder="Barrio, o pegá el link de Google Maps">
+            </div>
+            <div class="field">
+              <label for="fContacto">Contacto</label>
+              <input id="fContacto" type="tel" placeholder="Teléfono de quien recibe" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="fReferencia">Referencia del domicilio</label>
+              <input id="fReferencia" type="text" placeholder="Ej: casa celeste, portón negro, al lado del kiosco">
+            </div>
+          </div>
+        </div>
+        <div class="cart-foot">
+          <div class="cart-total-row">
+            <span>Total estimado</span>
+            <strong id="cartTotal">$0,00</strong>
+          </div>
+          <a id="waBtn" class="wa-btn" href="#" target="_blank" rel="noopener" aria-disabled="true">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.11c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.11.11-1.79-.11-.41-.13-.94-.3-1.61-.6-2.84-1.23-4.7-4.08-4.84-4.27-.14-.19-1.16-1.54-1.16-2.94s.72-2.09.98-2.38c.24-.27.53-.33.7-.33h.5c.16 0 .38-.03.58.45.24.58.81 2 .88 2.14.07.14.11.3.02.49-.09.19-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.57.16.27.71 1.18 1.53 1.91 1.05.94 1.94 1.24 2.21 1.38.27.14.43.11.59-.07.16-.19.68-.79.86-1.06.18-.27.36-.22.6-.13.24.08 1.53.72 1.79.86.27.13.44.19.51.3.07.13.07.68-.17 1.35z"/></svg>
+            Enviar pedido por WhatsApp
+          </a>
+          <p class="cart-note">Los precios pueden variar según stock y medio de pago. Confirmamos todo por WhatsApp.</p>
+          <button class="cart-clear" id="cartClear" hidden>Vaciar pedido</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
 </div>
 
-<div class="toast" id="toast"></div>
-
-<script>
-  const WHATSAPP = '5493874493082';
-  const API_URL  = 'https://script.google.com/macros/s/AKfycbyz4NTBE63lPTkkXTKoWKdF6BbdHGc555UGAfxMQL848JZnvL7fqwrMBFy703wKCY5n/exec';
-  const POR_PAG  = 48;
-
-  let productos = [];
-  let filtrados = [];
-  let pagina    = 0;
-  let carrito   = JSON.parse(localStorage.getItem('carrito') || '[]');
-
-  document.addEventListener('DOMContentLoaded', () => {
-    actualizarContadorCarrito();
-    cargarProductos();
-  });
-
-  async function cargarProductos() {
-    try {
-      const res  = await fetch(`${API_URL}?accion=getProductos`);
-      const data = await res.json();
-      productos  = data;
-      poblarFiltros();
-      filtrar();
-    } catch(e) {
-      document.getElementById('grilla').innerHTML =
-        '<div class="loading">⚠️ Error al cargar productos.</div>';
-    }
-  }
-
-  function poblarFiltros() {
-    const familias = [...new Set(productos.map(p => p.familia).filter(Boolean))].sort();
-    const sel = document.getElementById('filtroFamilia');
-    familias.forEach(f => {
-      const opt = document.createElement('option');
-      opt.value = f; opt.textContent = f;
-      sel.appendChild(opt);
-    });
-  }
-
-  function filtrar() {
-    const q   = document.getElementById('buscar').value.toLowerCase();
-    const fam = document.getElementById('filtroFamilia').value;
-    filtrados = productos.filter(p => {
-      const matchQ   = !q || String(p.codigo).toLowerCase().includes(q) || String(p.detalle).toLowerCase().includes(q);
-      const matchFam = !fam || p.familia === fam;
-      return matchQ && matchFam;
-    });
-    pagina = 0;
-    document.getElementById('grilla').innerHTML = '';
-    renderPagina();
-  }
-
-  function renderPagina() {
-    const inicio = pagina * POR_PAG;
-    const fin    = inicio + POR_PAG;
-    const slice  = filtrados.slice(inicio, fin);
-
-    document.getElementById('contador').textContent =
-      `${filtrados.length} producto${filtrados.length !== 1 ? 's' : ''} — mostrando ${Math.min(fin, filtrados.length)} de ${filtrados.length}`;
-
-    const grilla = document.getElementById('grilla');
-
-    if (pagina === 0 && !slice.length) {
-      grilla.innerHTML = '<div class="loading">Sin resultados para esa búsqueda.</div>';
-      document.getElementById('btnMas').style.display = 'none';
-      return;
-    }
-
-    slice.forEach(p => {
-      const enCarrito = carrito.some(c => c.codigo === p.codigo);
-      const div = document.createElement('div');
-      div.className = 'producto-card';
-      div.innerHTML = `
-        <div class="prod-img-wrap">
-          ${p.imagen
-            ? `<img src="https://lh3.googleusercontent.com/d/${p.imagen}"
-                alt="${p.detalle}" loading="lazy"
-                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-               <div class="prod-img-placeholder" style="display:none">${p.codigo}</div>`
-            : `<div class="prod-img-placeholder">${p.codigo}</div>`
-          }
+<div id="view-calculadoras" hidden>
+<section class="band">
+  <div class="wrap">
+    <div class="band-head">
+      <p class="eyebrow">¿No sabés cuánto comprar?</p>
+      <h2>Calculadoras de obra</h2>
+      <p>Estimaciones rápidas para no comprar de más ni quedarte corto. El resultado se puede cargar directo al pedido — el total de tu pedido queda visible en "Mi pedido", arriba.</p>
+    </div>
+    <div class="calc-grid">
+      <div class="calc">
+        <h3>Ladrillones por m² de pared</h3>
+        <div class="calc-row">
+          <div class="field">
+            <label for="cLadM2">Metros² de pared</label>
+            <input id="cLadM2" type="number" min="1" step="1" value="20">
+          </div>
+          <div class="field">
+            <label for="cLadTipo">Espesor de pared</label>
+            <select id="cLadTipo">
+              <option value="ladr-12" selected>Pared de 12 (ladrillón 12x18x30)</option>
+              <option value="ladr-18">Pared de 18 (ladrillón 18x18x30)</option>
+              <option value="ladr-8">Tabique de 8 (ladrillón 8x18x30)</option>
+            </select>
+          </div>
         </div>
-        <div class="prod-info">
-          <div class="prod-codigo">${p.codigo}</div>
-          <div class="prod-nombre">${p.detalle}</div>
-          <div class="prod-familia">${p.familia || ''}</div>
-          <div class="prod-precio">$ ${formatNum(p.precio)}</div>
+        <div class="calc-out" id="cLadOut"></div>
+        <button class="btn btn-primary" id="cLadAdd">Agregar al pedido</button>
+        <small>Calculado con 16 ladrillones por m² y 5% de desperdicio. El mortero lo calculamos con vos por WhatsApp.</small>
+      </div>
+      <div class="calc">
+        <h3>Cerámico por m² a colocar</h3>
+        <div class="calc-row">
+          <div class="field">
+            <label for="cCerM2">Metros² a colocar</label>
+            <input id="cCerM2" type="number" min="1" step="1" value="15">
+          </div>
         </div>
-        <button class="btn-agregar ${enCarrito ? 'en-carrito' : ''}"
-          onclick="agregarAlCarrito('${String(p.codigo).replace(/'/g,"\\'")}','${String(p.detalle).replace(/'/g,"\\'")}',${p.precio})">
-          ${enCarrito ? '✓ Agregado' : '+ Agregar'}
-        </button>`;
-      grilla.appendChild(div);
-    });
+        <div class="calc-out" id="cCerOut"></div>
+        <button class="btn btn-primary" id="cCerAdd">Agregar al pedido</button>
+        <small>Suma 8% de desperdicio por cortes y una caja de crucetas cada 20 m². Si el piso va en diagonal, conviene calcular 12%.</small>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
 
-    pagina++;
-    const btnMas = document.getElementById('btnMas');
-    btnMas.style.display = (pagina * POR_PAG < filtrados.length) ? 'block' : 'none';
-  }
+<div id="view-contacto" hidden>
+<section class="band">
+  <div class="wrap">
+    <div class="band-head">
+      <p class="eyebrow">Visitanos</p>
+      <h2>Dónde estamos</h2>
+    </div>
+    <div class="location-card">
+      <div class="location-info">
+        <h3>Corralón PMAT</h3>
+        <p>Salta Capital</p>
+        <a class="btn btn-primary" href="https://maps.app.goo.gl/RysLzhDWdUTv4JYd6" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+      <a class="location-map" href="https://maps.app.goo.gl/RysLzhDWdUTv4JYd6" target="_blank" rel="noopener" aria-label="Abrir la ubicación en Google Maps">
+        <img src="mapa.png" alt="Mapa con la ubicación de Corralón PMAT" loading="lazy">
+      </a>
+    </div>
 
-  function mostrarMas() { renderPagina(); }
+    <div class="band-head" style="margin-top:44px;">
+      <p class="eyebrow">Cómo trabajamos</p>
+      <h2>Envíos, acopio y formas de pago</h2>
+    </div>
+    <div class="info-grid">
+      <div class="info">
+        <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
+        <h3>Envíos con flota propia</h3>
+        <ul>
+          <li>Camiones, pala cargadora y autoelevador del corralón.</li>
+          <li>Coordinamos día y horario de descarga por WhatsApp.</li>
+          <li>El flete se cotiza según zona y volumen del pedido.</li>
+        </ul>
+      </div>
+      <div class="info">
+        <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96 12 12.01l8.73-5.05M12 22.08V12"/></svg></span>
+        <h3>Acopio de materiales</h3>
+        <ul>
+          <li>Pagás hoy al precio de hoy y retirás según avanza la obra.</li>
+          <li>Ideal para cemento, hierro y ladrillos en obras largas.</li>
+          <li>Consultanos condiciones antes de cerrar el pedido.</li>
+        </ul>
+      </div>
+      <div class="info">
+        <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M1 10h22"/></svg></span>
+        <h3>Formas de pago</h3>
+        <ul>
+          <li>Efectivo y transferencia.</li>
+          <li>Débito y crédito en el mostrador.</li>
+          <li>Cuenta corriente para clientes con cuenta abierta.</li>
+        </ul>
+      </div>
+    </div>
 
-  // CARRITO
-  function agregarAlCarrito(codigo, detalle, precio) {
-    const idx = carrito.findIndex(c => c.codigo === codigo);
-    if (idx >= 0) carrito[idx].qty++;
-    else carrito.push({ codigo, detalle, precio, qty: 1 });
-    guardarCarrito();
-    mostrarToast(`✓ ${detalle.substring(0,30)}… agregado`);
-  }
+    <div class="band-head" style="margin-top:44px;">
+      <h2 style="font-size:25px;">Marcas que trabajamos</h2>
+    </div>
+    <div class="brands" id="brandsGrid"></div>
 
-  function cambiarQty(codigo, delta) {
-    const idx = carrito.findIndex(c => c.codigo === codigo);
-    if (idx < 0) return;
-    carrito[idx].qty += delta;
-    if (carrito[idx].qty <= 0) carrito.splice(idx, 1);
-    guardarCarrito();
-    renderCarrito();
-  }
+    <div class="band-head" style="margin-top:44px;">
+      <h2 style="font-size:25px;">Preguntas frecuentes</h2>
+    </div>
+    <div class="faq-wrap">
+      <details class="faq">
+        <summary>¿El precio que veo es el final?</summary>
+        <p>Es el precio de lista actualizado. Al confirmar por WhatsApp te pasamos el total final según stock, forma de pago y flete si va con envío.</p>
+      </details>
+      <details class="faq">
+        <summary>¿Puedo pedir algo que no está en el catálogo?</summary>
+        <p>Sí. Pegá tu lista completa o escribilo en el pedido: tenemos más de 3.400 artículos en el corralón y publicamos online solo una parte.</p>
+      </details>
+      <details class="faq">
+        <summary>¿Hacen factura A?</summary>
+        <p>Sí, emitimos comprobante fiscal para responsables inscriptos. Avisanos con tu CUIT al confirmar el pedido.</p>
+      </details>
+      <details class="faq">
+        <summary>¿Cuánto tardan en entregar?</summary>
+        <p>Depende de la zona y del volumen. Al confirmar el pedido coordinamos día y franja horaria de entrega o de retiro en el corralón.</p>
+      </details>
+    </div>
+  </div>
+</section>
+</div>
 
-  function eliminarItem(codigo) {
-    carrito = carrito.filter(c => c.codigo !== codigo);
-    guardarCarrito();
-    renderCarrito();
-  }
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img class="foot-logo" src="logo.png" alt="Corralón PMAT">
+        <strong>Corralón PMAT</strong>
+        Materiales de construcción<br>
+        Salta Capital, Argentina
+      </div>
+      <div>
+        <strong>Contacto</strong>
+        WhatsApp y teléfono: (387) 449-3082<br>
+        Atención en el mostrador y por WhatsApp<br>
+        <a href="https://maps.app.goo.gl/RysLzhDWdUTv4JYd6" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+      <div>
+        <strong>Cómo funciona el pedido</strong>
+        Elegís del catálogo, lo mandás por WhatsApp y te confirmamos precio, stock y entrega. No se cobra nada desde la web.
+      </div>
+    </div>
+    <div class="foot-bottom">Precios sujetos a confirmación de stock. Vista previa del catálogo web.</div>
+  </div>
+</footer>
 
-  function guardarCarrito() {
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-    actualizarContadorCarrito();
-  }
+<div id="toast" role="status" aria-live="polite"></div>
 
-  function actualizarContadorCarrito() {
-    document.getElementById('carritoCount').textContent = carrito.reduce((s,c) => s+c.qty, 0);
-  }
-
-  function renderCarrito() {
-    const el = document.getElementById('carritoItems');
-    if (!carrito.length) {
-      el.innerHTML = '<div class="carrito-vacio">TU CARRITO ESTÁ VACÍO</div>';
-      document.getElementById('totalValor').textContent = '$ 0';
-      return;
-    }
-    el.innerHTML = carrito.map(c => `
-      <div class="carrito-item">
-        <div style="flex:1">
-          <div class="ci-nombre">${c.detalle}</div>
-          <div class="ci-codigo">${c.codigo}</div>
-        </div>
-        <div class="ci-qty">
-          <button onclick="cambiarQty('${c.codigo}',-1)">−</button>
-          <span>${c.qty}</span>
-          <button onclick="cambiarQty('${c.codigo}',1)">+</button>
-        </div>
-        <div class="ci-precio">$ ${formatNum(c.precio * c.qty)}</div>
-        <button class="ci-delete" onclick="eliminarItem('${c.codigo}')">🗑</button>
-      </div>`).join('');
-    const total = carrito.reduce((s,c) => s + c.precio * c.qty, 0);
-    document.getElementById('totalValor').textContent = '$ ' + formatNum(total);
-  }
-
-  function abrirCarrito() {
-    renderCarrito();
-    document.getElementById('overlay').classList.add('show');
-    document.getElementById('carritoPanel').classList.add('show');
-  }
-
-  function cerrarCarrito() {
-    document.getElementById('overlay').classList.remove('show');
-    document.getElementById('carritoPanel').classList.remove('show');
-  }
-
-  async function enviarPedido() {
-    if (!carrito.length) { mostrarToast('El carrito está vacío'); return; }
-    const nombre    = document.getElementById('pedNombre').value.trim();
-    const telefono  = document.getElementById('pedTelefono').value.trim();
-    const direccion = document.getElementById('pedDireccion').value.trim();
-    if (!nombre || !telefono || !direccion) { mostrarToast('Completá todos los campos'); return; }
-
-    const btn = document.getElementById('btnWhatsapp');
-    btn.disabled = true;
-
-    const total   = carrito.reduce((s,c) => s + c.precio * c.qty, 0);
-    const lineas  = carrito.map(c => `• ${c.qty}x ${c.detalle} (${c.codigo}) — $${formatNum(c.precio * c.qty)}`).join('\n');
-    const prodStr = carrito.map(c => `${c.qty}x ${c.codigo} $${c.precio * c.qty}`).join(' | ');
-
-    try {
-      await fetch(API_URL + '?accion=savePedido&nombre=' + encodeURIComponent(nombre) + '&telefono=' + encodeURIComponent(telefono) + '&direccion=' + encodeURIComponent(direccion) + '&productos=' + encodeURIComponent(prodStr) + '&total=' + total);
-    } catch(e) { console.warn('Sheet error:', e); }
-
-    const msg = `Hola! Quiero hacer un pedido:\n\n${lineas}\n\n*Total: $${formatNum(total)}*\n\nNombre: ${nombre}\nTeléfono: ${telefono}\nDirección: ${direccion}`;
-    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank');
-
-    carrito = [];
-    guardarCarrito();
-    cerrarCarrito();
-    ['pedNombre','pedTelefono','pedDireccion'].forEach(id => document.getElementById(id).value = '');
-    btn.disabled = false;
-    mostrarToast('✓ Pedido enviado por WhatsApp');
-  }
-
-  function formatNum(n) {
-    return Number(n).toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
-  }
-
-  function mostrarToast(msg) {
-    const t = document.getElementById('toast');
-    t.textContent = msg;
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 2500);
-  }
-</script>
+<script src="app.js"></script>
 </body>
 </html>
