@@ -1,0 +1,330 @@
+[
+  {
+    "cod": "BF",
+    "desc": "BOLSA DE  ARENA FINA",
+    "cat": "cemento",
+    "unit": "unidad",
+    "price": 900.0,
+    "frac": false
+  },
+  {
+    "cod": "BM",
+    "desc": "BOLSA DE ARENA MEDIANA",
+    "cat": "cemento",
+    "unit": "unidad",
+    "price": 800.0,
+    "frac": false
+  },
+  {
+    "cod": "CHS",
+    "desc": "BOLSA DE CAL HID. SANTA ELENA X 20 KGS",
+    "cat": "cemento",
+    "unit": "unidad",
+    "price": 6600.0,
+    "frac": false
+  },
+  {
+    "cod": "C",
+    "desc": "BOLSA DE CAL VIVA",
+    "cat": "cemento",
+    "unit": "unidad",
+    "price": 2880.0,
+    "frac": false
+  },
+  {
+    "cod": "CHO",
+    "desc": "BOLSA DE CEMENTO HOLCIM x 25 KGS.",
+    "cat": "cemento",
+    "unit": "unidad",
+    "price": 7700.0,
+    "frac": false
+  },
+  {
+    "cod": "CLN",
+    "desc": "BOLSA DE CEMENTO L. NEGRA x 25 KGS.",
+    "cat": "cemento",
+    "unit": "unidad",
+    "price": 7700.0,
+    "frac": false
+  },
+  {
+    "cod": "6470",
+    "desc": "CEMENTO BLANCO X KG. PREGO",
+    "cat": "cemento",
+    "unit": "unidad",
+    "price": 3125.92,
+    "frac": true
+  },
+  {
+    "cod": "BPWS",
+    "desc": "BOLSA PEGAMENTO ESTANDAR X 25 KGS. WEBER",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 7618.76,
+    "frac": false
+  },
+  {
+    "cod": "BPWA",
+    "desc": "BOLSA PEGAMENTO IMP. C/CERESITA WEBER",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 14731.71,
+    "frac": false
+  },
+  {
+    "cod": "BPC",
+    "desc": "BOLSA PEGAMENTO IMPERMEABLE X 25 KGS. \"CONSTRUKOR\"",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 8088.34,
+    "frac": false
+  },
+  {
+    "cod": "130030",
+    "desc": "BOLSA PEGAMENTO PORCELLANATO KLAUKOL",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 26316.48,
+    "frac": false
+  },
+  {
+    "cod": "PIS.AL.3636.1.060",
+    "desc": "CERAMICO PISO MAPUCHE ALL 1° 36X36 x m2",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 9453.5,
+    "frac": false
+  },
+  {
+    "cod": "598",
+    "desc": "CRUCETAS P/CERAMICOS C 2.5 MM X 250 UN. \"CRECHIO\"",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 4099.15,
+    "frac": false
+  },
+  {
+    "cod": "117119",
+    "desc": "CABLE 1 X 2.5 MM ROJO \"WIREFLEX\"",
+    "cat": "electricidad",
+    "unit": "unidad",
+    "price": 556.56,
+    "frac": false
+  },
+  {
+    "cod": "6646",
+    "desc": "CABLE COAXIL CCTV 67% RG-6 NG.Epuye",
+    "cat": "electricidad",
+    "unit": "unidad",
+    "price": 650.0,
+    "frac": false
+  },
+  {
+    "cod": "4740",
+    "desc": "CABLE UTP CAT 5E EXTERIOR",
+    "cat": "electricidad",
+    "unit": "unidad",
+    "price": 649.38,
+    "frac": false
+  },
+  {
+    "cod": "1",
+    "desc": "BALDE PLASTICO VOSS 2000",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 4532.67,
+    "frac": false
+  },
+  {
+    "cod": "76-J77902R3",
+    "desc": "BISAGRA LIBRO ZINC 25 MM FUMACA",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 211.24,
+    "frac": true
+  },
+  {
+    "cod": "M00704RO",
+    "desc": "BISAGRA POMELA ITALIANA 7MM",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 19.16,
+    "frac": false
+  },
+  {
+    "cod": "GO06E",
+    "desc": "GRAMPA OMEGA P/CAÑO AGUA 3/4\" ECO",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 256.35,
+    "frac": false
+  },
+  {
+    "cod": "1210",
+    "desc": "TIRAFONDOS  5/16\"(7.9MM) X 2\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 212.47,
+    "frac": true
+  },
+  {
+    "cod": "TFE344",
+    "desc": "TORNILLO FIX 18 X 19",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 32.4,
+    "frac": true
+  },
+  {
+    "cod": "KA14",
+    "desc": "ALAMBRE 14x KG",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 4400.14,
+    "frac": false
+  },
+  {
+    "cod": "KA16",
+    "desc": "ALAMBRE 16xKG",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 4400.14,
+    "frac": false
+  },
+  {
+    "cod": "-4.2",
+    "desc": "BARRA DE HIERRO  4",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 3813.0,
+    "frac": false
+  },
+  {
+    "cod": "-6",
+    "desc": "BARRA DE HIERRO  6",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 6592.3,
+    "frac": false
+  },
+  {
+    "cod": "-8",
+    "desc": "BARRA DE HIERRO  8",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 11066.9,
+    "frac": false
+  },
+  {
+    "cod": "-10",
+    "desc": "BARRA DE HIERRO 10",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 17468.37,
+    "frac": false
+  },
+  {
+    "cod": "-12",
+    "desc": "BARRA DE HIERRO 12",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 24554.25,
+    "frac": false
+  },
+  {
+    "cod": "L8",
+    "desc": "LADRILLONES  8 X 18 X 30",
+    "cat": "ladrillos",
+    "unit": "unidad",
+    "price": 734.08,
+    "frac": false
+  },
+  {
+    "cod": "L12",
+    "desc": "LADRILLONES 12 X 18 X 30",
+    "cat": "ladrillos",
+    "unit": "unidad",
+    "price": 970.9,
+    "frac": false
+  },
+  {
+    "cod": "L18",
+    "desc": "LADRILLONES 18 X 18 X 30",
+    "cat": "ladrillos",
+    "unit": "unidad",
+    "price": 1302.38,
+    "frac": false
+  },
+  {
+    "cod": "1417",
+    "desc": "ESMALTE SINTETICO X 1/2 LT. BLANCO VENTO",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 7089.15,
+    "frac": true
+  },
+  {
+    "cod": "1176",
+    "desc": "LATEX INTERIOR X  1 LT. \"SOLAR\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 4623.68,
+    "frac": true
+  },
+  {
+    "cod": "9808",
+    "desc": "PINTURA AL AGUA BLANCA \" VENTO \"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 7299.85,
+    "frac": true
+  },
+  {
+    "cod": "PINT.CLIP.001",
+    "desc": "PINTURA ASFALTICA X 1 LT. \"CLIPPERFLEX\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 6682.2,
+    "frac": false
+  },
+  {
+    "cod": "9586",
+    "desc": "CAÑO FLEXIBLE BLANCO  3/4\" MT GENROD",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 453.24,
+    "frac": false
+  },
+  {
+    "cod": "940",
+    "desc": "CAÑO FLEXIBLE BLANCO  7/8\" MT  GENROD",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 566.79,
+    "frac": false
+  },
+  {
+    "cod": "FG07M",
+    "desc": "FUELLE GOMA INODORO 50 ECO MALVAR",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 4756.04,
+    "frac": false
+  },
+  {
+    "cod": "VD1-2",
+    "desc": "LLAVE DE PASO DUKE PLASTICA 1/2",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 4848.29,
+    "frac": false
+  },
+  {
+    "cod": "VI1-2",
+    "desc": "LLAVE DE PASO METAL PALANCA VALFORT 1/2\"",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 10331.88,
+    "frac": false
+  }
+]

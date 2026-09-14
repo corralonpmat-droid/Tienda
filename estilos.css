@@ -35,10 +35,17 @@
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{transition-duration:.01ms !important;animation:none !important;}
 }
+/* Salvavidas contra desbordes horizontales accidentales (reportado
+   2026-09-14: la página pedía scroll lateral en desktop). No debería
+   recortar nada legítimo — todo el contenido ya vive dentro de .wrap
+   (max-width:1220px) — pero si algo se pasa de ancho, esto lo esconde en
+   vez de abrir una barra de scroll para todo el body. */
+html{overflow-x:hidden;}
 body{
   margin:0;background:var(--ground);color:var(--ink);
   font-family:var(--font);font-size:16px;line-height:1.6;font-weight:400;
   -webkit-font-smoothing:antialiased;
+  max-width:100vw;overflow-x:hidden;
 }
 a{color:inherit;}
 :focus-visible{outline:3px solid var(--primary);outline-offset:2px;}

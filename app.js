@@ -15,56 +15,27 @@
     {key:"ferreteria",   label:"Ferretería y Bulonería"}
   ];
 
-  // Catálogo: hoy escrito a mano acá, con precios y códigos reales tomados de
-  // corralon.db (2026-09-14). El sistema interno ya tiene listo el endpoint
-  // GET /api/catalogo-web (server.py) que devuelve los artículos marcados
-  // "Mostrar en la web" con su precio, unidad, rubro y foto — cuando se
-  // decida cómo van a viajar esos datos hasta este sitio (llamada en vivo,
-  // exportación periódica, lo que arme el proveedor de hosting) esta lista
-  // se reemplaza por ese resultado. `cod` es el código real del artículo:
-  // de ahí sale el nombre de archivo de la foto en imagenes/<cod>.jpg.
-  var ITEMS = [
-    {id:"cem-negra",   cod:"CLN",  cat:"cemento", desc:"Bolsa de cemento Loma Negra x 25 kg", unit:"la bolsa", price:7700.00, frac:false},
-    {id:"cem-holcim",  cod:"CHO",  cat:"cemento", desc:"Bolsa de cemento Holcim x 25 kg", unit:"la bolsa", price:7700.00, frac:false},
-    {id:"cem-blanco",  cod:"6470", cat:"cemento", desc:"Cemento blanco Prego", unit:"el kg", price:3125.92, frac:true},
-    {id:"cal-viva",    cod:"C",    cat:"cemento", desc:"Bolsa de cal viva", unit:"la bolsa", price:2880.00, frac:false},
-    {id:"cal-sta-elena", cod:"CHS", cat:"cemento", desc:"Bolsa de cal hidratada Santa Elena x 20 kg", unit:"la bolsa", price:6600.00, frac:false},
-    {id:"arena-med",   cod:"BM",   cat:"cemento", desc:"Bolsa de arena mediana", unit:"la bolsa", price:800.00, frac:false},
-    {id:"arena-fina",  cod:"BF",   cat:"cemento", desc:"Bolsa de arena fina", unit:"la bolsa", price:900.00, frac:false},
+  // Catálogo: ya NO se escribe a mano acá. Lo genera publicar_catalogo_web.py
+  // (corre en la PC servidor, 1-2 veces al día) leyendo de corralon.db los
+  // artículos tildados "🌐 Mostrar en la página web", y lo deja en
+  // productos.json al lado de este archivo — ver cargarCatalogo() más abajo.
+  // `cod` es el código real del artículo: de ahí sale el nombre de archivo
+  // de la foto en imagenes/<cod>.jpg (fotoHtml, más abajo).
+  var ITEMS = [];
 
-    {id:"ladr-12",     cod:"L12", cat:"ladrillos", desc:"Ladrillón 12 x 18 x 30 cm", unit:"la unidad", price:970.90, frac:false},
-    {id:"ladr-8",      cod:"L8",  cat:"ladrillos", desc:"Ladrillón 8 x 18 x 30 cm", unit:"la unidad", price:734.08, frac:false},
-    {id:"ladr-18",     cod:"L18", cat:"ladrillos", desc:"Ladrillón 18 x 18 x 30 cm", unit:"la unidad", price:1302.38, frac:false},
-
-    {id:"hierro-6",    cod:"-6",   cat:"hierros", desc:"Barra de hierro del 6", unit:"la barra", price:6592.30, frac:false},
-    {id:"hierro-10",   cod:"-10",  cat:"hierros", desc:"Barra de hierro del 10", unit:"la barra", price:17468.37, frac:false},
-    {id:"alambre-14",  cod:"KA14", cat:"hierros", desc:"Alambre negro N°14", unit:"el kg", price:4400.14, frac:true},
-    {id:"alambre-16",  cod:"KA16", cat:"hierros", desc:"Alambre negro N°16", unit:"el kg", price:4400.14, frac:true},
-
-    {id:"cano-34",     cod:"9586", cat:"plomeria", desc:"Caño flexible blanco 3/4\" (Genrod)", unit:"el metro", price:453.24, frac:true},
-    {id:"cano-78",     cod:"940",  cat:"plomeria", desc:"Caño flexible blanco 7/8\" (Genrod)", unit:"el metro", price:566.79, frac:true},
-    {id:"llave-palanca", cod:"VI1-2", cat:"plomeria", desc:"Llave de paso metal a palanca 1/2\" (Valfort)", unit:"la unidad", price:10331.88, frac:false},
-    {id:"llave-plastica", cod:"VD1-2", cat:"plomeria", desc:"Llave de paso plástica 1/2\" (Duke)", unit:"la unidad", price:4848.29, frac:false},
-    {id:"fuelle-inodoro", cod:"FG07M", cat:"plomeria", desc:"Fuelle de goma para inodoro N°50 (Malvar)", unit:"la unidad", price:4756.04, frac:false},
-
-    {id:"cable-25",    cod:"117119", cat:"electricidad", desc:"Cable 1 x 2,5 mm rojo (Wireflex)", unit:"el metro", price:556.56, frac:true},
-    {id:"cable-utp",   cod:"4740",   cat:"electricidad", desc:"Cable UTP Cat 5E exterior", unit:"el metro", price:649.38, frac:true},
-    {id:"cable-coaxil", cod:"6646",  cat:"electricidad", desc:"Cable coaxil CCTV RG-6", unit:"el metro", price:650.00, frac:true},
-
-    {id:"pint-agua-vento", cod:"9808", cat:"pinturas", desc:"Pintura al agua blanca (Vento)", unit:"el envase", price:7299.85, frac:false},
-    {id:"latex-solar", cod:"1176", cat:"pinturas", desc:"Látex interior x 1 L (Solar)", unit:"la unidad", price:4623.68, frac:false},
-    {id:"esmalte-vento", cod:"1417", cat:"pinturas", desc:"Esmalte sintético blanco x 1/2 L (Vento)", unit:"la unidad", price:7089.15, frac:false},
-    {id:"pint-asfaltica", cod:"PINT.CLIP.001", cat:"pinturas", desc:"Pintura asfáltica x 1 L (Clipperflex)", unit:"la unidad", price:6682.20, frac:false},
-
-    {id:"ceram-mapuche", cod:"PIS.AL.3636.1.060", cat:"ceramicos", desc:"Cerámico piso Mapuche 1° 36 x 36 cm", unit:"el m²", price:9453.50, frac:true},
-    {id:"crucetas",    cod:"598", cat:"ceramicos", desc:"Crucetas para cerámico 2,5 mm x 250 u (Crechio)", unit:"la caja", price:4099.15, frac:false},
-
-    {id:"tornillo-fix", cod:"TFE344", cat:"ferreteria", desc:"Tornillo Fix 18 x 19", unit:"la unidad", price:32.40, frac:false},
-    {id:"tirafondo",   cod:"1210", cat:"ferreteria", desc:"Tirafondo 5/16\" (7,9 mm) x 2\"", unit:"la unidad", price:212.47, frac:false},
-    {id:"bisagra-pomela", cod:"M00704RO", cat:"ferreteria", desc:"Bisagra pomela italiana 7 mm", unit:"la unidad", price:19.16, frac:false},
-    {id:"bisagra-libro", cod:"76-J77902R3", cat:"ferreteria", desc:"Bisagra libro de zinc 25 mm (Fumaca)", unit:"la unidad", price:211.24, frac:false},
-    {id:"grampa-omega", cod:"GO06E", cat:"ferreteria", desc:"Grampa omega para caño de agua 3/4\" (Eco)", unit:"la unidad", price:256.35, frac:false}
-  ];
+  function cargarCatalogo(){
+    return fetch("productos.json", {cache:"no-store"})
+      .then(function(res){ if(!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
+      .then(function(data){
+        ITEMS = (Array.isArray(data) ? data : []).map(function(r){
+          return {id:r.cod, cod:r.cod, cat:r.cat, desc:r.desc, unit:r.unit, price:Number(r.price)||0, frac:!!r.frac};
+        });
+      })
+      .catch(function(e){
+        console.warn("No se pudo cargar productos.json:", e);
+        ITEMS = [];
+      });
+  }
 
   var BRANDS = [
     "Loma Negra","Holcim","Santa Elena","Prego","Saladillo","IPS","Plastiferro","Genrod",
@@ -347,19 +318,32 @@
     var m2 = parseFloat(document.getElementById("cLadM2").value) || 0;
     var id = document.getElementById("cLadTipo").value;
     var it = byId(id);
+    var out = document.getElementById("cLadOut");
+    if(!it){
+      out.innerHTML = '<div class="sub">Este cálculo no está disponible por ahora — consultanos por WhatsApp.</div>';
+      return {id:id, u:0};
+    }
     var u = Math.ceil(m2 * LADR_POR_M2 * LADR_DESP);
-    document.getElementById("cLadOut").innerHTML =
+    out.innerHTML =
       '<div>Necesitás <b>'+fmtQty(u)+'</b> ladrillones</div>' +
       '<div class="sub">'+it.desc+' · <b>'+fmt(Math.round(u*it.price*100)/100)+'</b></div>';
     return {id:id, u:u};
   }
+  // Ceramico Mapuche + crucetas: ids fijos (cod real de corralon.db) — si
+  // alguno de los dos no está tildado "🌐 Web" en el sistema interno, la
+  // calculadora se apaga sola en vez de romper (byId devuelve null).
   function calcCer(){
     var m2 = parseFloat(document.getElementById("cCerM2").value) || 0;
-    var it = byId("ceram-mapuche"), cru = byId("crucetas");
+    var it = byId("PIS.AL.3636.1.060"), cru = byId("598");
+    var out = document.getElementById("cCerOut");
+    if(!it || !cru){
+      out.innerHTML = '<div class="sub">Este cálculo no está disponible por ahora — consultanos por WhatsApp.</div>';
+      return {m2:0, cajas:0};
+    }
     var comprar = Math.ceil(m2 * CER_DESP * 100) / 100;
     var cajas = Math.max(1, Math.ceil(m2 / M2_POR_CAJA));
     var tot = comprar*it.price + cajas*cru.price;
-    document.getElementById("cCerOut").innerHTML =
+    out.innerHTML =
       '<div>Comprá <b>'+fmtQty(comprar)+' m²</b> de cerámico y <b>'+cajas+'</b> caja'+(cajas>1?'s':'')+' de crucetas</div>' +
       '<div class="sub">Total estimado · <b>'+fmt(Math.round(tot*100)/100)+'</b></div>';
     return {m2:comprar, cajas:cajas};
@@ -503,7 +487,7 @@
   document.getElementById("cCerAdd").addEventListener("click", function(){
     var r = calcCer();
     if(r.m2 > 0){
-      addQty("ceram-mapuche", r.m2); addQty("crucetas", r.cajas);
+      addQty("PIS.AL.3636.1.060", r.m2); addQty("598", r.cajas);
       save(); render("all"); toast("Cerámico y crucetas agregados ✓");
     }
   });
@@ -516,9 +500,11 @@
   syncEntrega();
   renderBrandTicker();
   renderBrandsGrid();
-  renderRubros();
-  render("all");
-  calcLadr();
-  calcCer();
   showView((location.hash || "#inicio").replace("#",""));
+  cargarCatalogo().then(function(){
+    renderRubros();
+    render("all");
+    calcLadr();
+    calcCer();
+  });
 })();
