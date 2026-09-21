@@ -1,14 +1,17 @@
 (function(){
   "use strict";
 
-  // Interruptor del "Armá tu pedido" (carrito, botón "Mi pedido", "Agregar" en
-  // cada artículo, "Pegá tu lista", "Agregar al pedido" de las calculadoras).
-  // Sacado por ahora (2026-09-21): el catálogo queda solo para mirar precios y
-  // consultar por WhatsApp. Para volver a activarlo: poner true ACÁ y sacarle
-  // los comentarios HTML a los bloques marcados "sacado con el pedido" /
-  // "Panel Tu pedido" / "Botón Mi pedido" / "Pegá tu lista" en index.html, y
-  // volver a poner los botones cLadAdd / cCerAdd en las calculadoras.
-  var PEDIDO_ACTIVO = false;
+  // Interruptor del pedido (carrito, botón "Mi pedido", "Agregar" en cada
+  // artículo, "Agregar al pedido" de las calculadoras). ACTIVO.
+  // Se apagó unas horas el 2026-09-21 y Marcos pidió que vuelva. Para apagarlo
+  // de nuevo (catálogo solo para mirar precios y consultar por WhatsApp): poner
+  // false ACÁ y comentar en index.html el botón #headCart, el panel #cartPanel
+  // (con #cartBackdrop) y los botones cLadAdd / cCerAdd de las calculadoras.
+  // Quedan afuera a propósito (comentados en index.html): el bloque hero "Armá
+  // tu pedido / Cómo funciona" y la sección "Pegá tu lista" (con su tarjeta y
+  // su link del menú) — por eso iniciarPedido() no da por hecho que el botón
+  // #pasteBtn exista.
+  var PEDIDO_ACTIVO = true;
 
   // Número de WhatsApp que recibe los pedidos (el de Configuración fiscal del sistema).
   var PHONE = "5493874493082";
@@ -397,7 +400,7 @@
     var waBtn = document.getElementById("waBtn");
 
     if(!lines.length && !state.extras.length){
-      list.innerHTML = '<li class="cart-empty">Todavía no elegiste nada.<br>Agregá un artículo del catálogo o pegá tu lista para empezar.</li>';
+      list.innerHTML = '<li class="cart-empty">Todavía no elegiste nada.<br>Agregá un artículo del catálogo para empezar.</li>';
     } else {
       var html = lines.map(function(l){
         return '<li class="cart-line">' +
@@ -480,7 +483,8 @@
   // "Pegá tu lista", "Agregar al pedido" de las calculadoras) vive acá adentro,
   // para que con PEDIDO_ACTIVO en false no se busque nada que no está en el HTML.
   function iniciarPedido(){
-    document.getElementById("pasteBtn").addEventListener("click", runPaste);
+    var pasteBtn = document.getElementById("pasteBtn"); // "Pegá tu lista" está sacada del HTML
+    if(pasteBtn) pasteBtn.addEventListener("click", runPaste);
     document.getElementById("cartHead").addEventListener("click", function(){
       var abierto = document.getElementById("cartPanel").classList.contains("expanded");
       if(abierto) cerrarCarrito(); else abrirCarrito();

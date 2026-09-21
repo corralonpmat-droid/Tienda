@@ -25,12 +25,10 @@
       <a class="route-link" data-view="calculadoras" href="#calculadoras">Calculadoras</a>
       <a class="route-link" data-view="contacto" href="#contacto">Contacto</a>
     </nav>
-    <!-- Botón "Mi pedido" — sacado con el resto del pedido (ver PEDIDO_ACTIVO en app.js)
     <button class="btn-cart-head" id="headCart">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
       <span id="headCartLabel">Mi pedido</span>
     </button>
-    -->
   </div>
 </header>
 
@@ -69,8 +67,8 @@
 <section class="actions">
   <div class="wrap action-grid">
     <div class="action a-store">
-      <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span>
-      <h3>Catálogo</h3>
+      <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></span>
+      <h3>Catálogo y pedido</h3>
       <p>Con precio y stock actualizados.</p>
       <a class="btn btn-primary btn-sm route-link" data-view="inicio" data-anchor="catalogo" href="#inicio">Ver catálogo</a>
     </div>
@@ -138,7 +136,7 @@
 <section class="band tint" id="catalogo">
   <div class="wrap">
     <div class="band-head left">
-      <p class="eyebrow">Buscá y consultá por WhatsApp</p>
+      <p class="eyebrow">Elegí, agregá y pedí por WhatsApp</p>
       <h2>Catálogo con precio publicado</h2>
     </div>
     <div class="catalog-layout">
@@ -153,7 +151,6 @@
         <div id="catalogRoot"></div>
       </div>
 
-      <!-- Panel "Tu pedido" (carrito + envío por WhatsApp) — sacado por ahora
       <div id="cartBackdrop" class="cart-backdrop"></div>
       <aside id="cartPanel">
         <div class="cart-head" id="cartHead">
@@ -210,7 +207,6 @@
           <button class="cart-clear" id="cartClear" hidden>Vaciar pedido</button>
         </div>
       </aside>
-      -->
     </div>
   </div>
 </section>
@@ -223,7 +219,7 @@
     <div class="band-head">
       <p class="eyebrow">¿No sabés cuánto comprar?</p>
       <h2>Calculadoras de obra</h2>
-      <p>Estimaciones rápidas para no comprar de más ni quedarte corto. Para confirmar cantidades y precio final, consultanos por WhatsApp.</p>
+      <p>Estimaciones rápidas para no comprar de más ni quedarte corto. El resultado se puede cargar directo al pedido — el total de tu pedido queda visible en "Mi pedido", arriba.</p>
     </div>
     <div class="calc-grid">
       <div class="calc">
@@ -243,6 +239,7 @@
           </div>
         </div>
         <div class="calc-out" id="cLadOut"></div>
+        <button class="btn btn-primary" id="cLadAdd">Agregar al pedido</button>
         <small>Calculado con 16 ladrillones por m² y 5% de desperdicio. El mortero lo calculamos con vos por WhatsApp.</small>
       </div>
       <div class="calc">
@@ -254,6 +251,7 @@
           </div>
         </div>
         <div class="calc-out" id="cCerOut"></div>
+        <button class="btn btn-primary" id="cCerAdd">Agregar al pedido</button>
         <small>Suma 8% de desperdicio por cortes y una caja de crucetas cada 20 m². Si el piso va en diagonal, conviene calcular 12%.</small>
       </div>
     </div>
@@ -324,15 +322,15 @@
     <div class="faq-wrap">
       <details class="faq">
         <summary>¿El precio que veo es el final?</summary>
-        <p>Es el precio de lista actualizado. Consultanos por WhatsApp y te pasamos el total final según stock, forma de pago y flete si va con envío.</p>
+        <p>Es el precio de lista actualizado. Al confirmar por WhatsApp te pasamos el total final según stock, forma de pago y flete si va con envío.</p>
       </details>
       <details class="faq">
         <summary>¿Puedo pedir algo que no está en el catálogo?</summary>
-        <p>Sí. Escribinos por WhatsApp: tenemos más de 3.400 artículos en el corralón y publicamos online solo una parte.</p>
+        <p>Sí. Escribilo en el pedido o consultanos por WhatsApp: tenemos más de 3.400 artículos en el corralón y publicamos online solo una parte.</p>
       </details>
       <details class="faq">
         <summary>¿Hacen factura A?</summary>
-        <p>Sí, emitimos comprobante fiscal para responsables inscriptos. Avisanos con tu CUIT al hacer la compra.</p>
+        <p>Sí, emitimos comprobante fiscal para responsables inscriptos. Avisanos con tu CUIT al confirmar el pedido.</p>
       </details>
       <details class="faq">
         <summary>¿Cuánto tardan en entregar?</summary>
@@ -359,8 +357,8 @@
         <a href="https://maps.app.goo.gl/RysLzhDWdUTv4JYd6" target="_blank" rel="noopener">Cómo llegar</a>
       </div>
       <div>
-        <strong>Cómo comprar</strong>
-        Consultanos por WhatsApp o pasá por el mostrador y te confirmamos precio, stock y entrega. No se cobra nada desde la web.
+        <strong>Cómo funciona el pedido</strong>
+        Elegís del catálogo, lo mandás por WhatsApp y te confirmamos precio, stock y entrega. No se cobra nada desde la web.
       </div>
     </div>
     <div class="foot-bottom">Precios sujetos a confirmación de stock. Vista previa del catálogo web.</div>
@@ -373,6 +371,6 @@
 
 <div id="toast" role="status" aria-live="polite"></div>
 
-<script src="app.js?v=14"></script>
+<script src="app.js?v=15"></script>
 </body>
 </html>
