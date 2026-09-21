@@ -56,9 +56,12 @@ header.site{background:var(--surface);position:sticky;top:0;z-index:40;box-shado
    abajo, apilados y centrados — igual en PC y en celular. La leyenda
    "Materiales de construcción · Salta" queda en el HTML pero oculta, porque
    el boceto no la tiene y apilada quedaba nombre / leyenda / logo. */
-.brand{display:flex;flex-direction:column;align-items:center;gap:5px;text-decoration:none;}
+.brand{display:flex;flex-direction:column;align-items:stretch;gap:5px;text-decoration:none;}
 .brand-text{order:1;text-align:center;}
-.brand-badge{order:2;height:36px;width:auto;flex:none;display:block;}
+/* El logo toma el ancho del nombre (el más ancho de los dos manda): width:0 +
+   min-width:100% hace que la imagen no ensanche la columna por su tamaño
+   propio y se estire justo hasta el borde del texto, con su proporción. */
+.brand-badge{order:2;width:0;min-width:100%;height:auto;flex:none;display:block;}
 .wordmark{font-weight:800;font-size:20px;line-height:1.05;margin:0;color:var(--ink-strong);text-transform:uppercase;letter-spacing:.01em;}
 .site-tag{display:none;}
 nav.site-nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap;}
@@ -104,7 +107,6 @@ nav.site-nav a[aria-current="page"]{color:var(--primary-hover);background:var(--
 @media (max-width:640px){
   .site-row{padding-block:8px;gap:8px;row-gap:6px;}
   .brand{gap:3px;flex:none;}
-  .brand-badge{height:24px;}
   .wordmark{font-size:14px;}
   nav.site-nav{
     order:3;flex-basis:100%;margin-left:0;flex-wrap:nowrap;
