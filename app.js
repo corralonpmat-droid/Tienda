@@ -1,6 +1,15 @@
 (function(){
   "use strict";
 
+  // Interruptor del "Armá tu pedido" (carrito, botón "Mi pedido", "Agregar" en
+  // cada artículo, "Pegá tu lista", "Agregar al pedido" de las calculadoras).
+  // Sacado por ahora (2026-09-21): el catálogo queda solo para mirar precios y
+  // consultar por WhatsApp. Para volver a activarlo: poner true ACÁ y sacarle
+  // los comentarios HTML a los bloques marcados "sacado con el pedido" /
+  // "Panel Tu pedido" / "Botón Mi pedido" / "Pegá tu lista" en index.html, y
+  // volver a poner los botones cLadAdd / cCerAdd en las calculadoras.
+  var PEDIDO_ACTIVO = false;
+
   // Número de WhatsApp que recibe los pedidos (el de Configuración fiscal del sistema).
   var PHONE = "5493874493082";
 
@@ -214,10 +223,11 @@
   }
 
   function itemCard(item){
-    var qty = state.cart[item.id];
+    var qty = PEDIDO_ACTIVO ? state.cart[item.id] : null;
     var on = qty != null;
     var mn = minQty(item);
-    var acciones = on
+    var acciones = !PEDIDO_ACTIVO ? ''
+      : on
       ? '<div class="stepper" data-id="'+item.id+'">' +
           '<button type="button" data-act="dec" aria-label="Restar">–</button>' +
           '<input type="number" min="'+mn+'" step="'+(item.frac?'0.5':'1')+'" value="'+qty+'" aria-label="Cantidad de '+escAttr(item.desc)+'">' +
@@ -232,7 +242,7 @@
         '<p class="item-desc">'+item.desc+'</p>' +
         '<p class="item-unit">precio por '+unitCorta(item.unit)+'</p>' +
         '<span class="price">'+fmt(item.price)+'</span>' +
-        '<div class="item-actions">'+acciones+'</div>' +
+        (acciones ? '<div class="item-actions">'+acciones+'</div>' : '') +
       '</div>' +
     '</article>';
   }
@@ -250,7 +260,7 @@
               '<div class="item-grid">'+items.map(itemCard).join("")+'</div></section>';
     });
     root.innerHTML = any ? html :
-      '<div class="empty-state">No encontramos artículos con ese criterio.<br>Probá otra búsqueda, o pegá tu lista y lo cotizamos a mano.</div>';
+      '<div class="empty-state">No encontramos artículos con ese criterio.<br>Probá otra búsqueda, o consultanos por WhatsApp y lo cotizamos.</div>';
 
     Array.prototype.forEach.call(root.querySelectorAll("[data-add]"), function(btn){
       btn.addEventListener("click", function(){ agregar(btn.getAttribute("data-add")); });
@@ -442,14 +452,13 @@
 
   function render(what){
     if(what === "all"){ renderChips(); renderCatalog(); }
-    renderCart();
+    if(PEDIDO_ACTIVO) renderCart();
   }
 
   /* ---------- eventos ---------- */
   document.getElementById("searchInput").addEventListener("input", function(e){
     state.q = e.target.value; renderCatalog();
   });
-  document.getElementById("pasteBtn").addEventListener("click", runPaste);
 
   // Carrito como modal a pantalla completa (2026-09-14): abrirCarrito() lo
   // trae a primer plano con fondo que bloquea el resto (clickearlo cierra),
@@ -467,64 +476,73 @@
     document.getElementById("cartToggle").setAttribute("aria-expanded", "false");
     document.body.style.overflow = "";
   }
-  document.getElementById("cartHead").addEventListener("click", function(){
-    var abierto = document.getElementById("cartPanel").classList.contains("expanded");
-    if(abierto) cerrarCarrito(); else abrirCarrito();
-  });
-  document.getElementById("cartBackdrop").addEventListener("click", cerrarCarrito);
-  document.addEventListener("keydown", function(e){
-    if(e.key === "Escape") cerrarCarrito();
-  });
-  document.getElementById("headCart").addEventListener("click", function(){
-    if(document.getElementById("view-inicio").hidden) goTo("inicio", null);
-    abrirCarrito();
-  });
-  document.getElementById("cartClear").addEventListener("click", function(){
-    state.cart = {}; state.extras = []; save(); render("all"); toast("Pedido vaciado");
-  });
-  document.getElementById("fNombre").addEventListener("input", function(e){
-    state.form.nombre = e.target.value; save(); renderCart();
-  });
-  ["direccion","ubicacion","contacto","referencia"].forEach(function(campo){
-    document.getElementById("f" + campo.charAt(0).toUpperCase() + campo.slice(1)).addEventListener("input", function(e){
-      state.form[campo] = e.target.value; save(); renderCart();
+  // Todo lo que toca elementos del pedido (carrito, formulario de entrega,
+  // "Pegá tu lista", "Agregar al pedido" de las calculadoras) vive acá adentro,
+  // para que con PEDIDO_ACTIVO en false no se busque nada que no está en el HTML.
+  function iniciarPedido(){
+    document.getElementById("pasteBtn").addEventListener("click", runPaste);
+    document.getElementById("cartHead").addEventListener("click", function(){
+      var abierto = document.getElementById("cartPanel").classList.contains("expanded");
+      if(abierto) cerrarCarrito(); else abrirCarrito();
     });
-  });
-  Array.prototype.forEach.call(document.querySelectorAll("#entregaRow .radio-pill"), function(pill){
-    pill.addEventListener("click", function(){
-      state.form.entrega = pill.getAttribute("data-val");
-      syncEntrega(); save(); renderCart();
+    document.getElementById("cartBackdrop").addEventListener("click", cerrarCarrito);
+    document.addEventListener("keydown", function(e){
+      if(e.key === "Escape") cerrarCarrito();
     });
-  });
-  function syncEntrega(){
-    Array.prototype.forEach.call(document.querySelectorAll("#entregaRow .radio-pill"), function(p){
-      var on = p.getAttribute("data-val") === state.form.entrega;
-      p.classList.toggle("sel", on);
-      p.querySelector("input").checked = on;
+    document.getElementById("headCart").addEventListener("click", function(){
+      if(document.getElementById("view-inicio").hidden) goTo("inicio", null);
+      abrirCarrito();
     });
-    document.getElementById("envioFields").hidden = state.form.entrega !== "envio";
+    document.getElementById("cartClear").addEventListener("click", function(){
+      state.cart = {}; state.extras = []; save(); render("all"); toast("Pedido vaciado");
+    });
+    document.getElementById("fNombre").addEventListener("input", function(e){
+      state.form.nombre = e.target.value; save(); renderCart();
+    });
+    ["direccion","ubicacion","contacto","referencia"].forEach(function(campo){
+      document.getElementById("f" + campo.charAt(0).toUpperCase() + campo.slice(1)).addEventListener("input", function(e){
+        state.form[campo] = e.target.value; save(); renderCart();
+      });
+    });
+    Array.prototype.forEach.call(document.querySelectorAll("#entregaRow .radio-pill"), function(pill){
+      pill.addEventListener("click", function(){
+        state.form.entrega = pill.getAttribute("data-val");
+        syncEntrega(); save(); renderCart();
+      });
+    });
+    function syncEntrega(){
+      Array.prototype.forEach.call(document.querySelectorAll("#entregaRow .radio-pill"), function(p){
+        var on = p.getAttribute("data-val") === state.form.entrega;
+        p.classList.toggle("sel", on);
+        p.querySelector("input").checked = on;
+      });
+      document.getElementById("envioFields").hidden = state.form.entrega !== "envio";
+    }
+    document.getElementById("cLadAdd").addEventListener("click", function(){
+      var r = calcLadr();
+      if(r.u > 0){ addQty(r.id, r.u); save(); render("all"); toast(fmtQty(r.u)+" ladrillones agregados ✓"); }
+    });
+    document.getElementById("cCerAdd").addEventListener("click", function(){
+      var r = calcCer();
+      if(r.m2 > 0){
+        addQty("PIS.AL.3636.1.060", r.m2); addQty("598", r.cajas);
+        save(); render("all"); toast("Cerámico y crucetas agregados ✓");
+      }
+    });
+    document.getElementById("fNombre").value = state.form.nombre || "";
+    document.getElementById("fDireccion").value = state.form.direccion || "";
+    document.getElementById("fUbicacion").value = state.form.ubicacion || "";
+    document.getElementById("fContacto").value = state.form.contacto || "";
+    document.getElementById("fReferencia").value = state.form.referencia || "";
+    syncEntrega();
   }
+  if(PEDIDO_ACTIVO) iniciarPedido();
+
+  // Las calculadoras siguen andando sin el pedido: solo calculan y muestran el total.
   document.getElementById("cLadM2").addEventListener("input", calcLadr);
   document.getElementById("cLadTipo").addEventListener("change", calcLadr);
-  document.getElementById("cLadAdd").addEventListener("click", function(){
-    var r = calcLadr();
-    if(r.u > 0){ addQty(r.id, r.u); save(); render("all"); toast(fmtQty(r.u)+" ladrillones agregados ✓"); }
-  });
   document.getElementById("cCerM2").addEventListener("input", calcCer);
-  document.getElementById("cCerAdd").addEventListener("click", function(){
-    var r = calcCer();
-    if(r.m2 > 0){
-      addQty("PIS.AL.3636.1.060", r.m2); addQty("598", r.cajas);
-      save(); render("all"); toast("Cerámico y crucetas agregados ✓");
-    }
-  });
 
-  document.getElementById("fNombre").value = state.form.nombre || "";
-  document.getElementById("fDireccion").value = state.form.direccion || "";
-  document.getElementById("fUbicacion").value = state.form.ubicacion || "";
-  document.getElementById("fContacto").value = state.form.contacto || "";
-  document.getElementById("fReferencia").value = state.form.referencia || "";
-  syncEntrega();
   renderBrandTicker();
   renderBrandsGrid();
   showView((location.hash || "#inicio").replace("#",""));
