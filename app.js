@@ -16,6 +16,39 @@
   // Número de WhatsApp que recibe los pedidos (el de Configuración fiscal del sistema).
   var PHONE = "5493874493082";
 
+  // Aviso "Instalar app" (PLAN_APP_TIENDA.md, Fase 1 punto 8): Chrome/Android
+  // avisa solo con beforeinstallprompt; hay que guardar el evento porque el
+  // navegador no lo vuelve a disparar si no lo capturamos acá. safari/iOS no
+  // tiene ese evento — para eso mostramos la instrucción manual en texto.
+  var deferredInstallPrompt = null;
+  window.addEventListener("beforeinstallprompt", function(e){
+    e.preventDefault();
+    deferredInstallPrompt = e;
+  });
+
+  function mostrarAvisoInstalar(){
+    if(window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true) return;
+    var visto; try{ visto = localStorage.getItem("pmat_instalar_avisado"); }catch(e){ visto = "1"; }
+    if(visto) return;
+
+    var banner = document.getElementById("installBanner");
+    var texto = document.getElementById("installBannerText");
+    var btn = document.getElementById("installBannerBtn");
+    if(!banner) return;
+
+    if(deferredInstallPrompt){
+      texto.textContent = "Instalá la app de PMAT para pedir más rápido la próxima vez.";
+      btn.hidden = false;
+    } else if(/iphone|ipad|ipod/i.test(navigator.userAgent)){
+      texto.textContent = "Agregá esta página a tu pantalla de inicio: tocá el ícono de Compartir en Safari y elegí \"Agregar a inicio\".";
+      btn.hidden = true;
+    } else {
+      return; // navegador sin beforeinstallprompt y no es iOS: no hay nada que ofrecerle
+    }
+    banner.hidden = false;
+    try{ localStorage.setItem("pmat_instalar_avisado", "1"); }catch(e){}
+  }
+
   var CATS = [
     {key:"cemento",      label:"Cemento y Áridos"},
     {key:"ladrillos",    label:"Ladrillos y Bloques"},
@@ -81,14 +114,17 @@
   window.PMAT_ICON = iconSvg; // el onerror de arriba lo llama desde el HTML generado
 
   /* ---------- ruteo entre vistas (Inicio / Calculadoras / Contacto) ---------- */
-  var VIEWS = ["inicio","calculadoras","contacto"];
+  var VIEWS = ["inicio","calculadoras","contacto","cuenta"];
   function showView(view, anchor){
     if(VIEWS.indexOf(view) === -1) view = "inicio";
     VIEWS.forEach(function(v){
       var el = document.getElementById("view-"+v);
       if(el) el.hidden = (v !== view);
     });
-    Array.prototype.forEach.call(document.querySelectorAll(".site-nav .route-link"), function(a){
+    // .route-link también existe en la barra inferior (móvil) además de
+    // .site-nav (header) — el selector cubre las dos para que ambas marquen
+    // el mismo ítem activo.
+    Array.prototype.forEach.call(document.querySelectorAll(".route-link"), function(a){
       a.setAttribute("aria-current", a.getAttribute("data-view") === view ? "page" : "false");
     });
     if(anchor){
@@ -114,7 +150,7 @@
     showView((location.hash || "#inicio").replace("#",""));
   });
 
-  var state = {cat:"todos", q:"", cart:{}, extras:[], form:{
+  var state = {cat:"todos", q:"", cart:{}, extras:[], obras:[], pedidos:[], form:{
     nombre:"", entrega:"retiro", direccion:"", ubicacion:"", contacto:"", referencia:""
   }};
 
@@ -123,12 +159,19 @@
     if(saved && typeof saved === "object"){
       if(saved.cart) state.cart = saved.cart;
       if(Array.isArray(saved.extras)) state.extras = saved.extras;
+      if(Array.isArray(saved.obras)) state.obras = saved.obras;
+      if(Array.isArray(saved.pedidos)) state.pedidos = saved.pedidos;
       if(saved.form) state.form = Object.assign(state.form, saved.form);
     }
   }catch(e){}
 
   function save(){
-    try{ localStorage.setItem("pmat_pedido_v2", JSON.stringify({cart:state.cart, extras:state.extras, form:state.form})); }catch(e){}
+    try{
+      localStorage.setItem("pmat_pedido_v2", JSON.stringify({
+        cart:state.cart, extras:state.extras, form:state.form,
+        obras:state.obras, pedidos:state.pedidos
+      }));
+    }catch(e){}
   }
 
   function fmt(n){ return "$" + n.toLocaleString("es-AR",{minimumFractionDigits:2,maximumFractionDigits:2}); }
@@ -430,6 +473,8 @@
     document.getElementById("cartTotal").textContent = fmt(total);
     document.getElementById("headCartLabel").textContent = n ? ("Mi pedido · " + n) : "Mi pedido";
     document.getElementById("cartClear").hidden = !n;
+    var navBadge = document.getElementById("navPedidoBadge");
+    if(navBadge){ navBadge.textContent = n; navBadge.hidden = !n; }
 
     // Nombre siempre obligatorio; teléfono de contacto obligatorio solo con
     // envío a obra (con retiro en el corralón no hace falta coordinar nada).
@@ -456,6 +501,64 @@
   function render(what){
     if(what === "all"){ renderChips(); renderCatalog(); }
     if(PEDIDO_ACTIVO) renderCart();
+  }
+
+  /* ---------- Mi cuenta: obras y pedidos guardados en el celular ---------- */
+  // Fase 1 del plan de la app (PLAN_APP_TIENDA.md): todo local, sin cuenta ni
+  // servidor. "Mis obras" es la libreta de direcciones; "Mis pedidos" se
+  // completa solo con lo que el propio cliente mandó por WhatsApp desde acá
+  // (no hay forma de saber el estado real hasta la Fase 3, que consulta al POS).
+  function renderObras(){
+    var wrap = document.getElementById("obrasList");
+    if(!wrap) return;
+    if(!state.obras.length){
+      wrap.innerHTML = '<p class="empty-state">Todavía no guardaste ninguna obra. Guardala una vez y después la elegís al armar el pedido.</p>';
+      return;
+    }
+    wrap.innerHTML = state.obras.map(function(o, i){
+      return '<div class="obra-card"><div>' +
+        '<strong>' + escAttr(o.nombre) + '</strong>' +
+        (o.direccion ? '<div class="obra-meta">' + escAttr(o.direccion) + '</div>' : '') +
+        (o.referencia ? '<div class="obra-meta">' + escAttr(o.referencia) + '</div>' : '') +
+        (o.contacto ? '<div class="obra-meta">Recibe: ' + escAttr(o.contacto) + '</div>' : '') +
+        '</div><button type="button" class="cart-remove" data-obra="' + i + '">Quitar</button></div>';
+    }).join("");
+    Array.prototype.forEach.call(wrap.querySelectorAll("[data-obra]"), function(btn){
+      btn.addEventListener("click", function(){
+        state.obras.splice(Number(btn.getAttribute("data-obra")), 1);
+        save(); renderObras();
+      });
+    });
+  }
+
+  function renderPedidos(){
+    var wrap = document.getElementById("pedidosList");
+    if(!wrap) return;
+    if(!state.pedidos.length){
+      wrap.innerHTML = '<p class="empty-state">Todavía no hiciste ningún pedido desde acá.</p>';
+      return;
+    }
+    wrap.innerHTML = state.pedidos.map(function(p, i){
+      var fecha = new Date(p.fecha);
+      var fechaTxt = isNaN(fecha) ? "" : fecha.toLocaleDateString("es-AR") + " " + fecha.toLocaleTimeString("es-AR",{hour:"2-digit",minute:"2-digit"});
+      return '<div class="pedido-card">' +
+        '<div class="pedido-card-head"><span>' + fechaTxt + '</span><span class="pedido-estado">' + escAttr(p.estado || "Enviado") + '</span></div>' +
+        '<div class="obra-meta">' + p.items + (p.items === 1 ? ' artículo' : ' artículos') + ' · ' + fmt(p.total) + '</div>' +
+        '<button type="button" class="btn btn-outline btn-sm" data-repetir="' + i + '">Repetir pedido</button>' +
+        '</div>';
+    }).join("");
+    Array.prototype.forEach.call(wrap.querySelectorAll("[data-repetir]"), function(btn){
+      btn.addEventListener("click", function(){
+        var p = state.pedidos[Number(btn.getAttribute("data-repetir"))];
+        if(!p) return;
+        state.cart = JSON.parse(JSON.stringify(p.cart || {}));
+        state.extras = (p.extras || []).slice();
+        save(); render("all");
+        goTo("inicio", null);
+        abrirCarrito();
+        toast("Pedido cargado en el carrito");
+      });
+    });
   }
 
   /* ---------- eventos ---------- */
@@ -539,6 +642,78 @@
     document.getElementById("fContacto").value = state.form.contacto || "";
     document.getElementById("fReferencia").value = state.form.referencia || "";
     syncEntrega();
+
+    // Barra inferior (móvil): "Pedido" abre el mismo panel que "Mi pedido" del header.
+    var navPedido = document.getElementById("navPedido");
+    if(navPedido) navPedido.addEventListener("click", abrirCarrito);
+
+    // Mi cuenta → Mis obras: libreta simple, guardada en el celular (sin GPS/mapa todavía).
+    var obraAddBtn = document.getElementById("obraAddBtn");
+    if(obraAddBtn){
+      var obraForm = document.getElementById("obraForm");
+      obraAddBtn.addEventListener("click", function(){
+        obraForm.hidden = false;
+        obraAddBtn.hidden = true;
+        document.getElementById("obNombre").focus();
+      });
+      document.getElementById("obraCancelBtn").addEventListener("click", function(){
+        obraForm.hidden = true;
+        obraAddBtn.hidden = false;
+      });
+      document.getElementById("obraSaveBtn").addEventListener("click", function(){
+        var nombre = document.getElementById("obNombre").value.trim();
+        if(!nombre){ toast("Ponele un nombre a la obra"); return; }
+        state.obras.push({
+          nombre: nombre,
+          direccion: document.getElementById("obDireccion").value.trim(),
+          referencia: document.getElementById("obReferencia").value.trim(),
+          contacto: document.getElementById("obContacto").value.trim()
+        });
+        save();
+        ["obNombre","obDireccion","obReferencia","obContacto"].forEach(function(id){
+          document.getElementById(id).value = "";
+        });
+        obraForm.hidden = true;
+        obraAddBtn.hidden = false;
+        renderObras();
+        toast("Obra guardada ✓");
+      });
+    }
+
+    // Mi cuenta → Mis pedidos: se registra acá mismo (optimista) apenas se
+    // manda por WhatsApp — no hay forma de confirmar que el POS lo recibió
+    // hasta la Fase 3 del plan, por eso el estado siempre queda "Enviado".
+    document.getElementById("waBtn").addEventListener("click", function(){
+      if(this.getAttribute("aria-disabled") === "true") return;
+      var lines = cartLines();
+      var total = lines.reduce(function(a,l){return a+l.subtotal;},0);
+      state.pedidos.unshift({
+        fecha: new Date().toISOString(),
+        items: lines.length + (state.extras.length ? 1 : 0),
+        total: total,
+        estado: "Enviado",
+        cart: JSON.parse(JSON.stringify(state.cart)),
+        extras: state.extras.slice()
+      });
+      var esPrimero = state.pedidos.length === 1;
+      if(state.pedidos.length > 20) state.pedidos.length = 20;
+      save();
+      renderPedidos();
+      if(esPrimero) mostrarAvisoInstalar();
+    });
+
+    document.getElementById("installBannerClose").addEventListener("click", function(){
+      document.getElementById("installBanner").hidden = true;
+    });
+    document.getElementById("installBannerBtn").addEventListener("click", function(){
+      if(!deferredInstallPrompt) return;
+      deferredInstallPrompt.prompt();
+      deferredInstallPrompt.userChoice.then(function(){ deferredInstallPrompt = null; });
+      document.getElementById("installBanner").hidden = true;
+    });
+
+    renderObras();
+    renderPedidos();
   }
   if(PEDIDO_ACTIVO) iniciarPedido();
 
@@ -556,4 +731,14 @@
     calcLadr();
     calcCer();
   });
+
+  // PWA: registra el service worker (cachea el shell para que abra al
+  // instante; productos.json sigue siendo siempre network-first, ver sw.js).
+  if("serviceWorker" in navigator){
+    window.addEventListener("load", function(){
+      navigator.serviceWorker.register("sw.js").catch(function(e){
+        console.warn("No se pudo registrar el service worker:", e);
+      });
+    });
+  }
 })();

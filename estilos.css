@@ -419,3 +419,79 @@ footer.site-footer strong{color:var(--on-panel);display:block;margin-bottom:5px;
 .foot-grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));}
 .foot-logo{height:40px;width:auto;display:block;margin-bottom:12px;}
 .foot-bottom{margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,.13);font-size:12.5px;color:var(--on-panel-dim);}
+
+/* ---------- barra inferior fija (solo celular, ver @media más abajo) ---------- */
+/* PLAN_APP_TIENDA.md → "Sistema visual": reusa tokens de color/radio/sombra de
+   arriba, no define nada nuevo. Los 4 destinos son .route-link igual que la
+   nav de escritorio (mismo showView() de app.js) salvo "Pedido", que abre el
+   panel del carrito en vez de cambiar de vista. */
+.bottom-nav{
+  display:none;
+  position:fixed;left:0;right:0;bottom:0;z-index:40;height:60px;
+  background:var(--surface);
+  box-shadow:0 -6px 18px rgba(40,20,5,.10);
+  padding-bottom:env(safe-area-inset-bottom, 0);
+}
+.bn-item{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+  padding:8px 4px 7px;border:0;background:transparent;color:var(--muted);
+  text-decoration:none;font-size:11px;font-weight:600;font-family:inherit;cursor:pointer;
+}
+.bn-item[aria-current="page"]{color:var(--primary);}
+.bn-ico-wrap{position:relative;display:inline-flex;}
+.bn-badge{
+  position:absolute;top:-4px;right:-8px;min-width:16px;height:16px;padding:0 3px;
+  background:var(--primary);color:var(--on-primary);border-radius:999px;
+  font-size:10px;font-weight:700;line-height:16px;text-align:center;
+}
+
+/* ---------- Mi cuenta ---------- */
+.cuenta-sub{font-size:15px;font-weight:700;color:var(--ink-strong);margin:30px 0 12px;}
+.cuenta-sub:first-of-type{margin-top:0;}
+.empty-state{color:var(--muted);font-size:14px;line-height:1.6;padding:4px 0 16px;}
+.obra-card,.pedido-card{
+  border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;margin-bottom:10px;
+}
+.obra-card{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;}
+.obra-meta{font-size:12.5px;color:var(--muted);margin-top:2px;}
+.obra-form{
+  border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-top:12px;
+  display:flex;flex-direction:column;gap:12px;
+}
+.obra-form-actions{display:flex;gap:10px;}
+.cuenta-links{display:flex;flex-direction:column;gap:0;margin-bottom:8px;}
+.cuenta-links a{
+  padding:13px 2px;border-bottom:1px solid var(--line);color:var(--ink);
+  text-decoration:none;font-weight:600;font-size:14.5px;
+}
+.cuenta-links a:last-child{border-bottom:0;}
+.cuenta-links a:hover{color:var(--primary-hover);}
+.pedido-card-head{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--muted);margin-bottom:4px;}
+.pedido-estado{
+  background:var(--surface-2);color:var(--muted);padding:2px 9px;border-radius:999px;
+  font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.03em;flex:none;
+}
+.pedido-card .btn{margin-top:10px;}
+
+@media (max-width:768px){
+  .bottom-nav{display:flex;}
+  body{padding-bottom:60px;}
+  .wa-float{bottom:74px;}
+  #toast{bottom:150px;}
+  .install-banner{bottom:74px;}
+}
+
+/* ---------- aviso "instalar app" ---------- */
+.install-banner{
+  position:fixed;left:12px;right:12px;bottom:20px;z-index:45;max-width:480px;margin:0 auto;
+  display:flex;align-items:center;gap:12px;
+  background:var(--panel);color:var(--on-panel);
+  padding:14px 16px;border-radius:var(--r);box-shadow:var(--shadow);
+}
+.install-banner p{margin:0;flex:1;font-size:13.5px;line-height:1.5;}
+.install-banner .btn{flex:none;}
+.install-close{
+  border:0;background:transparent;color:var(--on-panel-dim);cursor:pointer;flex:none;
+  width:24px;height:24px;font-size:20px;line-height:1;padding:0;
+}
+.install-close:hover{color:var(--on-panel);}
