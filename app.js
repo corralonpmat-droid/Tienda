@@ -576,8 +576,6 @@
     document.getElementById("cartTotal").textContent = fmt(total);
     document.getElementById("headCartLabel").textContent = n ? ("Mi pedido · " + n) : "Mi pedido";
     document.getElementById("cartClear").hidden = !n;
-    var navBadge = document.getElementById("navPedidoBadge");
-    if(navBadge){ navBadge.textContent = n; navBadge.hidden = !n; }
 
     // Nombre siempre obligatorio; teléfono de contacto obligatorio solo con
     // envío a obra (con retiro en el corralón no hace falta coordinar nada).
@@ -897,18 +895,6 @@
     document.getElementById("fAceptaSustituto").checked = state.form.aceptaSustituto !== false;
     syncEntrega();
     syncPago();
-
-    // Barra inferior (móvil): "Pedido" abre el mismo panel que "Mi pedido" del
-    // header. #cartPanel vive DENTRO de #view-inicio (ver el <aside> en el
-    // catálogo) — si se toca desde otra vista (ej. Mi cuenta) hay que volver a
-    // Inicio primero, si no el panel "se abre" adentro de una vista oculta:
-    // no se ve nada y el body queda con overflow:hidden trabado (parece
-    // colgado). Mismo guard que ya usaba #headCart más abajo.
-    var navPedido = document.getElementById("navPedido");
-    if(navPedido) navPedido.addEventListener("click", function(){
-      if(document.getElementById("view-inicio").hidden) goTo("inicio", null);
-      abrirCarrito();
-    });
 
     // Mi cuenta → Mis obras: libreta simple, guardada en el celular (sin GPS/mapa todavía).
     var obraAddBtn = document.getElementById("obraAddBtn");
