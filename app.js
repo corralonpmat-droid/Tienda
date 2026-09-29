@@ -160,7 +160,7 @@
   window.PMAT_ICON = iconSvg; // el onerror de arriba lo llama desde el HTML generado
 
   /* ---------- ruteo entre vistas (Inicio / Calculadoras / Contacto) ---------- */
-  var VIEWS = ["inicio","calculadoras","contacto","cuenta"];
+  var VIEWS = ["inicio","calculadoras","contacto","datos","pedidos"];
   function showView(view, anchor){
     if(VIEWS.indexOf(view) === -1) view = "inicio";
     VIEWS.forEach(function(v){

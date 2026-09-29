@@ -44,7 +44,8 @@
   <nav class="side-menu-nav">
     <a href="#inicio" class="side-menu-item route-link" data-view="inicio">🏠 Inicio</a>
     <a href="#inicio" class="side-menu-item route-link" data-view="inicio" data-anchor="catalogo">🛒 Catálogo</a>
-    <a href="#cuenta" class="side-menu-item route-link" data-view="cuenta">👤 Mi cuenta</a>
+    <a href="#datos" class="side-menu-item route-link" data-view="datos">👤 Mis datos</a>
+    <a href="#pedidos" class="side-menu-item route-link" data-view="pedidos">🧾 Mis pedidos</a>
     <a href="#calculadoras" class="side-menu-item route-link" data-view="calculadoras">🧮 Calculadoras</a>
     <a href="#contacto" class="side-menu-item route-link" data-view="contacto">🚚 Envíos, acopio, formas de pago y preguntas frecuentes</a>
     <a href="https://maps.app.goo.gl/RysLzhDWdUTv4JYd6" target="_blank" rel="noopener" class="side-menu-item">📍 Cómo llegar</a>
@@ -285,15 +286,14 @@
 
 </div>
 
-<div id="view-cuenta" hidden>
+<div id="view-datos" hidden>
 <section class="band">
   <div class="wrap">
     <div class="band-head">
       <p class="eyebrow">Tu cuenta</p>
-      <h2>Mi cuenta</h2>
+      <h2>Mis datos</h2>
     </div>
 
-    <h3 class="cuenta-sub" id="cuentaDatos" style="margin-top:0;">Mis datos</h3>
     <div class="datos-form">
       <div class="field">
         <label for="mdNombre">Nombre y apellido</label>
@@ -326,10 +326,7 @@
       <p class="datos-note">Se guardan en este celular y se precargan solos la próxima vez que hagas un pedido.</p>
     </div>
 
-    <h3 class="cuenta-sub" id="cuentaPedidos">Mis pedidos</h3>
-    <div id="pedidosList"></div>
-
-    <h3 class="cuenta-sub" id="cuentaObras">Mis obras</h3>
+    <h3 class="cuenta-sub" style="margin-top:30px;">Mis obras</h3>
     <div id="obrasList"></div>
     <button class="btn btn-outline btn-block" id="obraAddBtn" type="button">+ Agregar obra</button>
     <div class="obra-form" id="obraForm" hidden>
@@ -354,14 +351,19 @@
         <button class="btn btn-outline" id="obraCancelBtn" type="button">Cancelar</button>
       </div>
     </div>
+  </div>
+</section>
+</div>
 
-    <h3 class="cuenta-sub">Más</h3>
-    <div class="cuenta-links">
-      <a class="route-link" data-view="calculadoras" href="#calculadoras">Calculadoras</a>
-      <a class="route-link" data-view="contacto" href="#contacto">Envíos, acopio, formas de pago y preguntas frecuentes</a>
-      <a href="https://maps.app.goo.gl/RysLzhDWdUTv4JYd6" target="_blank" rel="noopener">Cómo llegar</a>
-      <a href="https://wa.me/5493874493082" target="_blank" rel="noopener">Ayuda por WhatsApp</a>
+<div id="view-pedidos" hidden>
+<section class="band">
+  <div class="wrap">
+    <div class="band-head">
+      <p class="eyebrow">Tu cuenta</p>
+      <h2>Mis pedidos</h2>
     </div>
+
+    <div id="pedidosList"></div>
   </div>
 </section>
 </div>
@@ -530,6 +532,6 @@
   <button type="button" class="install-close" id="installBannerClose" aria-label="Cerrar aviso">×</button>
 </div>
 
-<script src="app.js?v=26"></script>
+<script src="app.js?v=27"></script>
 </body>
 </html>
