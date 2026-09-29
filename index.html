@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#e2231a">
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="estilos.css?v=22">
+<link rel="stylesheet" href="estilos.css?v=23">
 </head>
 <body>
 
@@ -32,8 +32,31 @@
   </div>
 </div>
 
+<div id="sideMenuBackdrop" class="side-menu-backdrop"></div>
+<aside id="sideMenu" class="side-menu">
+  <div class="side-menu-head">
+    <img src="logo.png" alt="Corralón PMAT" class="side-menu-logo">
+    <button type="button" class="side-menu-close" id="sideMenuClose" aria-label="Cerrar menú">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <p class="side-menu-greeting" id="sideMenuGreeting">¡Hola!</p>
+  <nav class="side-menu-nav">
+    <a href="#cuenta" class="side-menu-item route-link" data-view="cuenta" data-anchor="cuentaPedidos">🧾 Mis pedidos</a>
+    <a href="#cuenta" class="side-menu-item route-link" data-view="cuenta" data-anchor="cuentaObras">📍 Mis obras</a>
+    <a href="#calculadoras" class="side-menu-item route-link" data-view="calculadoras">🧮 Calculadoras</a>
+    <a href="#contacto" class="side-menu-item route-link" data-view="contacto">🚚 Envíos, acopio y formas de pago</a>
+    <a href="#contacto" class="side-menu-item route-link" data-view="contacto">❓ Preguntas frecuentes</a>
+    <a href="https://maps.app.goo.gl/RysLzhDWdUTv4JYd6" target="_blank" rel="noopener" class="side-menu-item">📍 Cómo llegar</a>
+    <a href="https://wa.me/5493874493082" target="_blank" rel="noopener" class="side-menu-item">💬 Ayuda por WhatsApp</a>
+  </nav>
+</aside>
+
 <header class="site">
   <div class="wrap site-row">
+    <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
     <a class="brand route-link" data-view="inicio" href="#inicio">
       <img class="brand-badge" src="logo.png" alt="Corralón PMAT">
       <span class="brand-text">
@@ -270,10 +293,10 @@
       <h2>Mi cuenta</h2>
     </div>
 
-    <h3 class="cuenta-sub">Mis pedidos</h3>
+    <h3 class="cuenta-sub" id="cuentaPedidos">Mis pedidos</h3>
     <div id="pedidosList"></div>
 
-    <h3 class="cuenta-sub">Mis obras</h3>
+    <h3 class="cuenta-sub" id="cuentaObras">Mis obras</h3>
     <div id="obrasList"></div>
     <button class="btn btn-outline btn-block" id="obraAddBtn" type="button">+ Agregar obra</button>
     <div class="obra-form" id="obraForm" hidden>
@@ -499,6 +522,6 @@
   </a>
 </nav>
 
-<script src="app.js?v=23"></script>
+<script src="app.js?v=24"></script>
 </body>
 </html>

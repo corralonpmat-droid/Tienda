@@ -670,6 +670,26 @@
     state.q = e.target.value; renderCatalog();
   });
 
+  /* ---------- menú lateral (☰, estilo Grido) ---------- */
+  function abrirMenu(){
+    document.getElementById("sideMenuGreeting").textContent =
+      state.form.nombre ? ("¡Hola, " + state.form.nombre + "!") : "¡Hola!";
+    document.getElementById("sideMenu").classList.add("show");
+    document.getElementById("sideMenuBackdrop").classList.add("show");
+    document.body.style.overflow = "hidden";
+  }
+  function cerrarMenu(){
+    document.getElementById("sideMenu").classList.remove("show");
+    document.getElementById("sideMenuBackdrop").classList.remove("show");
+    document.body.style.overflow = "";
+  }
+  document.getElementById("menuToggle").addEventListener("click", abrirMenu);
+  document.getElementById("sideMenuClose").addEventListener("click", cerrarMenu);
+  document.getElementById("sideMenuBackdrop").addEventListener("click", cerrarMenu);
+  Array.prototype.forEach.call(document.querySelectorAll(".side-menu-item"), function(a){
+    a.addEventListener("click", cerrarMenu);
+  });
+
   /* ---------- ficha de producto a pantalla completa ---------- */
   // Funciona haya o no pedido activo (igual que itemCard: sin PEDIDO_ACTIVO
   // se ve todo salvo el botón de agregar) — por eso vive acá afuera, no
@@ -726,7 +746,9 @@
   }
   document.getElementById("fichaClose").addEventListener("click", cerrarFicha);
   document.addEventListener("keydown", function(e){
-    if(e.key === "Escape" && fichaAbierta) cerrarFicha();
+    if(e.key !== "Escape") return;
+    if(fichaAbierta) cerrarFicha();
+    if(document.getElementById("sideMenu").classList.contains("show")) cerrarMenu();
   });
 
   // Carrito como modal a pantalla completa (2026-09-14): abrirCarrito() lo

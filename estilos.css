@@ -49,6 +49,37 @@ img{max-width:100%;}
 .wrap{max-width:1220px;margin:0 auto;padding-inline:22px;}
 @media (max-width:480px){.wrap{padding-inline:16px;}}
 
+/* ---------- menú lateral (☰, estilo Grido) ---------- */
+.menu-toggle{
+  border:0;background:transparent;color:var(--ink);cursor:pointer;flex:none;
+  width:38px;height:38px;display:flex;align-items:center;justify-content:center;
+  border-radius:var(--r-btn);
+}
+.menu-toggle:hover{background:var(--surface-2);}
+.side-menu-backdrop{
+  position:fixed;inset:0;background:rgba(20,10,4,.55);z-index:95;
+  opacity:0;pointer-events:none;transition:opacity .2s ease;
+}
+.side-menu-backdrop.show{opacity:1;pointer-events:auto;}
+.side-menu{
+  position:fixed;top:0;left:0;bottom:0;z-index:96;width:280px;max-width:82vw;
+  background:var(--surface);box-shadow:14px 0 38px rgba(20,10,4,.3);
+  transform:translateX(-100%);transition:transform .24s ease;
+  display:flex;flex-direction:column;overflow-y:auto;
+}
+.side-menu.show{transform:translateX(0);}
+.side-menu-head{display:flex;align-items:center;justify-content:space-between;padding:18px 16px 4px;}
+.side-menu-logo{height:38px;width:auto;}
+.side-menu-close{border:0;background:transparent;color:var(--muted);cursor:pointer;padding:4px;}
+.side-menu-close:hover{color:var(--primary);}
+.side-menu-greeting{font-size:19px;font-weight:700;color:var(--ink-strong);padding:10px 18px 16px;margin:0;}
+.side-menu-nav{display:flex;flex-direction:column;border-top:1px solid var(--line);}
+.side-menu-item{
+  padding:15px 18px;color:var(--ink);text-decoration:none;font-weight:600;font-size:14.5px;
+  border-bottom:1px solid var(--line);
+}
+.side-menu-item:hover{background:var(--surface-2);color:var(--primary-hover);}
+
 /* ---------- header ---------- */
 header.site{background:var(--surface);position:sticky;top:0;z-index:40;box-shadow:0 2px 14px rgba(40,20,5,.08);}
 .site-row{display:flex;align-items:center;gap:20px;padding-block:14px;flex-wrap:wrap;}
