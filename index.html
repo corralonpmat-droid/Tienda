@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#e2231a">
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="estilos.css?v=21">
+<link rel="stylesheet" href="estilos.css?v=22">
 </head>
 <body>
 
@@ -200,11 +200,14 @@
             <div class="envio-fields" id="envioFields" hidden>
               <div class="field">
                 <label for="fDireccion">Dirección</label>
-                <input id="fDireccion" type="text" placeholder="Calle y número" autocomplete="street-address">
+                <input id="fDireccion" type="text" placeholder="Ej: Barrio San Cayetano, Mza 12, Casa 8" autocomplete="street-address">
               </div>
               <div class="field">
                 <label for="fUbicacion">Ubicación</label>
-                <input id="fUbicacion" type="text" placeholder="Barrio, o pegá el link de Google Maps">
+                <div class="ubicacion-row">
+                  <input id="fUbicacion" type="text" placeholder="Barrio, o pegá el link de Google Maps">
+                  <button type="button" class="btn btn-outline btn-sm" id="btnUbicacionGPS">📍 Adjuntar mi ubicación</button>
+                </div>
               </div>
               <div class="field">
                 <label for="fContacto">Contacto <span class="req">*</span></label>
@@ -496,6 +499,6 @@
   </a>
 </nav>
 
-<script src="app.js?v=22"></script>
+<script src="app.js?v=23"></script>
 </body>
 </html>

@@ -534,9 +534,16 @@
       list.innerHTML = '<li class="cart-empty">Todavía no elegiste nada.<br>Agregá un artículo del catálogo para empezar.</li>';
     } else {
       var html = lines.map(function(l){
+        var it = byId(l.id);
+        var mn = it ? minQty(it) : 1;
         return '<li class="cart-line">' +
-          '<div><div class="cart-line-desc">'+l.desc+'</div>' +
-          '<div class="cart-line-meta">'+fmtQty(l.qty)+' '+unitCorta(l.unit)+' × '+fmt(l.price)+'</div></div>' +
+          '<div class="cart-line-main"><div class="cart-line-desc">'+l.desc+'</div>' +
+          '<div class="cart-line-meta">'+fmt(l.price)+' × '+unitCorta(l.unit)+'</div>' +
+          '<div class="stepper cart-line-stepper" data-id="'+l.id+'">' +
+            '<button type="button" data-act="dec" aria-label="Restar" tabindex="-1">–</button>' +
+            '<input type="number" min="'+mn+'" step="'+(it && it.frac ? '0.5' : '1')+'" value="'+l.qty+'" aria-label="Cantidad de '+escAttr(l.desc)+'">' +
+            '<button type="button" data-act="inc" aria-label="Sumar" tabindex="-1">+</button>' +
+          '</div></div>' +
           '<div class="cart-line-right"><span class="cart-line-total">'+fmt(l.subtotal)+'</span>' +
           '<button type="button" class="cart-remove" data-id="'+l.id+'">Quitar</button></div>' +
         '</li>';
@@ -553,6 +560,14 @@
           if(btn.getAttribute("data-extras")){ state.extras = []; save(); render("all"); }
           else removeLine(btn.getAttribute("data-id"));
         });
+      });
+      Array.prototype.forEach.call(list.querySelectorAll(".cart-line-stepper"), function(st){
+        var id = st.getAttribute("data-id");
+        Array.prototype.forEach.call(st.querySelectorAll("button"), function(btn){
+          btn.addEventListener("click", function(){ step(id, btn.getAttribute("data-act")==="inc"?1:-1); });
+        });
+        var input = st.querySelector("input");
+        input.addEventListener("change", function(){ setQty(id, parseFloat(String(input.value).replace(",", "."))); });
       });
     }
 
@@ -759,6 +774,27 @@
         state.form[campo] = e.target.value; save(); renderCart();
       });
     });
+    var btnGPS = document.getElementById("btnUbicacionGPS");
+    if(btnGPS && navigator.geolocation){
+      btnGPS.addEventListener("click", function(){
+        btnGPS.disabled = true;
+        btnGPS.textContent = "Buscando tu ubicación...";
+        navigator.geolocation.getCurrentPosition(function(pos){
+          var link = "https://maps.google.com/?q=" + pos.coords.latitude + "," + pos.coords.longitude;
+          document.getElementById("fUbicacion").value = link;
+          state.form.ubicacion = link; save(); renderCart();
+          btnGPS.disabled = false;
+          btnGPS.textContent = "📍 Ubicación adjuntada ✓";
+          toast("Ubicación adjuntada ✓");
+        }, function(){
+          btnGPS.disabled = false;
+          btnGPS.textContent = "📍 Adjuntar mi ubicación";
+          toast("No pudimos acceder a tu ubicación — pegá el link de Google Maps a mano");
+        }, {timeout: 10000});
+      });
+    } else if(btnGPS){
+      btnGPS.hidden = true; // navegador sin soporte de geolocalización: se cae al campo de texto de siempre
+    }
     Array.prototype.forEach.call(document.querySelectorAll("#entregaRow .radio-pill"), function(pill){
       pill.addEventListener("click", function(){
         state.form.entrega = pill.getAttribute("data-val");
