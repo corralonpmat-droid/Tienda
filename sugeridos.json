@@ -1,10 +1,10 @@
 {
-  "cemento": [],
-  "ladrillos": [],
-  "hierros": [],
-  "plomeria": [],
+  "cemento": ["BF", "C", "1"],
+  "ladrillos": ["CLN", "BF"],
+  "hierros": ["KA16", "CLN"],
+  "plomeria": ["VI1-2", "9586"],
   "electricidad": [],
   "pinturas": [],
-  "ceramicos": [],
-  "ferreteria": []
+  "ceramicos": ["BPC", "PIS.AL.3636.1.060"],
+  "ferreteria": ["CLN"]
 }
