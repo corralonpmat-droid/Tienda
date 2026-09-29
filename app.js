@@ -788,4 +788,22 @@
       });
     });
   }
+
+  // Pantalla de Bienvenida (pantalla 0 del plan): solo la primera vez, sin
+  // pedir ningún permiso. Se marca en localStorage apenas se muestra (no
+  // recién al cerrarla) para que no vuelva a aparecer aunque alguien cierre
+  // la pestaña sin tocar "Empezar".
+  (function(){
+    var visto; try{ visto = localStorage.getItem("pmat_bienvenida_vista"); }catch(e){ visto = "1"; }
+    if(visto) return;
+    var pantalla = document.getElementById("welcomeScreen");
+    if(!pantalla) return;
+    pantalla.hidden = false;
+    document.body.style.overflow = "hidden";
+    try{ localStorage.setItem("pmat_bienvenida_vista", "1"); }catch(e){}
+    document.getElementById("welcomeStart").addEventListener("click", function(){
+      pantalla.hidden = true;
+      document.body.style.overflow = "";
+    });
+  })();
 })();

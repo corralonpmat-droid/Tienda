@@ -5,7 +5,7 @@
 // Subir CACHE_VERSION cuando cambie algo en ARCHIVOS_PRECACHE (mismo criterio
 // que el "?v=16" de estilos.css en index.html) para que los celulares con la
 // versión anterior instalada bajen la nueva.
-var CACHE_VERSION = "pmat-v3";
+var CACHE_VERSION = "pmat-v4";
 
 // Los nombres de estilos.css/app.js llevan el mismo "?v=N" que pide
 // index.html — si no coinciden exacto, cachea una URL que la página nunca
@@ -15,8 +15,8 @@ var CACHE_VERSION = "pmat-v3";
 var ARCHIVOS_PRECACHE = [
   "./",
   "index.html",
-  "estilos.css?v=19",
-  "app.js?v=19",
+  "estilos.css?v=20",
+  "app.js?v=20",
   "manifest.json",
   "logo.png",
   "icon-192.png",

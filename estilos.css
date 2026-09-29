@@ -499,3 +499,14 @@ footer.site-footer strong{color:var(--on-panel);display:block;margin-bottom:5px;
   width:24px;height:24px;font-size:20px;line-height:1;padding:0;
 }
 .install-close:hover{color:var(--on-panel);}
+
+/* ---------- pantalla de bienvenida (solo la primera vez) ---------- */
+.welcome-screen{
+  position:fixed;inset:0;z-index:100;background:var(--surface);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:16px;padding:32px;text-align:center;
+}
+.welcome-logo{width:140px;height:auto;margin-bottom:10px;}
+.welcome-screen h1{font-size:26px;margin:0;color:var(--ink-strong);}
+.welcome-screen p{font-size:15px;color:var(--muted);margin:0 0 14px;max-width:320px;line-height:1.5;}
+.welcome-screen .btn{max-width:280px;}
