@@ -519,6 +519,11 @@ footer.site-footer strong{color:var(--on-panel);display:block;margin-bottom:5px;
   border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-top:12px;
   display:flex;flex-direction:column;gap:12px;
 }
+.datos-form{
+  border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:8px;
+  display:flex;flex-direction:column;gap:12px;background:var(--surface-2);
+}
+.datos-note{font-size:12px;color:var(--muted);margin:0;line-height:1.5;}
 .obra-form-actions{display:flex;gap:10px;}
 .cuenta-links{display:flex;flex-direction:column;gap:0;margin-bottom:8px;}
 .cuenta-links a{

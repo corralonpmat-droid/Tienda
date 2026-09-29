@@ -788,12 +788,26 @@
     document.getElementById("cartClear").addEventListener("click", function(){
       state.cart = {}; state.extras = []; save(); render("all"); toast("Pedido vaciado");
     });
-    document.getElementById("fNombre").addEventListener("input", function(e){
-      state.form.nombre = e.target.value; save(); renderCart();
-    });
-    ["direccion","ubicacion","contacto","referencia"].forEach(function(campo){
-      document.getElementById("f" + campo.charAt(0).toUpperCase() + campo.slice(1)).addEventListener("input", function(e){
-        state.form[campo] = e.target.value; save(); renderCart();
+    // Campos de texto compartidos entre el carrito y "Mis datos" (Mi cuenta):
+    // los dos leen/escriben el mismo state.form — editar en cualquiera de los
+    // dos lugares actualiza el otro al toque (2026-09-29, a pedido de Marcos:
+    // antes solo se veían/guardaban dentro del carrito, en ningún lado se
+    // mostraban como "esto es lo tuyo").
+    var CAMPOS_TEXTO = ["nombre","direccion","ubicacion","contacto","referencia","cuit"];
+    function sincronizarCampoTexto(campo, valor){
+      state.form[campo] = valor; save();
+      var idCampo = campo.charAt(0).toUpperCase() + campo.slice(1);
+      ["f" + idCampo, "md" + idCampo].forEach(function(id){
+        var el = document.getElementById(id);
+        if(el && el.value !== valor) el.value = valor;
+      });
+      renderCart();
+    }
+    CAMPOS_TEXTO.forEach(function(campo){
+      var idCampo = campo.charAt(0).toUpperCase() + campo.slice(1);
+      ["f" + idCampo, "md" + idCampo].forEach(function(id){
+        var el = document.getElementById(id);
+        if(el) el.addEventListener("input", function(e){ sincronizarCampoTexto(campo, e.target.value); });
       });
     });
     var btnGPS = document.getElementById("btnUbicacionGPS");
@@ -803,8 +817,7 @@
         btnGPS.textContent = "Buscando tu ubicación...";
         navigator.geolocation.getCurrentPosition(function(pos){
           var link = "https://maps.google.com/?q=" + pos.coords.latitude + "," + pos.coords.longitude;
-          document.getElementById("fUbicacion").value = link;
-          state.form.ubicacion = link; save(); renderCart();
+          sincronizarCampoTexto("ubicacion", link);
           btnGPS.disabled = false;
           btnGPS.textContent = "📍 Ubicación adjuntada ✓";
           toast("Ubicación adjuntada ✓");
@@ -845,13 +858,19 @@
       });
       document.getElementById("pagoHint").hidden = state.form.pago !== "tarjeta";
     }
-    document.getElementById("fFacturaA").addEventListener("change", function(e){
-      state.form.facturaA = e.target.checked;
-      document.getElementById("cuitField").hidden = !state.form.facturaA;
-      save(); renderCart();
-    });
-    document.getElementById("fCuit").addEventListener("input", function(e){
-      state.form.cuit = e.target.value; save(); renderCart();
+    function sincronizarFacturaA(checked){
+      state.form.facturaA = checked; save();
+      ["fFacturaA","mdFacturaA"].forEach(function(id){
+        var el = document.getElementById(id); if(el) el.checked = checked;
+      });
+      ["cuitField","mdCuitField"].forEach(function(id){
+        var el = document.getElementById(id); if(el) el.hidden = !checked;
+      });
+      renderCart();
+    }
+    ["fFacturaA","mdFacturaA"].forEach(function(id){
+      var el = document.getElementById(id);
+      if(el) el.addEventListener("change", function(e){ sincronizarFacturaA(e.target.checked); });
     });
     document.getElementById("fAceptaSustituto").addEventListener("change", function(e){
       state.form.aceptaSustituto = e.target.checked; save(); renderCart();
@@ -867,14 +886,14 @@
         save(); render("all"); toast("Cerámico y crucetas agregados ✓");
       }
     });
-    document.getElementById("fNombre").value = state.form.nombre || "";
-    document.getElementById("fDireccion").value = state.form.direccion || "";
-    document.getElementById("fUbicacion").value = state.form.ubicacion || "";
-    document.getElementById("fContacto").value = state.form.contacto || "";
-    document.getElementById("fReferencia").value = state.form.referencia || "";
-    document.getElementById("fFacturaA").checked = !!state.form.facturaA;
-    document.getElementById("cuitField").hidden = !state.form.facturaA;
-    document.getElementById("fCuit").value = state.form.cuit || "";
+    CAMPOS_TEXTO.forEach(function(campo){
+      var idCampo = campo.charAt(0).toUpperCase() + campo.slice(1);
+      var valor = state.form[campo] || "";
+      ["f" + idCampo, "md" + idCampo].forEach(function(id){
+        var el = document.getElementById(id); if(el) el.value = valor;
+      });
+    });
+    sincronizarFacturaA(!!state.form.facturaA);
     document.getElementById("fAceptaSustituto").checked = state.form.aceptaSustituto !== false;
     syncEntrega();
     syncPago();
