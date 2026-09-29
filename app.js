@@ -16,6 +16,38 @@
   // Número de WhatsApp que recibe los pedidos (el de Configuración fiscal del sistema).
   var PHONE = "5493874493082";
 
+  // Pedidos Web (Fase 3 del plan, servidor separado, sin vínculo con el POS
+  // real — ver PLAN_APP_TIENDA.md). Si está vacío o falla, el pedido sigue
+  // saliendo SOLO por WhatsApp, exactamente como siempre — esto es un agregado
+  // que nunca bloquea ni retrasa el envío por WhatsApp.
+  // 🔴 TEMPORAL (29/09/2026): apunta al túnel de prueba de Marcos, que deja de
+  // existir en cuanto cierre esa ventana. Volver a "" cuando termine la prueba.
+  var PEDIDOS_WEB_URL = "https://deeper-journey-picks-humanities.trycloudflare.com";
+
+  function mandarAPedidosWeb(pedidoLocal, lines){
+    if(!PEDIDOS_WEB_URL) return;
+    var items = lines.map(function(l){ return {cod: l.id, cantidad: l.qty}; });
+    var f = state.form;
+    fetch(PEDIDOS_WEB_URL + "/api/pedido", {
+      method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({
+        nombre: f.nombre, contacto: f.contacto || "", entrega: f.entrega,
+        direccion: f.direccion || "", ubicacion: f.ubicacion || "",
+        referencia: f.referencia || "", medio_pago: f.pago || "efectivo",
+        factura_a: !!f.facturaA, cuit: f.cuit || "",
+        acepta_sustituto: f.aceptaSustituto !== false,
+        items: items, extras: state.extras.slice()
+      })
+    }).then(function(res){ return res.ok ? res.json() : null; })
+      .then(function(data){
+        if(!data) return;
+        pedidoLocal.numero_web = data.numero;
+        pedidoLocal.token_web = data.token;
+        save();
+      })
+      .catch(function(e){ console.warn("Pedidos Web no disponible, sigue solo por WhatsApp:", e); });
+  }
+
   // Aviso "Instalar app" (PLAN_APP_TIENDA.md, Fase 1 punto 8): Chrome/Android
   // avisa solo con beforeinstallprompt; hay que guardar el evento porque el
   // navegador no lo vuelve a disparar si no lo capturamos acá. safari/iOS no
@@ -841,19 +873,21 @@
       if(this.getAttribute("aria-disabled") === "true") return;
       var lines = cartLines();
       var total = lines.reduce(function(a,l){return a+l.subtotal;},0);
-      state.pedidos.unshift({
+      var pedidoLocal = {
         fecha: new Date().toISOString(),
         items: lines.length + (state.extras.length ? 1 : 0),
         total: total,
         estado: "Enviado",
         cart: JSON.parse(JSON.stringify(state.cart)),
         extras: state.extras.slice()
-      });
+      };
+      state.pedidos.unshift(pedidoLocal);
       var esPrimero = state.pedidos.length === 1;
       if(state.pedidos.length > 20) state.pedidos.length = 20;
       save();
       renderPedidos();
       if(esPrimero) mostrarAvisoInstalar();
+      mandarAPedidosWeb(pedidoLocal, lines); // nunca bloquea ni retrasa el WhatsApp de arriba
     });
 
     document.getElementById("installBannerClose").addEventListener("click", function(){
