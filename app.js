@@ -151,7 +151,8 @@
   });
 
   var state = {cat:"todos", q:"", cart:{}, extras:[], obras:[], pedidos:[], form:{
-    nombre:"", entrega:"retiro", direccion:"", ubicacion:"", contacto:"", referencia:""
+    nombre:"", entrega:"retiro", direccion:"", ubicacion:"", contacto:"", referencia:"",
+    pago:"efectivo", facturaA:false, cuit:"", aceptaSustituto:true
   }};
 
   try{
@@ -429,6 +430,14 @@
     } else {
       msg += "\n*ENTREGA:* Retiro en el corralón";
     }
+    var PAGO_LABEL = {efectivo:"Efectivo", transferencia:"Transferencia", tarjeta:"Tarjeta (recargo a confirmar)"};
+    msg += "\n*MEDIO DE PAGO:* " + (PAGO_LABEL[f.pago] || "Efectivo");
+    if(f.facturaA){
+      msg += "\n*FACTURA A" + (f.cuit ? " · CUIT " + f.cuit : " (falta el CUIT, te lo pedimos por WhatsApp)") + "*";
+    }
+    if(!f.aceptaSustituto){
+      msg += "\n*Si falta algo, NO acepto un equivalente de otra marca — consultarme antes.*";
+    }
     if(state.extras.length){
       msg += "\n\n*TAMBIÉN NECESITO (no estaba publicado):*\n";
       state.extras.forEach(function(l){ msg += "• " + l + "\n"; });
@@ -625,6 +634,31 @@
       });
       document.getElementById("envioFields").hidden = state.form.entrega !== "envio";
     }
+    Array.prototype.forEach.call(document.querySelectorAll("#pagoRow .radio-pill"), function(pill){
+      pill.addEventListener("click", function(){
+        state.form.pago = pill.getAttribute("data-val");
+        syncPago(); save(); renderCart();
+      });
+    });
+    function syncPago(){
+      Array.prototype.forEach.call(document.querySelectorAll("#pagoRow .radio-pill"), function(p){
+        var on = p.getAttribute("data-val") === state.form.pago;
+        p.classList.toggle("sel", on);
+        p.querySelector("input").checked = on;
+      });
+      document.getElementById("pagoHint").hidden = state.form.pago !== "tarjeta";
+    }
+    document.getElementById("fFacturaA").addEventListener("change", function(e){
+      state.form.facturaA = e.target.checked;
+      document.getElementById("cuitField").hidden = !state.form.facturaA;
+      save(); renderCart();
+    });
+    document.getElementById("fCuit").addEventListener("input", function(e){
+      state.form.cuit = e.target.value; save(); renderCart();
+    });
+    document.getElementById("fAceptaSustituto").addEventListener("change", function(e){
+      state.form.aceptaSustituto = e.target.checked; save(); renderCart();
+    });
     document.getElementById("cLadAdd").addEventListener("click", function(){
       var r = calcLadr();
       if(r.u > 0){ addQty(r.id, r.u); save(); render("all"); toast(fmtQty(r.u)+" ladrillones agregados ✓"); }
@@ -641,7 +675,12 @@
     document.getElementById("fUbicacion").value = state.form.ubicacion || "";
     document.getElementById("fContacto").value = state.form.contacto || "";
     document.getElementById("fReferencia").value = state.form.referencia || "";
+    document.getElementById("fFacturaA").checked = !!state.form.facturaA;
+    document.getElementById("cuitField").hidden = !state.form.facturaA;
+    document.getElementById("fCuit").value = state.form.cuit || "";
+    document.getElementById("fAceptaSustituto").checked = state.form.aceptaSustituto !== false;
     syncEntrega();
+    syncPago();
 
     // Barra inferior (móvil): "Pedido" abre el mismo panel que "Mi pedido" del
     // header. #cartPanel vive DENTRO de #view-inicio (ver el <aside> en el
