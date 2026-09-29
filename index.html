@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#e2231a">
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="estilos.css?v=20">
+<link rel="stylesheet" href="estilos.css?v=21">
 </head>
 <body>
 
@@ -17,6 +17,19 @@
   <h1>Materiales para toda tu obra</h1>
   <p>Catálogo, precios y pedidos del corralón, desde el celular.</p>
   <button type="button" class="btn btn-primary btn-block" id="welcomeStart">Empezar</button>
+</div>
+
+<div id="productSheet" class="product-sheet" hidden>
+  <button type="button" class="product-sheet-close" id="fichaClose" aria-label="Cerrar">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="product-sheet-photo" id="fichaFoto"></div>
+  <div class="product-sheet-body">
+    <p class="product-sheet-desc" id="fichaDesc"></p>
+    <p class="item-unit" id="fichaUnit"></p>
+    <span class="price product-sheet-price" id="fichaPrice"></span>
+    <div class="product-sheet-actions" id="fichaAcciones"></div>
+  </div>
 </div>
 
 <header class="site">
@@ -174,6 +187,7 @@
         </div>
         <div class="cart-scroll">
           <ul class="cart-items" id="cartItems"></ul>
+          <div class="sugeridos-wrap" id="sugeridosWrap" hidden></div>
           <div class="cart-form">
             <div class="field">
               <label for="fNombre">Apellido y nombre <span class="req">*</span></label>
@@ -482,6 +496,6 @@
   </a>
 </nav>
 
-<script src="app.js?v=20"></script>
+<script src="app.js?v=21"></script>
 </body>
 </html>

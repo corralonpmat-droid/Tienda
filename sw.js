@@ -5,7 +5,7 @@
 // Subir CACHE_VERSION cuando cambie algo en ARCHIVOS_PRECACHE (mismo criterio
 // que el "?v=16" de estilos.css en index.html) para que los celulares con la
 // versión anterior instalada bajen la nueva.
-var CACHE_VERSION = "pmat-v4";
+var CACHE_VERSION = "pmat-v5";
 
 // Los nombres de estilos.css/app.js llevan el mismo "?v=N" que pide
 // index.html — si no coinciden exacto, cachea una URL que la página nunca
@@ -15,8 +15,8 @@ var CACHE_VERSION = "pmat-v4";
 var ARCHIVOS_PRECACHE = [
   "./",
   "index.html",
-  "estilos.css?v=20",
-  "app.js?v=20",
+  "estilos.css?v=21",
+  "app.js?v=21",
   "manifest.json",
   "logo.png",
   "icon-192.png",
@@ -50,9 +50,10 @@ self.addEventListener("fetch", function(event){
   var url = new URL(req.url);
   if(url.origin !== self.location.origin) return; // Google Fonts, etc. — sin tocar
 
-  // productos.json (y sus fotos): siempre intenta la red primero. Un precio
-  // viejo es peor que una espera de medio segundo.
-  if(url.pathname.indexOf("productos.json") !== -1){
+  // productos.json y sugeridos.json: siempre intenta la red primero. Un
+  // precio viejo (o un "Llevá también" desactualizado) es peor que una
+  // espera de medio segundo.
+  if(url.pathname.indexOf("productos.json") !== -1 || url.pathname.indexOf("sugeridos.json") !== -1){
     event.respondWith(
       fetch(req).then(function(res){
         var copia = res.clone();

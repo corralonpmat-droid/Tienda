@@ -82,6 +82,20 @@
       });
   }
 
+  // "Llevá también" (carrito): reglas fijas por rubro, en sugeridos.json al
+  // lado de este archivo — Marcos lo completa a mano con códigos reales
+  // (mismo criterio que calculadoras.json/zonas.json: no se inventa acá).
+  // Formato: {"<rubro>": ["<cod1>", "<cod2>", ...], ...}, una clave por cada
+  // CATS.key de arriba. Mientras el archivo tenga arrays vacíos, la sección
+  // simplemente no aparece — no rompe nada.
+  var SUGERIDOS = {};
+  function cargarSugeridos(){
+    return fetch("sugeridos.json", {cache:"no-store"})
+      .then(function(res){ return res.ok ? res.json() : {}; })
+      .then(function(data){ SUGERIDOS = (data && typeof data === "object") ? data : {}; })
+      .catch(function(){ SUGERIDOS = {}; });
+  }
+
   var BRANDS = [
     "Loma Negra","Holcim","Santa Elena","Prego","Saladillo","IPS","Plastiferro","Genrod",
     "Ferrum","Valfort","Duke","Malvar","Vento","Solar","Fumaca","Crechio","Epuye","Wireflex"
@@ -284,7 +298,7 @@
       : '<button type="button" class="btn btn-yellow btn-sm btn-block" data-add="'+item.id+'">Agregar</button>';
     return '<article class="item'+(on?' in-cart':'')+'">' +
       (on ? '<span class="item-flag">En tu pedido</span>' : '') +
-      '<div class="item-photo">'+fotoHtml(item,44)+'</div>' +
+      '<div class="item-photo" data-open="'+item.id+'">'+fotoHtml(item,44)+'</div>' +
       '<div class="item-body">' +
         '<p class="item-desc">'+item.desc+'</p>' +
         '<p class="item-unit">precio por '+unitCorta(item.unit)+'</p>' +
@@ -322,6 +336,9 @@
       });
       var input = st.querySelector("input");
       input.addEventListener("change", function(){ setQty(id, parseFloat(String(input.value).replace(",", "."))); });
+    });
+    Array.prototype.forEach.call(root.querySelectorAll("[data-open]"), function(el){
+      el.addEventListener("click", function(){ abrirFicha(el.getAttribute("data-open")); });
     });
   }
 
@@ -445,11 +462,41 @@
     msg += "\n\n(Pedido armado desde el catálogo web)";
     return msg;
   }
+  // "Llevá también": junta las reglas de SUGERIDOS de cada rubro presente en
+  // el carrito, saca lo que ya está en el pedido, y muestra hasta 8.
+  function renderSugeridos(lines){
+    var wrap = document.getElementById("sugeridosWrap");
+    if(!wrap) return;
+    var rubros = {};
+    lines.forEach(function(l){ var it = byId(l.id); if(it) rubros[it.cat] = true; });
+    var ids = [];
+    Object.keys(rubros).forEach(function(cat){
+      (SUGERIDOS[cat] || []).forEach(function(cod){
+        if(!state.cart[cod] && ids.indexOf(cod) === -1) ids.push(cod);
+      });
+    });
+    var items = ids.map(byId).filter(Boolean).slice(0, 8);
+    if(!items.length){ wrap.hidden = true; wrap.innerHTML = ""; return; }
+    wrap.hidden = false;
+    wrap.innerHTML = '<p class="sug-title">Llevá también</p><div class="sug-row">' +
+      items.map(function(it){
+        return '<button type="button" class="sug-card" data-sug="'+it.id+'">' +
+          '<span class="sug-add">+</span>' +
+          '<span class="sug-photo">'+fotoHtml(it, 20)+'</span>' +
+          '<span class="sug-desc">'+it.desc+'</span>' +
+          '<span class="sug-price">'+fmt(it.price)+'</span>' +
+        '</button>';
+      }).join("") + '</div>';
+    Array.prototype.forEach.call(wrap.querySelectorAll("[data-sug]"), function(btn){
+      btn.addEventListener("click", function(){ agregar(btn.getAttribute("data-sug")); });
+    });
+  }
   function renderCart(){
     var lines = cartLines();
     var list = document.getElementById("cartItems");
     var total = lines.reduce(function(a,l){return a+l.subtotal;},0);
     var waBtn = document.getElementById("waBtn");
+    renderSugeridos(lines);
 
     if(!lines.length && !state.extras.length){
       list.innerHTML = '<li class="cart-empty">Todavía no elegiste nada.<br>Agregá un artículo del catálogo para empezar.</li>';
@@ -510,6 +557,7 @@
   function render(what){
     if(what === "all"){ renderChips(); renderCatalog(); }
     if(PEDIDO_ACTIVO) renderCart();
+    if(fichaAbierta) renderFicha();
   }
 
   /* ---------- Mi cuenta: obras y pedidos guardados en el celular ---------- */
@@ -573,6 +621,65 @@
   /* ---------- eventos ---------- */
   document.getElementById("searchInput").addEventListener("input", function(e){
     state.q = e.target.value; renderCatalog();
+  });
+
+  /* ---------- ficha de producto a pantalla completa ---------- */
+  // Funciona haya o no pedido activo (igual que itemCard: sin PEDIDO_ACTIVO
+  // se ve todo salvo el botón de agregar) — por eso vive acá afuera, no
+  // adentro de iniciarPedido().
+  var fichaAbierta = null;
+  function fichaAcciones(item){
+    if(!PEDIDO_ACTIVO) return "";
+    var qty = state.cart[item.id];
+    var on = qty != null;
+    var mn = minQty(item);
+    if(on){
+      return '<div class="stepper" data-id="'+item.id+'">' +
+          '<button type="button" data-act="dec" aria-label="Restar">–</button>' +
+          '<input type="number" min="'+mn+'" step="'+(item.frac?'0.5':'1')+'" value="'+qty+'" aria-label="Cantidad de '+escAttr(item.desc)+'">' +
+          '<button type="button" data-act="inc" aria-label="Sumar">+</button>' +
+        '</div>' +
+        '<button type="button" class="btn btn-outline" data-quit="'+item.id+'">Quitar</button>';
+    }
+    return '<button type="button" class="btn btn-yellow btn-block" data-add="'+item.id+'">Agregar</button>';
+  }
+  function renderFicha(){
+    if(!fichaAbierta) return;
+    var item = byId(fichaAbierta);
+    if(!item){ cerrarFicha(); return; }
+    document.getElementById("fichaFoto").innerHTML = fotoHtml(item, 64);
+    document.getElementById("fichaDesc").textContent = item.desc;
+    document.getElementById("fichaUnit").textContent = "Precio por " + unitCorta(item.unit);
+    document.getElementById("fichaPrice").textContent = fmt(item.price);
+    var acc = document.getElementById("fichaAcciones");
+    acc.innerHTML = fichaAcciones(item);
+    var add = acc.querySelector("[data-add]");
+    if(add) add.addEventListener("click", function(){ agregar(item.id); });
+    var quit = acc.querySelector("[data-quit]");
+    if(quit) quit.addEventListener("click", function(){ removeLine(item.id); });
+    var st = acc.querySelector(".stepper");
+    if(st){
+      Array.prototype.forEach.call(st.querySelectorAll("button"), function(btn){
+        btn.addEventListener("click", function(){ step(item.id, btn.getAttribute("data-act")==="inc"?1:-1); });
+      });
+      var input = st.querySelector("input");
+      input.addEventListener("change", function(){ setQty(item.id, parseFloat(String(input.value).replace(",", "."))); });
+    }
+  }
+  function abrirFicha(id){
+    fichaAbierta = id;
+    renderFicha();
+    document.getElementById("productSheet").hidden = false;
+    document.body.style.overflow = "hidden";
+  }
+  function cerrarFicha(){
+    fichaAbierta = null;
+    document.getElementById("productSheet").hidden = true;
+    document.body.style.overflow = "";
+  }
+  document.getElementById("fichaClose").addEventListener("click", cerrarFicha);
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape" && fichaAbierta) cerrarFicha();
   });
 
   // Carrito como modal a pantalla completa (2026-09-14): abrirCarrito() lo
@@ -777,6 +884,9 @@
     render("all");
     calcLadr();
     calcCer();
+  });
+  cargarSugeridos().then(function(){
+    if(PEDIDO_ACTIVO) renderCart(); // por si el carrito ya traía ítems restaurados de localStorage
   });
 
   // PWA: registra el service worker (cachea el shell para que abra al
