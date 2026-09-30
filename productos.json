@@ -48,12 +48,76 @@
     "frac": false
   },
   {
+    "cod": "CA",
+    "desc": "CAMIONADA DE ARENA COMUN MEDIANA",
+    "cat": "cemento",
+    "unit": "unidad",
+    "price": 176000.0,
+    "frac": false
+  },
+  {
+    "cod": "CAF",
+    "desc": "CAMIONADA DE ARENA FINA",
+    "cat": "cemento",
+    "unit": "unidad",
+    "price": 176000.0,
+    "frac": false
+  },
+  {
+    "cod": "CAL",
+    "desc": "CAMIONADA DE ARENA LAVADA MEDIANA",
+    "cat": "cemento",
+    "unit": "unidad",
+    "price": 220000.0,
+    "frac": false
+  },
+  {
+    "cod": "CRL",
+    "desc": "CAMIONADA RIPIOSA LAVADA",
+    "cat": "cemento",
+    "unit": "unidad",
+    "price": 225500.0,
+    "frac": false
+  },
+  {
+    "cod": "CRQ",
+    "desc": "CAMIONADA RIPIOSA QUIJANO",
+    "cat": "cemento",
+    "unit": "unidad",
+    "price": 170500.0,
+    "frac": false
+  },
+  {
     "cod": "6470",
     "desc": "CEMENTO BLANCO X KG. PREGO",
     "cat": "cemento",
     "unit": "unidad",
     "price": 3164.79,
     "frac": true
+  },
+  {
+    "cod": "A3",
+    "desc": "MT. DE ARENA ENTREVERADA M.",
+    "cat": "cemento",
+    "unit": "metro",
+    "price": 48400.0,
+    "frac": false
+  },
+  {
+    "cod": "A1",
+    "desc": "MT. DE ARENA LAVADA M.",
+    "cat": "cemento",
+    "unit": "metro",
+    "price": 55000.0,
+    "frac": false
+  },
+  {
+    "cod": "R1",
+    "desc": "MT. DE RIPIOSA",
+    "cat": "cemento",
+    "unit": "medio metro",
+    "price": 46200.0,
+    "frac": false
   },
   {
     "cod": "BPWS",
@@ -120,6 +184,30 @@
     "frac": false
   },
   {
+    "cod": "9586",
+    "desc": "CAÑO FLEXIBLE BLANCO  3/4\" MT GENROD",
+    "cat": "electricidad",
+    "unit": "unidad",
+    "price": 453.24,
+    "frac": false
+  },
+  {
+    "cod": "940",
+    "desc": "CAÑO FLEXIBLE BLANCO  7/8\" MT  GENROD",
+    "cat": "electricidad",
+    "unit": "unidad",
+    "price": 566.79,
+    "frac": false
+  },
+  {
+    "cod": "ISO.RUFI.015",
+    "desc": "AISLANTE TERMICO ALUM SIMPLE 10 MM 1X20 MT \"RUFI\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 49773.84,
+    "frac": false
+  },
+  {
     "cod": "1",
     "desc": "BALDE PLASTICO VOSS 2000",
     "cat": "ferreteria",
@@ -144,11 +232,67 @@
     "frac": false
   },
   {
+    "cod": "CH",
+    "desc": "BOLSA DE CAL HID. M. VIRGINIA  ~ 23 kgs.",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 8500.2,
+    "frac": false
+  },
+  {
+    "cod": "BMS",
+    "desc": "BOLSA DE MAESTRO x 25 KGS.",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 7950.0,
+    "frac": false
+  },
+  {
+    "cod": "BPL",
+    "desc": "BOLSA DE PLASTICOR x 25 KGS.",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 7840.0,
+    "frac": false
+  },
+  {
+    "cod": "4509801",
+    "desc": "BOVEDILLA TELGOPOR 12cm X1 MT",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 6090.0,
+    "frac": false
+  },
+  {
+    "cod": "FCW",
+    "desc": "FINO A LA CAL INTERIOR X 25 KG \"WEBER\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 10356.6,
+    "frac": false
+  },
+  {
     "cod": "GO06E",
     "desc": "GRAMPA OMEGA P/CAÑO AGUA 3/4\" ECO",
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 256.35,
+    "frac": false
+  },
+  {
+    "cod": "M15",
+    "desc": "MALLA Q-084 (2,00X6mts) H4",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 33727.45,
+    "frac": false
+  },
+  {
+    "cod": "M515",
+    "desc": "MALLA Q-131 (2,40X6mts) H5",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 99429.26,
     "frac": false
   },
   {
@@ -224,6 +368,46 @@
     "frac": false
   },
   {
+    "cod": "CHAC3.5",
+    "desc": "CHAPA CINCALUM 27 X 3.50 MT",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 52433.01,
+    "frac": false
+  },
+  {
+    "cod": "CHAC5",
+    "desc": "CHAPA CINCALUM 27 X 5.00 MT",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 74904.31,
+    "frac": false
+  },
+  {
+    "cod": "PC100",
+    "desc": "PERFIL C 100X50X15X1.6  X 12 MTS.",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 114968.0,
+    "frac": false
+  },
+  {
+    "cod": "PC80",
+    "desc": "PERFIL C 80X40X15X1,6  X 12 MTS.",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 94220.0,
+    "frac": false
+  },
+  {
+    "cod": "SK",
+    "desc": "LADRILLON SCAC PARA LOSA 12.5X40X25",
+    "cat": "ladrillos",
+    "unit": "unidad",
+    "price": 2550.09,
+    "frac": false
+  },
+  {
     "cod": "L8",
     "desc": "LADRILLONES  8 X 18 X 30",
     "cat": "ladrillos",
@@ -280,19 +464,11 @@
     "frac": false
   },
   {
-    "cod": "9586",
-    "desc": "CAÑO FLEXIBLE BLANCO  3/4\" MT GENROD",
+    "cod": "CN110",
+    "desc": "CAÑO PVC N1 110 X 4MTS STANDART \"AMANCO\"",
     "cat": "plomeria",
     "unit": "unidad",
-    "price": 453.24,
-    "frac": false
-  },
-  {
-    "cod": "940",
-    "desc": "CAÑO FLEXIBLE BLANCO  7/8\" MT  GENROD",
-    "cat": "plomeria",
-    "unit": "unidad",
-    "price": 566.79,
+    "price": 38701.17,
     "frac": false
   },
   {
