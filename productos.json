@@ -16,6 +16,14 @@
     "frac": false
   },
   {
+    "cod": "CH",
+    "desc": "BOLSA DE CAL HID. M. VIRGINIA  ~ 23 kgs.",
+    "cat": "cemento",
+    "unit": "unidad",
+    "price": 8500.2,
+    "frac": false
+  },
+  {
     "cod": "CHS",
     "desc": "BOLSA DE CAL HID. SANTA ELENA X 20 KGS",
     "cat": "cemento",
@@ -48,19 +56,11 @@
     "frac": false
   },
   {
-    "cod": "CA",
-    "desc": "CAMIONADA DE ARENA COMUN MEDIANA",
+    "cod": "BMS",
+    "desc": "BOLSA DE MAESTRO x 25 KGS.",
     "cat": "cemento",
     "unit": "unidad",
-    "price": 176000.0,
-    "frac": false
-  },
-  {
-    "cod": "CAF",
-    "desc": "CAMIONADA DE ARENA FINA",
-    "cat": "cemento",
-    "unit": "unidad",
-    "price": 176000.0,
+    "price": 7950.0,
     "frac": false
   },
   {
@@ -80,14 +80,6 @@
     "frac": false
   },
   {
-    "cod": "CRQ",
-    "desc": "CAMIONADA RIPIOSA QUIJANO",
-    "cat": "cemento",
-    "unit": "unidad",
-    "price": 170500.0,
-    "frac": false
-  },
-  {
     "cod": "6470",
     "desc": "CEMENTO BLANCO X KG. PREGO",
     "cat": "cemento",
@@ -96,19 +88,19 @@
     "frac": true
   },
   {
+    "cod": "FCW",
+    "desc": "FINO A LA CAL INTERIOR X 25 KG \"WEBER\"",
+    "cat": "cemento",
+    "unit": "unidad",
+    "price": 10356.6,
+    "frac": false
+  },
+  {
     "cod": "A3",
     "desc": "MT. DE ARENA ENTREVERADA M.",
     "cat": "cemento",
     "unit": "metro",
     "price": 48400.0,
-    "frac": false
-  },
-  {
-    "cod": "A1",
-    "desc": "MT. DE ARENA LAVADA M.",
-    "cat": "cemento",
-    "unit": "metro",
-    "price": 55000.0,
     "frac": false
   },
   {
@@ -232,43 +224,11 @@
     "frac": false
   },
   {
-    "cod": "CH",
-    "desc": "BOLSA DE CAL HID. M. VIRGINIA  ~ 23 kgs.",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 8500.2,
-    "frac": false
-  },
-  {
-    "cod": "BMS",
-    "desc": "BOLSA DE MAESTRO x 25 KGS.",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 7950.0,
-    "frac": false
-  },
-  {
     "cod": "BPL",
     "desc": "BOLSA DE PLASTICOR x 25 KGS.",
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 7840.0,
-    "frac": false
-  },
-  {
-    "cod": "4509801",
-    "desc": "BOVEDILLA TELGOPOR 12cm X1 MT",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 6090.0,
-    "frac": false
-  },
-  {
-    "cod": "FCW",
-    "desc": "FINO A LA CAL INTERIOR X 25 KG \"WEBER\"",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 10356.6,
     "frac": false
   },
   {
@@ -348,7 +308,7 @@
     "desc": "BARRA DE HIERRO  8",
     "cat": "hierros",
     "unit": "unidad",
-    "price": 11066.9,
+    "price": 11206.26,
     "frac": false
   },
   {
@@ -356,7 +316,7 @@
     "desc": "BARRA DE HIERRO 10",
     "cat": "hierros",
     "unit": "unidad",
-    "price": 17468.37,
+    "price": 17551.05,
     "frac": false
   },
   {
@@ -364,7 +324,7 @@
     "desc": "BARRA DE HIERRO 12",
     "cat": "hierros",
     "unit": "unidad",
-    "price": 24554.25,
+    "price": 24760.22,
     "frac": false
   },
   {
@@ -397,6 +357,14 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 94220.0,
+    "frac": false
+  },
+  {
+    "cod": "4509801",
+    "desc": "BOVEDILLA TELGOPOR 12cm X1 MT",
+    "cat": "ladrillos",
+    "unit": "unidad",
+    "price": 6090.0,
     "frac": false
   },
   {
