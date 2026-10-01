@@ -372,7 +372,7 @@
     "desc": "LADRILLON SCAC PARA LOSA 12.5X40X25",
     "cat": "ladrillos",
     "unit": "unidad",
-    "price": 2550.09,
+    "price": 2470.0,
     "frac": false
   },
   {
@@ -380,7 +380,7 @@
     "desc": "LADRILLONES  8 X 18 X 30",
     "cat": "ladrillos",
     "unit": "unidad",
-    "price": 710.02,
+    "price": 682.0,
     "frac": false
   },
   {
@@ -388,7 +388,7 @@
     "desc": "LADRILLONES 12 X 18 X 30",
     "cat": "ladrillos",
     "unit": "unidad",
-    "price": 940.01,
+    "price": 891.0,
     "frac": false
   },
   {
@@ -396,7 +396,7 @@
     "desc": "LADRILLONES 18 X 18 X 30",
     "cat": "ladrillos",
     "unit": "unidad",
-    "price": 1265.0,
+    "price": 1210.0,
     "frac": false
   },
   {
