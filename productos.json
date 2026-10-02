@@ -4,7 +4,7 @@
     "desc": "BOLSA DE  ARENA FINA",
     "cat": "cemento",
     "unit": "unidad",
-    "price": 900.0,
+    "price": 1000.0,
     "frac": false
   },
   {
@@ -12,7 +12,7 @@
     "desc": "BOLSA DE ARENA MEDIANA",
     "cat": "cemento",
     "unit": "unidad",
-    "price": 800.0,
+    "price": 1000.0,
     "frac": false
   },
   {
