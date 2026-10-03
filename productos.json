@@ -88,6 +88,14 @@
     "frac": true
   },
   {
+    "cod": "CINECO",
+    "desc": "CINTA TRANSPARENTE 48X 40 ECO",
+    "cat": "cemento",
+    "unit": "unidad",
+    "price": 1752.1,
+    "frac": false
+  },
+  {
     "cod": "FCW",
     "desc": "FINO A LA CAL INTERIOR X 25 KG \"WEBER\"",
     "cat": "cemento",
