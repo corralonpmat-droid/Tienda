@@ -124,7 +124,7 @@
     "desc": "BOLSA PEGAMENTO ESTANDAR X 25 KGS. WEBER",
     "cat": "ceramicos",
     "unit": "unidad",
-    "price": 7618.76,
+    "price": 7706.44,
     "frac": false
   },
   {
@@ -240,6 +240,14 @@
     "frac": false
   },
   {
+    "cod": "ECO2.5",
+    "desc": "ELECTRODO 2.5 MM X KG. CONARCO",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 14775.66,
+    "frac": false
+  },
+  {
     "cod": "GO06E",
     "desc": "GRAMPA OMEGA P/CAÑO AGUA 3/4\" ECO",
     "cat": "ferreteria",
@@ -253,14 +261,6 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 33727.45,
-    "frac": false
-  },
-  {
-    "cod": "M515",
-    "desc": "MALLA Q-131 (2,40X6mts) H5",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 99429.26,
     "frac": false
   },
   {
@@ -352,6 +352,14 @@
     "frac": false
   },
   {
+    "cod": "M515",
+    "desc": "MALLA Q-131 (2,40X6mts) H5",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 99429.26,
+    "frac": false
+  },
+  {
     "cod": "PC100",
     "desc": "PERFIL C 100X50X15X1.6  X 12 MTS.",
     "cat": "hierros",
@@ -408,6 +416,14 @@
     "frac": false
   },
   {
+    "cod": "1252",
+    "desc": "AGUARRAS X 900CC \"SOLAR\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 3678.82,
+    "frac": true
+  },
+  {
     "cod": "1417",
     "desc": "ESMALTE SINTETICO X 1/2 LT. BLANCO VENTO",
     "cat": "pinturas",
@@ -424,11 +440,19 @@
     "frac": true
   },
   {
+    "cod": "3013",
+    "desc": "MEMBRANA LIQUIDA BLANCA X 20 LTS VENTO",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 99944.26,
+    "frac": false
+  },
+  {
     "cod": "9808",
     "desc": "PINTURA AL AGUA BLANCA \" VENTO \"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 7424.86,
+    "price": 7500.0,
     "frac": true
   },
   {
@@ -436,8 +460,40 @@
     "desc": "PINTURA ASFALTICA X 1 LT. \"CLIPPERFLEX\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 6700.0,
+    "price": 6805.07,
     "frac": false
+  },
+  {
+    "cod": "AWC160",
+    "desc": "CAÑO AW 4 M x 110",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 34460.72,
+    "frac": false
+  },
+  {
+    "cod": "CA035",
+    "desc": "CAÑO HIDRO 3 1/2\"",
+    "cat": "plomeria",
+    "unit": "metro",
+    "price": 2837.1,
+    "frac": true
+  },
+  {
+    "cod": "CA040",
+    "desc": "CAÑO HIDRO 3 3/4\"",
+    "cat": "plomeria",
+    "unit": "metro",
+    "price": 4154.23,
+    "frac": true
+  },
+  {
+    "cod": "CP110S",
+    "desc": "CAÑO PVC 110 STD \"BOSTICO\"",
+    "cat": "plomeria",
+    "unit": "metro",
+    "price": 7193.17,
+    "frac": true
   },
   {
     "cod": "CN110",
@@ -469,6 +525,14 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 10331.88,
+    "frac": false
+  },
+  {
+    "cod": "CANTF005",
+    "desc": "PLU CANALETA BLANCA PVC 3 MTS. PLUVITUBO",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 39418.25,
     "frac": false
   }
 ]
