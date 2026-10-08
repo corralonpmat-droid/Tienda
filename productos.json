@@ -308,7 +308,7 @@
     "desc": "BARRA DE HIERRO  6",
     "cat": "hierros",
     "unit": "unidad",
-    "price": 6592.3,
+    "price": 6160.05,
     "frac": false
   },
   {
@@ -316,7 +316,7 @@
     "desc": "BARRA DE HIERRO  8",
     "cat": "hierros",
     "unit": "unidad",
-    "price": 11206.26,
+    "price": 10780.0,
     "frac": false
   },
   {
@@ -324,7 +324,7 @@
     "desc": "BARRA DE HIERRO 10",
     "cat": "hierros",
     "unit": "unidad",
-    "price": 17551.05,
+    "price": 17050.23,
     "frac": false
   },
   {
@@ -332,7 +332,7 @@
     "desc": "BARRA DE HIERRO 12",
     "cat": "hierros",
     "unit": "unidad",
-    "price": 24760.22,
+    "price": 24090.11,
     "frac": false
   },
   {
