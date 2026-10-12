@@ -107,6 +107,11 @@
         ITEMS = (Array.isArray(data) ? data : []).map(function(r){
           return {id:r.cod, cod:r.cod, cat:r.cat, desc:r.desc, unit:r.unit, price:Number(r.price)||0, frac:!!r.frac};
         });
+        // Saca del carrito guardado los artículos que ya no están en el catálogo.
+        Object.keys(state.cart).forEach(function(id){
+          if(!byId(id) || !(Number(state.cart[id]) > 0)) delete state.cart[id];
+        });
+        save();
       })
       .catch(function(e){
         console.warn("No se pudo cargar productos.json:", e);
@@ -204,11 +209,11 @@
   try{
     var saved = JSON.parse(localStorage.getItem("pmat_pedido_v2") || "null");
     if(saved && typeof saved === "object"){
-      if(saved.cart) state.cart = saved.cart;
-      if(Array.isArray(saved.extras)) state.extras = saved.extras;
-      if(Array.isArray(saved.obras)) state.obras = saved.obras;
-      if(Array.isArray(saved.pedidos)) state.pedidos = saved.pedidos;
-      if(saved.form) state.form = Object.assign(state.form, saved.form);
+      if(saved.cart && typeof saved.cart === "object" && !Array.isArray(saved.cart)) state.cart = saved.cart;
+      if(Array.isArray(saved.extras)) state.extras = saved.extras.filter(function(x){ return typeof x === "string"; });
+      if(Array.isArray(saved.obras)) state.obras = saved.obras.filter(function(o){ return o && typeof o === "object"; });
+      if(Array.isArray(saved.pedidos)) state.pedidos = saved.pedidos.filter(function(p){ return p && typeof p === "object"; });
+      if(saved.form && typeof saved.form === "object") state.form = Object.assign(state.form, saved.form);
     }
   }catch(e){}
 
@@ -457,8 +462,12 @@
 
   /* ---------- pedido / WhatsApp ---------- */
   function cartLines(){
-    return Object.keys(state.cart).map(function(id){
-      var it = byId(id), qty = state.cart[id];
+    // Ignora lo que quedó guardado en el carrito de un artículo que ya no está
+    // publicado: antes eso tiraba un error y dejaba la página sin catálogo.
+    return Object.keys(state.cart).filter(function(id){
+      return byId(id) && Number(state.cart[id]) > 0;
+    }).map(function(id){
+      var it = byId(id), qty = Number(state.cart[id]);
       return {id:id, desc:it.desc, unit:it.unit, price:it.price, qty:qty, subtotal:Math.round(it.price*qty*100)/100};
     });
   }
@@ -645,7 +654,7 @@
       var fechaTxt = isNaN(fecha) ? "" : fecha.toLocaleDateString("es-AR") + " " + fecha.toLocaleTimeString("es-AR",{hour:"2-digit",minute:"2-digit"});
       return '<div class="pedido-card">' +
         '<div class="pedido-card-head"><span>' + fechaTxt + '</span><span class="pedido-estado">' + escAttr(p.estado || "Enviado") + '</span></div>' +
-        '<div class="obra-meta">' + p.items + (p.items === 1 ? ' artículo' : ' artículos') + ' · ' + fmt(p.total) + '</div>' +
+        '<div class="obra-meta">' + (Number(p.items)||0) + (p.items === 1 ? ' artículo' : ' artículos') + ' · ' + fmt(Number(p.total)||0) + '</div>' +
         '<button type="button" class="btn btn-outline btn-sm" data-repetir="' + i + '">Repetir pedido</button>' +
         '</div>';
     }).join("");
