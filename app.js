@@ -289,31 +289,13 @@
       BRANDS.map(function(b){ return '<span>'+b+'</span>'; }).join("");
   }
 
-  /* ---------- rubros ---------- */
-  function renderRubros(){
-    var grid = document.getElementById("rubroGrid");
-    grid.innerHTML = CATS.map(function(c){
-      var n = ITEMS.filter(function(i){return i.cat===c.key;}).length;
-      return '<button class="rubro" data-cat="'+c.key+'">' +
-        '<span class="ico">'+iconSvg(c.key,26)+'</span>' +
-        '<span><b>'+c.label+'</b><small>'+n+' con precio</small></span>' +
-      '</button>';
-    }).join("");
-    Array.prototype.forEach.call(grid.querySelectorAll(".rubro"), function(b){
-      b.addEventListener("click", function(){
-        state.cat = b.getAttribute("data-cat");
-        render("all");
-        document.getElementById("catalogo").scrollIntoView({behavior:"smooth", block:"start"});
-      });
-    });
-  }
-
   /* ---------- catálogo ---------- */
   function renderChips(){
     var row = document.getElementById("chipRow");
     var all = [{key:"todos",label:"Todos"}].concat(CATS);
     row.innerHTML = all.map(function(c){
-      return '<button class="chip" role="tab" aria-pressed="'+(state.cat===c.key)+'" data-cat="'+c.key+'">'+c.label+'</button>';
+      var n = c.key === "todos" ? ITEMS.length : ITEMS.filter(function(i){return i.cat===c.key;}).length;
+      return '<button class="chip" role="tab" aria-pressed="'+(state.cat===c.key)+'" data-cat="'+c.key+'">'+c.label+' <small>'+n+'</small></button>';
     }).join("");
     Array.prototype.forEach.call(row.querySelectorAll(".chip"), function(btn){
       btn.addEventListener("click", function(){ state.cat = btn.getAttribute("data-cat"); render("all"); });
@@ -986,7 +968,6 @@
   renderBrandsGrid();
   showView((location.hash || "#inicio").replace("#",""));
   cargarCatalogo().then(function(){
-    renderRubros();
     render("all");
     calcLadr();
     calcCer();

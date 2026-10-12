@@ -207,19 +207,6 @@ section.band.tint{background:var(--surface-2);}
 .band-head p{margin:0 auto;color:var(--muted);max-width:66ch;font-size:15.5px;}
 .band-head.left p{margin-inline:0;}
 
-/* ---------- rubros ---------- */
-.rubro-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(172px,1fr));}
-.rubro{
-  display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;
-  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
-  padding:20px 14px;cursor:pointer;color:var(--ink);box-shadow:var(--shadow-sm);
-  transition:transform .14s ease, box-shadow .14s ease;
-}
-.rubro:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--primary);}
-.rubro .ico{width:54px;height:54px;border-radius:var(--r-sm);background:var(--surface-2);display:flex;align-items:center;justify-content:center;color:var(--primary);}
-.rubro b{display:block;font-size:14.5px;font-weight:600;line-height:1.3;}
-.rubro small{color:var(--muted);font-size:12.5px;}
-
 /* ---------- pegá tu lista ---------- */
 .paste-card{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:24px;display:grid;gap:16px;}
 @media (min-width:840px){.paste-card{grid-template-columns:1.35fr .65fr;gap:24px;align-items:start;}}
@@ -582,3 +569,4 @@ footer.site-footer strong{color:var(--on-panel);display:block;margin-bottom:5px;
   position:absolute;top:6px;right:6px;width:22px;height:22px;border-radius:50%;
   background:var(--primary);color:var(--on-primary);font-size:15px;font-weight:700;line-height:22px;text-align:center;
 }
+.chip small{font-size:11.5px;opacity:.7;margin-left:3px;font-weight:500;}
