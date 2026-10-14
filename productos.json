@@ -96,6 +96,14 @@
     "frac": false
   },
   {
+    "cod": "FCWE",
+    "desc": "FINO A LA CAL EXT. FORTE X 25 KG \"WEBER\"",
+    "cat": "cemento",
+    "unit": "unidad",
+    "price": 11789.17,
+    "frac": false
+  },
+  {
     "cod": "FCW",
     "desc": "FINO A LA CAL INTERIOR X 25 KG \"WEBER\"",
     "cat": "cemento",
@@ -176,6 +184,22 @@
     "frac": false
   },
   {
+    "cod": "F4005N",
+    "desc": "CABLE T/TALLER 2X1.5 IRAM NEGRO FONSECA",
+    "cat": "electricidad",
+    "unit": "metro",
+    "price": 2104.32,
+    "frac": true
+  },
+  {
+    "cod": "CN1022",
+    "desc": "CABLE T/TALLER 2X2.5 MM FONSECA",
+    "cat": "electricidad",
+    "unit": "metro",
+    "price": 3353.18,
+    "frac": true
+  },
+  {
     "cod": "4740",
     "desc": "CABLE UTP CAT 5E EXTERIOR",
     "cat": "electricidad",
@@ -197,6 +221,14 @@
     "cat": "electricidad",
     "unit": "unidad",
     "price": 566.79,
+    "frac": false
+  },
+  {
+    "cod": "AL050",
+    "desc": "ADHESIVO PVC  60 c.c. LOSUNG",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 4554.93,
     "frac": false
   },
   {
@@ -240,11 +272,163 @@
     "frac": false
   },
   {
+    "cod": "VCE",
+    "desc": "CERESITA X  1KG",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 4900.0,
+    "frac": false
+  },
+  {
+    "cod": "VCE4",
+    "desc": "CERESITA X  4KG",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 14366.23,
+    "frac": false
+  },
+  {
+    "cod": "VCE10",
+    "desc": "CERESITA X 10 KG",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 30460.47,
+    "frac": false
+  },
+  {
+    "cod": "VCE20",
+    "desc": "CERESITA X 20 KG",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 55557.6,
+    "frac": false
+  },
+  {
+    "cod": "2742",
+    "desc": "CERRADURA PRIVE N 208 FRENTE ANCHO",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 22635.5,
+    "frac": false
+  },
+  {
+    "cod": "C1.5",
+    "desc": "CLAVO 1 1/2\" X KG.",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 5366.21,
+    "frac": false
+  },
+  {
+    "cod": "C2.5",
+    "desc": "CLAVO 2 1/2\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 5308.8,
+    "frac": false
+  },
+  {
+    "cod": "2056345",
+    "desc": "DISCO DIAMANTADO 3 EN 1 SG/TB/C 4,5\" RHEIN",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 10007.39,
+    "frac": false
+  },
+  {
+    "cod": "205637",
+    "desc": "DISCO DIAMANTADO 3 EN 1 SG/TB/C 7\" RHEIN",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 23820.69,
+    "frac": false
+  },
+  {
+    "cod": "2054045",
+    "desc": "DISCO DIAMANTADO CONTINUO 4.5\" RHEIN",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 6331.34,
+    "frac": false
+  },
+  {
+    "cod": "SM649",
+    "desc": "DISCO DIAMANTADO MULTIUSO (TAJA/PIEDRA/METAL) 4.5\" NINERDARS",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 9443.78,
+    "frac": false
+  },
+  {
+    "cod": "2053045",
+    "desc": "DISCO DIAMANTADO SEGMENTADO  LASER   4.5\" RHEIN",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 7492.24,
+    "frac": false
+  },
+  {
+    "cod": "205307",
+    "desc": "DISCO DIAMANTADO SEGMENTADO  LASER   7\" RHEIN",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 18619.55,
+    "frac": false
+  },
+  {
+    "cod": "PYS-4.5",
+    "desc": "DISCO DIAMANTADO SEGMENTADO 4.5\" ELEMENT",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 5500.0,
+    "frac": false
+  },
+  {
+    "cod": "2055045",
+    "desc": "DISCO DIAMANTADO TURBO 4,5\" RHEIN",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 8705.28,
+    "frac": false
+  },
+  {
+    "cod": "TRF-4.5-3",
+    "desc": "DISCO DIAMANTADO TURBO FINO 4.5\" ALIAFOR",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 42947.49,
+    "frac": false
+  },
+  {
+    "cod": "TRF-7",
+    "desc": "DISCO DIAMANTADO TURBO FINO 7\" ALIAFOR",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 87602.82,
+    "frac": false
+  },
+  {
+    "cod": "SM-662-46",
+    "desc": "DISCO DIAMANTADO ULTRA DELGADO 4.5\" NINERDARS",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 19000.0,
+    "frac": false
+  },
+  {
     "cod": "ECO2.5",
     "desc": "ELECTRODO 2.5 MM X KG. CONARCO",
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 14775.66,
+    "frac": false
+  },
+  {
+    "cod": "6",
+    "desc": "FILTRO 20 CM. \"VOSS\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 2655.07,
     "frac": false
   },
   {
@@ -261,6 +445,70 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 33727.45,
+    "frac": false
+  },
+  {
+    "cod": "MAL3",
+    "desc": "MEMBRANA ASFALTICA 3 MM LAMIPLAST 25KG VERDE",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 63768.19,
+    "frac": false
+  },
+  {
+    "cod": "MAL4",
+    "desc": "MEMBRANA ASFALTICA 4 MM LAMIPLAST 35KG AMARILLO",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 81625.79,
+    "frac": false
+  },
+  {
+    "cod": "MKAL1",
+    "desc": "MUROKAL X 1 LT.",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 51666.24,
+    "frac": false
+  },
+  {
+    "cod": "ABE.MA.25.PLA.170",
+    "desc": "PUERTA PLACA MAD. PINO PARANA 700X20 D",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 64028.41,
+    "frac": false
+  },
+  {
+    "cod": "ABE.MA.25.PLA.171",
+    "desc": "PUERTA PLACA MAD. PINO PARANA 700X20 I",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 64028.41,
+    "frac": false
+  },
+  {
+    "cod": "ABE.MA.25.PLA.18",
+    "desc": "PUERTA PLACA MAD. PINO PARANA 800X20 D",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 66201.16,
+    "frac": false
+  },
+  {
+    "cod": "ABE.MA.25.PLA.181",
+    "desc": "PUERTA PLACA MAD. PINO PARANA 800X20 I",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 65978.64,
+    "frac": false
+  },
+  {
+    "cod": "2242-0418440",
+    "desc": "SIKA 1 HIDROFUGO X 5 LTS.",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 9798.5,
     "frac": false
   },
   {
@@ -344,11 +592,43 @@
     "frac": false
   },
   {
+    "cod": "CHAC4.5",
+    "desc": "CHAPA CINCALUM 27 X 4.50 MT",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 67413.88,
+    "frac": false
+  },
+  {
     "cod": "CHAC5",
     "desc": "CHAPA CINCALUM 27 X 5.00 MT",
     "cat": "hierros",
     "unit": "unidad",
     "price": 74904.31,
+    "frac": false
+  },
+  {
+    "cod": "CHAC6.0",
+    "desc": "CHAPA CINCALUM 27 X 6.00 MT",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 89885.17,
+    "frac": false
+  },
+  {
+    "cod": "CHAC7.0",
+    "desc": "CHAPA CINCALUM 27 X 7.00 MT",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 104866.03,
+    "frac": false
+  },
+  {
+    "cod": "C2",
+    "desc": "CLAVO 2 \" X KG.",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 5374.26,
     "frac": false
   },
   {
@@ -373,6 +653,22 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 94220.0,
+    "frac": false
+  },
+  {
+    "cod": "HIE.TUB.EST.594",
+    "desc": "TUBO RECTANGULAR 20X50X1.25  6 MTS(REGLA)",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 38259.42,
+    "frac": false
+  },
+  {
+    "cod": "HIE.TUB.EST.599",
+    "desc": "TUBO RECTANGULAR 20X60X1.25  6 MTS(REGLA)",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 43803.76,
     "frac": false
   },
   {
@@ -424,6 +720,22 @@
     "frac": true
   },
   {
+    "cod": "9917",
+    "desc": "CONVERTIDOR X 1 LT. NEGRO \"VENTO\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 13241.59,
+    "frac": true
+  },
+  {
+    "cod": "9918",
+    "desc": "CONVERTIDOR X 4 LTS. NEGRO \"VENTO\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 47430.31,
+    "frac": false
+  },
+  {
     "cod": "1417",
     "desc": "ESMALTE SINTETICO X 1/2 LT. BLANCO VENTO",
     "cat": "pinturas",
@@ -464,6 +776,54 @@
     "frac": false
   },
   {
+    "cod": "PINT.KOVER.003",
+    "desc": "PINTURA ASFALTICA X 18 LTS \"CLIPERFLEX\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 71840.43,
+    "frac": false
+  },
+  {
+    "cod": "PINT.CLIP.002",
+    "desc": "PINTURA ASFALTICA X 4 LTS. \"CLIPPERFLEX\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 20758.88,
+    "frac": false
+  },
+  {
+    "cod": "CIVM1-2",
+    "desc": "CANILLA METAL ESFERICA MARIPOSA 1/2 \"VALFORTE\"",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 10506.98,
+    "frac": false
+  },
+  {
+    "cod": "CIV1-2E",
+    "desc": "CANILLA METAL ESFERICA PALANCA 1/2  LT100 P ECO \"VALFORTE\"",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 6843.12,
+    "frac": false
+  },
+  {
+    "cod": "CIV1-2",
+    "desc": "CANILLA METAL ESFERICA PALANCA 1/2 \"VALFORTE\"",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 12253.85,
+    "frac": false
+  },
+  {
+    "cod": "CIV3-4",
+    "desc": "CANILLA METAL ESFERICA PALANCA 3/4 \"VALFORTE\"",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 18193.85,
+    "frac": false
+  },
+  {
     "cod": "AWC160",
     "desc": "CAÑO AW 4 M x 110",
     "cat": "plomeria",
@@ -485,6 +845,30 @@
     "cat": "plomeria",
     "unit": "metro",
     "price": 4154.23,
+    "frac": true
+  },
+  {
+    "cod": "CA020",
+    "desc": "CAÑO IPS 4X4 1/2\"",
+    "cat": "plomeria",
+    "unit": "metro",
+    "price": 2810.26,
+    "frac": true
+  },
+  {
+    "cod": "CP063",
+    "desc": "CAÑO PVC 063 \"BOSTICO\"",
+    "cat": "plomeria",
+    "unit": "metro",
+    "price": 5102.31,
+    "frac": true
+  },
+  {
+    "cod": "CP100",
+    "desc": "CAÑO PVC 100 BOSTICO",
+    "cat": "plomeria",
+    "unit": "metro",
+    "price": 5639.17,
     "frac": true
   },
   {
@@ -512,6 +896,22 @@
     "frac": false
   },
   {
+    "cod": "LF030",
+    "desc": "LB DEPOSITO COLGAR FERRUM ANDINA",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 121365.0,
+    "frac": false
+  },
+  {
+    "cod": "LF010",
+    "desc": "LB INODORO CORTO FERRUM ANDINA",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 123550.0,
+    "frac": false
+  },
+  {
     "cod": "VD1-2",
     "desc": "LLAVE DE PASO DUKE PLASTICA 1/2",
     "cat": "plomeria",
@@ -533,6 +933,22 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 39418.25,
+    "frac": false
+  },
+  {
+    "cod": "CANTF085",
+    "desc": "PLU SOPORTE CANALETA PVC PLUVITUBO",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 3946.5,
+    "frac": false
+  },
+  {
+    "cod": "FU625",
+    "desc": "VALVULA ESFERICA FU PALANCA 1/2\"",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 16420.81,
     "frac": false
   }
 ]
