@@ -123,7 +123,7 @@
     "cod": "R1",
     "desc": "MT. DE RIPIOSA",
     "cat": "cemento",
-    "unit": "medio metro",
+    "unit": "metro",
     "price": 46200.0,
     "frac": false
   },
