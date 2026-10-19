@@ -60,7 +60,7 @@
     "desc": "BOLSA DE MAESTRO x 25 KGS.",
     "cat": "cemento",
     "unit": "unidad",
-    "price": 8047.5,
+    "price": 8030.0,
     "frac": false
   },
   {
@@ -68,7 +68,7 @@
     "desc": "CAMIONADA DE ARENA LAVADA MEDIANA",
     "cat": "cemento",
     "unit": "unidad",
-    "price": 220000.0,
+    "price": 247500.0,
     "frac": false
   },
   {
@@ -76,7 +76,7 @@
     "desc": "CAMIONADA RIPIOSA LAVADA",
     "cat": "cemento",
     "unit": "unidad",
-    "price": 225500.0,
+    "price": 236500.0,
     "frac": false
   },
   {
@@ -268,7 +268,7 @@
     "desc": "BOLSA DE PLASTICOR x 25 KGS.",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 7840.0,
+    "price": 8030.0,
     "frac": false
   },
   {
