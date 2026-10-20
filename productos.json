@@ -228,7 +228,7 @@
     "desc": "ADHESIVO PVC  60 c.c. LOSUNG",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 4554.93,
+    "price": 4767.84,
     "frac": false
   },
   {
@@ -244,7 +244,7 @@
     "desc": "BALDE PLASTICO VOSS 2000",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 4532.67,
+    "price": 4857.16,
     "frac": false
   },
   {
@@ -292,7 +292,7 @@
     "desc": "CERESITA X 10 KG",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 30460.47,
+    "price": 30500.0,
     "frac": false
   },
   {
@@ -428,7 +428,7 @@
     "desc": "FILTRO 20 CM. \"VOSS\"",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 2655.07,
+    "price": 2845.13,
     "frac": false
   },
   {
@@ -764,7 +764,7 @@
     "desc": "PINTURA AL AGUA BLANCA \" VENTO \"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 7500.0,
+    "price": 7424.86,
     "frac": true
   },
   {
@@ -796,7 +796,7 @@
     "desc": "CANILLA METAL ESFERICA MARIPOSA 1/2 \"VALFORTE\"",
     "cat": "plomeria",
     "unit": "unidad",
-    "price": 10506.98,
+    "price": 11557.68,
     "frac": false
   },
   {
@@ -812,7 +812,7 @@
     "desc": "CANILLA METAL ESFERICA PALANCA 1/2 \"VALFORTE\"",
     "cat": "plomeria",
     "unit": "unidad",
-    "price": 12253.85,
+    "price": 13479.23,
     "frac": false
   },
   {
@@ -820,7 +820,7 @@
     "desc": "CANILLA METAL ESFERICA PALANCA 3/4 \"VALFORTE\"",
     "cat": "plomeria",
     "unit": "unidad",
-    "price": 18193.85,
+    "price": 20013.23,
     "frac": false
   },
   {
@@ -844,7 +844,7 @@
     "desc": "CAÑO HIDRO 3 3/4\"",
     "cat": "plomeria",
     "unit": "metro",
-    "price": 4154.23,
+    "price": 4258.09,
     "frac": true
   },
   {
@@ -916,7 +916,7 @@
     "desc": "LLAVE DE PASO DUKE PLASTICA 1/2",
     "cat": "plomeria",
     "unit": "unidad",
-    "price": 4848.29,
+    "price": 4900.0,
     "frac": false
   },
   {
@@ -924,7 +924,7 @@
     "desc": "LLAVE DE PASO METAL PALANCA VALFORT 1/2\"",
     "cat": "plomeria",
     "unit": "unidad",
-    "price": 10331.88,
+    "price": 11365.06,
     "frac": false
   },
   {
