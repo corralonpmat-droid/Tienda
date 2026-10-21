@@ -28,7 +28,7 @@
     "desc": "BOLSA DE CAL HID. SANTA ELENA X 20 KGS",
     "cat": "cemento",
     "unit": "unidad",
-    "price": 6600.0,
+    "price": 7040.0,
     "frac": false
   },
   {
@@ -173,6 +173,14 @@
     "cat": "ceramicos",
     "unit": "unidad",
     "price": 4155.66,
+    "frac": false
+  },
+  {
+    "cod": "JM1002C",
+    "desc": "CABLE 1 X 2.5 MM CELESTE \"MH\"",
+    "cat": "electricidad",
+    "unit": "unidad",
+    "price": 1204.11,
     "frac": false
   },
   {
@@ -389,6 +397,14 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 8705.28,
+    "frac": false
+  },
+  {
+    "cod": "205507",
+    "desc": "DISCO DIAMANTADO TURBO 7\" RHEIN",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 20842.46,
     "frac": false
   },
   {
@@ -856,6 +872,30 @@
     "frac": true
   },
   {
+    "cod": "CP040",
+    "desc": "CAÑO PVC 040  \"BOSTICO\"",
+    "cat": "plomeria",
+    "unit": "metro",
+    "price": 2594.15,
+    "frac": true
+  },
+  {
+    "cod": "CP050",
+    "desc": "CAÑO PVC 050 \"BOSTICO\"",
+    "cat": "plomeria",
+    "unit": "metro",
+    "price": 3349.39,
+    "frac": true
+  },
+  {
+    "cod": "CP060",
+    "desc": "CAÑO PVC 060 \"BOSTICO\"",
+    "cat": "plomeria",
+    "unit": "metro",
+    "price": 3651.11,
+    "frac": true
+  },
+  {
     "cod": "CP063",
     "desc": "CAÑO PVC 063 \"BOSTICO\"",
     "cat": "plomeria",
@@ -878,6 +918,30 @@
     "unit": "metro",
     "price": 7193.17,
     "frac": true
+  },
+  {
+    "cod": "CP160P",
+    "desc": "CAÑO PVC 160 PLUS J/PEGAR (CLOACA) X 4MTS \"BOSTICO\"",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 62365.71,
+    "frac": false
+  },
+  {
+    "cod": "CN040",
+    "desc": "CAÑO PVC N1 040 STANDART X 4MTS \"AMANCO\"",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 14409.3,
+    "frac": false
+  },
+  {
+    "cod": "CN063",
+    "desc": "CAÑO PVC N1 063 STANDART X 4MTS \"AMANCO\"",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 23770.5,
+    "frac": false
   },
   {
     "cod": "CN110",
