@@ -128,6 +128,22 @@
     "frac": false
   },
   {
+    "cod": "16216",
+    "desc": "TELGOPOR EPS MOLIDO X BOLSA 1/5 M3",
+    "cat": "cemento",
+    "unit": "unidad",
+    "price": 14403.14,
+    "frac": false
+  },
+  {
+    "cod": "VY",
+    "desc": "YESO YEMACO",
+    "cat": "cemento",
+    "unit": "kg",
+    "price": 760.0,
+    "frac": true
+  },
+  {
     "cod": "BPWS",
     "desc": "BOLSA PEGAMENTO ESTANDAR X 25 KGS. WEBER",
     "cat": "ceramicos",
@@ -176,8 +192,24 @@
     "frac": false
   },
   {
+    "cod": "PWTC",
+    "desc": "PASTINA X 2 KG TERRACOTA WEBER",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false
+  },
+  {
     "cod": "JM1002C",
     "desc": "CABLE 1 X 2.5 MM CELESTE \"MH\"",
+    "cat": "electricidad",
+    "unit": "unidad",
+    "price": 1204.11,
+    "frac": false
+  },
+  {
+    "cod": "JM1002M",
+    "desc": "CABLE 1 X 2.5 MM MARRON \"MH\"",
     "cat": "electricidad",
     "unit": "unidad",
     "price": 1204.11,
@@ -188,7 +220,7 @@
     "desc": "CABLE COAXIL CCTV 67% RG-6 NG.Epuye",
     "cat": "electricidad",
     "unit": "unidad",
-    "price": 650.0,
+    "price": 903.53,
     "frac": false
   },
   {
@@ -220,7 +252,7 @@
     "desc": "CAÑO FLEXIBLE BLANCO  3/4\" MT GENROD",
     "cat": "electricidad",
     "unit": "unidad",
-    "price": 487.84,
+    "price": 475.37,
     "frac": false
   },
   {
@@ -228,15 +260,71 @@
     "desc": "CAÑO FLEXIBLE BLANCO  7/8\" MT  GENROD",
     "cat": "electricidad",
     "unit": "unidad",
-    "price": 566.79,
+    "price": 601.46,
     "frac": false
   },
   {
-    "cod": "AL050",
-    "desc": "ADHESIVO PVC  60 c.c. LOSUNG",
+    "cod": "983E",
+    "desc": "CAÑO FLEXIBLE SEMIPESADO GRIS  3/4\" MT GENROD",
+    "cat": "electricidad",
+    "unit": "unidad",
+    "price": 831.04,
+    "frac": false
+  },
+  {
+    "cod": "984E",
+    "desc": "CAÑO FLEXIBLE SEMIPESADO GRIS  7/8\" MT GENROD/JELUZ",
+    "cat": "electricidad",
+    "unit": "unidad",
+    "price": 987.5,
+    "frac": false
+  },
+  {
+    "cod": "14120",
+    "desc": "CAÑO GRIS RIGIDO 20MM REFORZADO  GEN-ROD",
+    "cat": "electricidad",
+    "unit": "unidad",
+    "price": 2805.89,
+    "frac": false
+  },
+  {
+    "cod": "22",
+    "desc": "CAÑO GRIS RIGIDO 25MM REFORZADO  GEN-ROD",
+    "cat": "electricidad",
+    "unit": "unidad",
+    "price": 3963.17,
+    "frac": false
+  },
+  {
+    "cod": "04.03.02.00",
+    "desc": "RESISTENCIA P/CALEFON BRONCE TIPO FOCO",
+    "cat": "electricidad",
+    "unit": "unidad",
+    "price": 9000.0,
+    "frac": false
+  },
+  {
+    "cod": "1253",
+    "desc": "ACEITE P/MADERA LINO X LT. S10",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 4767.84,
+    "price": 5073.62,
+    "frac": true
+  },
+  {
+    "cod": "2059-STO3045",
+    "desc": "ADHESIVO P/ZAPATILLA 9 GRS. ECCOLE",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 7649.13,
+    "frac": false
+  },
+  {
+    "cod": "POXMA38",
+    "desc": "ADHESIVO POXILINA 70ML.",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 7602.0,
     "frac": false
   },
   {
@@ -245,6 +333,22 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 49773.84,
+    "frac": false
+  },
+  {
+    "cod": "2440-F0129002JR",
+    "desc": "AMOLADORA SKIL 115 MM 700 W 11000 RPM  9002",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 81543.62,
+    "frac": false
+  },
+  {
+    "cod": "TIPO1 125",
+    "desc": "AUTOPER. T1- 14X2,5\" C/AR VUL \"S/M\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 151.06,
     "frac": false
   },
   {
@@ -312,11 +416,139 @@
     "frac": false
   },
   {
+    "cod": "2747",
+    "desc": "CERRADURA PRIVE N 105 Z5 BAÑO FRENTE ANG",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 11845.15,
+    "frac": false
+  },
+  {
+    "cod": "2731",
+    "desc": "CERRADURA PRIVE N 120 - PUERTA CORREDIZA",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 16101.24,
+    "frac": false
+  },
+  {
+    "cod": "2737",
+    "desc": "CERRADURA PRIVE N 201- DOBLE PERNO NIQU",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 39802.18,
+    "frac": false
+  },
+  {
+    "cod": "2738",
+    "desc": "CERRADURA PRIVE N 204 - ANGOSTA DOBLE PERNO",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 33783.69,
+    "frac": false
+  },
+  {
+    "cod": "2740",
+    "desc": "CERRADURA PRIVE N 206 - SEGURIDAD ANGOST",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 30417.67,
+    "frac": false
+  },
+  {
     "cod": "2742",
     "desc": "CERRADURA PRIVE N 208 FRENTE ANCHO",
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 22635.5,
+    "frac": false
+  },
+  {
+    "cod": "2745",
+    "desc": "CERRADURA PRIVE N 212 - PARA PUERTA CORREDIZA",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 34260.19,
+    "frac": false
+  },
+  {
+    "cod": "1038-214-N-C-A",
+    "desc": "CERRADURA PRIVE N 214 ANGOSTA PUERTA CORREDIZA",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 46960.69,
+    "frac": false
+  },
+  {
+    "cod": "2739",
+    "desc": "CERRADURA PRIVE Nº 205 - SEG DOBLE PERNO",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 28706.43,
+    "frac": false
+  },
+  {
+    "cod": "2741",
+    "desc": "CERRADURA PRIVE Nº 207",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 22014.16,
+    "frac": false
+  },
+  {
+    "cod": "2736",
+    "desc": "CERRADURA PRIVE Nº200",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 23702.04,
+    "frac": false
+  },
+  {
+    "cod": "FLG520",
+    "desc": "CINTA METRICA 10 MT UYUSTOOL",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 13300.0,
+    "frac": false
+  },
+  {
+    "cod": "FLG519",
+    "desc": "CINTA METRICA 5 MT UYUSTOOL",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 7000.0,
+    "frac": false
+  },
+  {
+    "cod": "FLG075",
+    "desc": "CINTA METRICA 7,5 MTS. UYUSTOOLS",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 10500.0,
+    "frac": false
+  },
+  {
+    "cod": "FE3341",
+    "desc": "CINTA METRICA AUTOMATICA ECOFLEX 3 m FLEJE AMARILLO (103)",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 10560.2,
+    "frac": false
+  },
+  {
+    "cod": "FE3344",
+    "desc": "CINTA METRICA AUTOMATICA PREMIUMBLOK 5 m FLEJE AMARILLO (525 M)",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 24532.2,
+    "frac": false
+  },
+  {
+    "cod": "FE3345",
+    "desc": "CINTA METRICA AUTOMATICA PREMIUMBLOK 8 m FLEJE AMARILLO (508)",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 36211.0,
     "frac": false
   },
   {
@@ -333,6 +565,38 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 5308.8,
+    "frac": false
+  },
+  {
+    "cod": "TG051",
+    "desc": "CURVA PVC 45° MH 110 TRAPANI",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 7121.74,
+    "frac": false
+  },
+  {
+    "cod": "06-2052345",
+    "desc": "DISCO CORTE MADERA 4.5\"  RHEIN",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 15514.96,
+    "frac": false
+  },
+  {
+    "cod": "262936",
+    "desc": "DISCO CORTE METAL 4,5\" X 1 MM \"ELEMENT\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 1000.0,
+    "frac": false
+  },
+  {
+    "cod": "EACD11011525",
+    "desc": "DISCO CORTE METAL 4,5\" X 1 MM \"EMTOP\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 1500.0,
     "frac": false
   },
   {
@@ -432,11 +696,75 @@
     "frac": false
   },
   {
+    "cod": "ECO2.0",
+    "desc": "ELECTRODO 2.0 MM X KG. CONARCO",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 20300.0,
+    "frac": false
+  },
+  {
     "cod": "ECO2.5",
     "desc": "ELECTRODO 2.5 MM X KG. CONARCO",
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 14800.0,
+    "frac": false
+  },
+  {
+    "cod": "6800",
+    "desc": "ENDUIDO PLASTICO X  1 LT. \"VENTO\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 4552.5,
+    "frac": true
+  },
+  {
+    "cod": "6801",
+    "desc": "ENDUIDO PLASTICO X  4 LTS. \"VENTO\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 14016.24,
+    "frac": false
+  },
+  {
+    "cod": "6802",
+    "desc": "ENDUIDO PLASTICO X 10 LTS. \"VENTO\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 31191.56,
+    "frac": false
+  },
+  {
+    "cod": "6803",
+    "desc": "ENDUIDO PLASTICO X 20 LTS. \"VENTO\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 59400.08,
+    "frac": false
+  },
+  {
+    "cod": "IF06",
+    "desc": "ESCALERA PINTOR 9 PELDAÑOS 3.05 MTS.",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 100100.0,
+    "frac": false
+  },
+  {
+    "cod": "2256-H71EPU500",
+    "desc": "ESPUMA  POLIURETANO HOMEY 500 ML",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 10170.49,
+    "frac": false
+  },
+  {
+    "cod": "2256-H71EPU750",
+    "desc": "ESPUMA  POLIURETANO HOMEY 750 ML",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 14140.49,
     "frac": false
   },
   {
@@ -448,11 +776,51 @@
     "frac": false
   },
   {
+    "cod": "8",
+    "desc": "FILTRO 25 CM. \"VOSS\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 3282.9,
+    "frac": false
+  },
+  {
     "cod": "GO06E",
     "desc": "GRAMPA OMEGA P/CAÑO AGUA 3/4\" ECO",
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 256.35,
+    "frac": false
+  },
+  {
+    "cod": "367-100",
+    "desc": "GUANTE PALMA ENGOMADA NITRILO ANTICORTANTE",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 2829.76,
+    "frac": false
+  },
+  {
+    "cod": "GD0016",
+    "desc": "GUANTE TELA+GOMA ROJO-GRIS-NARANJA-AZUL 8\" \"FERRAWYY\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 2100.0,
+    "frac": false
+  },
+  {
+    "cod": "3706",
+    "desc": "HERRADURA Nº 1-24 MUSTAD",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 15712.77,
+    "frac": false
+  },
+  {
+    "cod": "3707",
+    "desc": "HERRADURA Nº 2-26 MUSTAD",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 15712.77,
     "frac": false
   },
   {
@@ -462,6 +830,38 @@
     "unit": "unidad",
     "price": 33727.45,
     "frac": false
+  },
+  {
+    "cod": "1575",
+    "desc": "MANIJA MINISTERIO ALUMINIO PULIDO P/MEDIO",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 5850.8,
+    "frac": false
+  },
+  {
+    "cod": "1578",
+    "desc": "MANIJA MINISTERIO BRONCE PULIDO P/MEDIO",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 13087.22,
+    "frac": false
+  },
+  {
+    "cod": "EWHT0102",
+    "desc": "MASCARA FOTOSENSIBLE PARA SOLDAR EMTOP",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 53918.24,
+    "frac": false
+  },
+  {
+    "cod": "CHI001",
+    "desc": "MEDIA SOMBRA NEGRA 80% (2.10 MTS)",
+    "cat": "ferreteria",
+    "unit": "metro",
+    "price": 4879.85,
+    "frac": true
   },
   {
     "cod": "MAL3",
@@ -480,11 +880,51 @@
     "frac": false
   },
   {
+    "cod": "5792",
+    "desc": "MEMBRANA AUTOADHESIVA 25 CM X 10 MTS.",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 44746.87,
+    "frac": false
+  },
+  {
     "cod": "MKAL1",
     "desc": "MUROKAL X 1 LT.",
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 51666.24,
+    "frac": false
+  },
+  {
+    "cod": "390",
+    "desc": "PALA CUADRADA C/CORTO \"APACHE\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 21710.95,
+    "frac": false
+  },
+  {
+    "cod": "PWNV",
+    "desc": "PASTINA X 2 KG NIEVE WEBER",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false
+  },
+  {
+    "cod": "4534063",
+    "desc": "PINCEL TODO USO CERDA BLANCA 21/2\"   ESSAMET",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 2560.69,
+    "frac": false
+  },
+  {
+    "cod": "4534076",
+    "desc": "PINCEL TODO USO CERDA BLANCA 3\"       ESSAMET",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 3203.32,
     "frac": false
   },
   {
@@ -520,12 +960,108 @@
     "frac": false
   },
   {
+    "cod": "AW145",
+    "desc": "RAMAL AW 45° MH 110",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 10466.7,
+    "frac": false
+  },
+  {
+    "cod": "161-3028-3",
+    "desc": "REGULADOR P/GAS X 1.5 MT  R/BRONCE",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 15383.35,
+    "frac": false
+  },
+  {
+    "cod": "2178-2263",
+    "desc": "REGULADOR P/GAS X 2.0 MT  R/BRONCE",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 16460.11,
+    "frac": false
+  },
+  {
+    "cod": "2246-8424",
+    "desc": "RESISTENCIA PULMON COBREADA P/CALEFON FEMSAL",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 11019.59,
+    "frac": false
+  },
+  {
+    "cod": "SH025",
+    "desc": "SELLAROSCA HIDRO 3 X 25 CC",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 2841.21,
+    "frac": false
+  },
+  {
+    "cod": "2242-0440100",
+    "desc": "SIKA 1 HIDROFUGO X 1 LT.",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 3500.0,
+    "frac": false
+  },
+  {
     "cod": "2242-0418440",
     "desc": "SIKA 1 HIDROFUGO X 5 LTS.",
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 9798.5,
     "frac": false
+  },
+  {
+    "cod": "E5020",
+    "desc": "SOPAPA COCINA 50 ERREDE",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 6412.99,
+    "frac": false
+  },
+  {
+    "cod": "2205",
+    "desc": "SOPLETE TECHISTA  A5000 X 10 KG. ALIGAS",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 29432.62,
+    "frac": false
+  },
+  {
+    "cod": "HERR.INGCO.007",
+    "desc": "TALADRO PERCUTOR 710W INGCO",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 89637.48,
+    "frac": false
+  },
+  {
+    "cod": "SANSP-1",
+    "desc": "TERRAJA PVC 1/2-3/4-1\" SANOGAS",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 38387.07,
+    "frac": false
+  },
+  {
+    "cod": "6107",
+    "desc": "THINNER SELLO DE ORO X 900CC \"S10\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 6778.81,
+    "frac": true
+  },
+  {
+    "cod": "1084",
+    "desc": "THINNER X 0,90 LT. ENVASADO \"S10\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 5702.6,
+    "frac": true
   },
   {
     "cod": "1210",
@@ -544,6 +1080,14 @@
     "frac": true
   },
   {
+    "cod": "10134250FIX",
+    "desc": "TORNILLO FIX 22 X 44",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 99.76,
+    "frac": true
+  },
+  {
     "cod": "KA14",
     "desc": "ALAMBRE 14x KG",
     "cat": "hierros",
@@ -557,6 +1101,38 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 4400.14,
+    "frac": false
+  },
+  {
+    "cod": "AG20",
+    "desc": "ALAMBRE GALVANIZADO N° 20",
+    "cat": "hierros",
+    "unit": "100 g",
+    "price": 1155.19,
+    "frac": true
+  },
+  {
+    "cod": "KA14G",
+    "desc": "ALAMBRE GALVANIZANDO 14 X KG",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 5177.59,
+    "frac": false
+  },
+  {
+    "cod": "AR8",
+    "desc": "ALAMBRE NEGRO 8",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 4340.0,
+    "frac": false
+  },
+  {
+    "cod": "TIPO1 123",
+    "desc": "AUTOPER. T1- 14X2\" C/AR VUL \"S/M\"",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 127.5,
     "frac": false
   },
   {
@@ -700,7 +1276,7 @@
     "desc": "LADRILLON SCAC PARA LOSA 12.5X40X25",
     "cat": "ladrillos",
     "unit": "unidad",
-    "price": 2525.0,
+    "price": 2530.0,
     "frac": false
   },
   {
@@ -736,11 +1312,43 @@
     "frac": true
   },
   {
+    "cod": "1512",
+    "desc": "BARNIZ X 1 LT VENTO",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 11774.22,
+    "frac": true
+  },
+  {
+    "cod": "1511",
+    "desc": "BARNIZ X 1/2 LT VENTO",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 7126.52,
+    "frac": true
+  },
+  {
     "cod": "9917",
     "desc": "CONVERTIDOR X 1 LT. NEGRO \"VENTO\"",
     "cat": "pinturas",
     "unit": "unidad",
     "price": 13241.59,
+    "frac": true
+  },
+  {
+    "cod": "9917M",
+    "desc": "CONVERTIDOR X 1 LT. NEGRO MATE \"OBRA COLOR\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 14196.0,
+    "frac": false
+  },
+  {
+    "cod": "9916",
+    "desc": "CONVERTIDOR X 1/2 LT. NEGRO  \"VENTO\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 7688.58,
     "frac": true
   },
   {
@@ -752,12 +1360,68 @@
     "frac": false
   },
   {
+    "cod": "1418S",
+    "desc": "ESMALTE SINTETICO X 1 LT. BLANCO VENTO\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 12453.49,
+    "frac": true
+  },
+  {
     "cod": "1417",
     "desc": "ESMALTE SINTETICO X 1/2 LT. BLANCO VENTO",
     "cat": "pinturas",
     "unit": "unidad",
     "price": 7218.36,
     "frac": true
+  },
+  {
+    "cod": "1974",
+    "desc": "FIJADOR SELLADOR X  1 LT. \"VENTO\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 4415.83,
+    "frac": true
+  },
+  {
+    "cod": "1975",
+    "desc": "FIJADOR SELLADOR X  4 LTS. \"VENTO\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 14029.93,
+    "frac": false
+  },
+  {
+    "cod": "1976",
+    "desc": "FIJADOR SELLADOR X 10 LTS. \"VENTO\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 30706.87,
+    "frac": false
+  },
+  {
+    "cod": "1194",
+    "desc": "IMPREGNANTE BRILLANTE X 1 LT. ALGARROBO \"VENTO\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 11970.06,
+    "frac": true
+  },
+  {
+    "cod": "1182I",
+    "desc": "IMPREGNANTE BRILLANTE X 1 LT. NOGAL \"VENTO\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 11970.06,
+    "frac": true
+  },
+  {
+    "cod": "1555",
+    "desc": "LATEX EXTERIOR X 10 LTS. \"VENTO\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 53246.43,
+    "frac": false
   },
   {
     "cod": "1176",
@@ -768,11 +1432,59 @@
     "frac": true
   },
   {
+    "cod": "1170L",
+    "desc": "LATEX INTERIOR X  4 LTS. \"SOLAR\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 14865.65,
+    "frac": false
+  },
+  {
+    "cod": "1171L",
+    "desc": "LATEX INTERIOR X 10 LTS. \"SOLAR\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 32637.44,
+    "frac": false
+  },
+  {
+    "cod": "AGU003",
+    "desc": "LATEX INTERIOR/EXTERIOR X 20 LITROS SAN AGUSTIN",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 59016.14,
+    "frac": false
+  },
+  {
+    "cod": "3011",
+    "desc": "MEMBRANA LIQUIDA BLANCA X  4LTS VENTO",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 23522.7,
+    "frac": false
+  },
+  {
+    "cod": "3012",
+    "desc": "MEMBRANA LIQUIDA BLANCA X 10 LTS VENTO",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 52935.45,
+    "frac": false
+  },
+  {
     "cod": "3013",
     "desc": "MEMBRANA LIQUIDA BLANCA X 20 LTS VENTO",
     "cat": "pinturas",
     "unit": "unidad",
     "price": 99944.26,
+    "frac": false
+  },
+  {
+    "cod": "4534050",
+    "desc": "PINCEL TODO USO CERDA BLANCA 2\"  ESSAMET",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 1968.51,
     "frac": false
   },
   {
@@ -808,6 +1520,30 @@
     "frac": false
   },
   {
+    "cod": "4699F",
+    "desc": "RODILLOS LANA 22 CM  ANTARTIDA",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 10811.16,
+    "frac": false
+  },
+  {
+    "cod": "AL050",
+    "desc": "ADHESIVO PVC  60 c.c. LOSUNG",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 4767.84,
+    "frac": false
+  },
+  {
+    "cod": "AL125",
+    "desc": "ADHESIVO PVC 125 c.c. LOSUNG",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 10751.42,
+    "frac": false
+  },
+  {
     "cod": "CIVM1-2",
     "desc": "CANILLA METAL ESFERICA MARIPOSA 1/2 \"VALFORTE\"",
     "cat": "plomeria",
@@ -840,11 +1576,43 @@
     "frac": false
   },
   {
+    "cod": "GIN1",
+    "desc": "CANILLA PVC C/MANGA 1/2 GINYPLAST",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 2598.0,
+    "frac": false
+  },
+  {
+    "cod": "ITE1-A",
+    "desc": "CANILLA PVC P/LAVARROPA 1/2 GINYPLAST",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 4500.0,
+    "frac": false
+  },
+  {
     "cod": "AWC160",
     "desc": "CAÑO AW 4 M x 110",
     "cat": "plomeria",
     "unit": "unidad",
     "price": 34460.72,
+    "frac": false
+  },
+  {
+    "cod": "AWC080",
+    "desc": "CAÑO AW 4 M x 50",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 14620.56,
+    "frac": false
+  },
+  {
+    "cod": "AWC120",
+    "desc": "CAÑO AW 4 M x 63",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 18631.9,
     "frac": false
   },
   {
@@ -869,6 +1637,14 @@
     "cat": "plomeria",
     "unit": "metro",
     "price": 2810.26,
+    "frac": true
+  },
+  {
+    "cod": "CA025",
+    "desc": "CAÑO IPS 4X4 3/4\" ",
+    "cat": "plomeria",
+    "unit": "metro",
+    "price": 4392.03,
     "frac": true
   },
   {
@@ -952,11 +1728,91 @@
     "frac": false
   },
   {
+    "cod": "TF20004",
+    "desc": "CAÑO TUBOFUSION 20 MM x 4 M (PN 20)",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 7150.89,
+    "frac": false
+  },
+  {
+    "cod": "TF25004",
+    "desc": "CAÑO TUBOFUSION 25 MM x 4 M (PN 20)",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 10763.08,
+    "frac": false
+  },
+  {
+    "cod": "TF32004",
+    "desc": "CAÑO TUBOFUSION 32 MM x 4 m (PN20)",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 17477.02,
+    "frac": false
+  },
+  {
+    "cod": "N1040",
+    "desc": "CODO PVC 90° MH 110 NIVEL 1",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 4738.56,
+    "frac": false
+  },
+  {
+    "cod": "DM016",
+    "desc": "DEPOSITO PVC MOCHILA  APOYO 11 LT. MONKOTO",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 43774.63,
+    "frac": false
+  },
+  {
+    "cod": "FGA110",
+    "desc": "FLEXIBLE GAS APROB. EXTENSIBLE 1/2\" 20-42 ALARZA/LATIN",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 20958.67,
+    "frac": false
+  },
+  {
+    "cod": "E3000",
+    "desc": "FLOTANTE PVC TANQUE 1/2\" ERREDE",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 11789.78,
+    "frac": false
+  },
+  {
+    "cod": "E3100",
+    "desc": "FLOTANTE PVC TANQUE 3/4\" ERREDE",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 15310.48,
+    "frac": false
+  },
+  {
     "cod": "FG07M",
     "desc": "FUELLE GOMA INODORO 50 ECO MALVAR",
     "cat": "plomeria",
     "unit": "unidad",
     "price": 4756.04,
+    "frac": false
+  },
+  {
+    "cod": "VTC09",
+    "desc": "FUELLE PVC ANDINA ORIGINAL FERRUM",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 16121.01,
+    "frac": false
+  },
+  {
+    "cod": "GRI.FVB1.427",
+    "desc": "GRIFERIA LAVATORIO 207/B1P \"ARIZONA PLUS\" FV",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 94796.31,
     "frac": false
   },
   {
@@ -976,6 +1832,14 @@
     "frac": false
   },
   {
+    "cod": "LF020",
+    "desc": "LB LAVATORIO 3 AGUJEROS FERRUM ANDINA",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 58070.49,
+    "frac": false
+  },
+  {
     "cod": "VD1-2",
     "desc": "LLAVE DE PASO DUKE PLASTICA 1/2",
     "cat": "plomeria",
@@ -992,6 +1856,14 @@
     "frac": false
   },
   {
+    "cod": "F103",
+    "desc": "MANGUERA RIEGO 1/2\" REFORZADA FAMA",
+    "cat": "plomeria",
+    "unit": "metro",
+    "price": 787.79,
+    "frac": true
+  },
+  {
     "cod": "CANTF005",
     "desc": "PLU CANALETA BLANCA PVC 3 MTS. PLUVITUBO",
     "cat": "plomeria",
@@ -1000,11 +1872,59 @@
     "frac": false
   },
   {
+    "cod": "CANTF015",
+    "desc": "PLU EMBUDO CANALETA PVC PLUVITUBO",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 12439.96,
+    "frac": false
+  },
+  {
     "cod": "CANTF085",
     "desc": "PLU SOPORTE CANALETA PVC PLUVITUBO",
     "cat": "plomeria",
     "unit": "unidad",
     "price": 3946.5,
+    "frac": false
+  },
+  {
+    "cod": "CANTF025",
+    "desc": "PLU UNION CANALETA PVC PLUVITUBO",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 4267.33,
+    "frac": false
+  },
+  {
+    "cod": "VQ039",
+    "desc": "RAMAL PVC 45° MH 110",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 7321.35,
+    "frac": false
+  },
+  {
+    "cod": "E5010",
+    "desc": "SOPAPA LAVATORIO 40 ERREDE",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 5857.83,
+    "frac": false
+  },
+  {
+    "cod": "TIA",
+    "desc": "TAPA INODORO BLANCO FAPLAS",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 17500.0,
+    "frac": false
+  },
+  {
+    "cod": "TIFA",
+    "desc": "TAPA INODORO PVC F. AREA PRINGLES",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 22844.91,
     "frac": false
   },
   {
