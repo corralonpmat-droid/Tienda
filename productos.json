@@ -16,6 +16,14 @@
     "frac": false
   },
   {
+    "cod": "CHN",
+    "desc": "BOLSA DE CAL HID. \"NICO\" X 25 DM3 ",
+    "cat": "cemento",
+    "unit": "unidad",
+    "price": 6600.0,
+    "frac": false
+  },
+  {
     "cod": "CH",
     "desc": "BOLSA DE CAL HID. M. VIRGINIA  ~ 23 kgs.",
     "cat": "cemento",
@@ -380,7 +388,7 @@
     "desc": "BOLSA DE PLASTICOR x 25 KGS.",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 8030.0,
+    "price": 7990.53,
     "frac": false
   },
   {
@@ -564,7 +572,7 @@
     "desc": "CLAVO 2 1/2\"",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 5308.8,
+    "price": 5423.18,
     "frac": false
   },
   {
@@ -1836,7 +1844,7 @@
     "desc": "LB LAVATORIO 3 AGUJEROS FERRUM ANDINA",
     "cat": "plomeria",
     "unit": "unidad",
-    "price": 58070.49,
+    "price": 69545.0,
     "frac": false
   },
   {
