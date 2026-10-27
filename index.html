@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#e2231a">
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="estilos.css?v=27">
+<link rel="stylesheet" href="estilos.css?v=28">
 </head>
 <body>
 
@@ -239,8 +239,8 @@
 
             <label class="field-label">Medio de pago</label>
             <div class="radio-row" id="pagoRow">
-              <label class="radio-pill sel" data-val="efectivo"><input type="radio" name="pago" value="efectivo" checked>Efectivo</label>
-              <label class="radio-pill" data-val="transferencia"><input type="radio" name="pago" value="transferencia">Transferencia</label>
+              <label class="radio-pill sel" data-val="efectivo"><input type="radio" name="pago" value="efectivo" checked>Efectivo <small class="pill-desc">−9,09%</small></label>
+              <label class="radio-pill" data-val="transferencia"><input type="radio" name="pago" value="transferencia">Transferencia <small class="pill-desc">−5%</small></label>
               <label class="radio-pill" data-val="tarjeta"><input type="radio" name="pago" value="tarjeta">Tarjeta</label>
             </div>
             <p class="pago-hint" id="pagoHint" hidden>Puede aplicar un recargo — te confirmamos el total exacto por WhatsApp.</p>
@@ -248,6 +248,10 @@
           </div>
         </div>
         <div class="cart-foot">
+          <div class="cart-desc" id="cartDesc" hidden>
+            <div><span>Precio de lista</span><span id="cartSub"></span></div>
+            <div class="cart-desc-ok"><span id="cartDescLabel"></span><span id="cartDescMonto"></span></div>
+          </div>
           <div class="cart-total-row">
             <span>Total estimado</span>
             <strong id="cartTotal">$0,00</strong>
@@ -512,6 +516,6 @@
   <button type="button" class="install-close" id="installBannerClose" aria-label="Cerrar aviso">×</button>
 </div>
 
-<script src="app.js?v=30"></script>
+<script src="app.js?v=31"></script>
 </body>
 </html>
