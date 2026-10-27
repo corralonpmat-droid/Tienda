@@ -774,7 +774,9 @@
       if(document.getElementById("view-inicio").hidden) goTo("inicio", null);
       abrirCarrito();
     });
-    document.getElementById("cartClear").addEventListener("click", function(){
+    document.getElementById("cartClear").addEventListener("click", function(e){
+      e.stopPropagation(); // está dentro del encabezado, que abre/cierra el carrito
+      if(!confirm("¿Vaciar todo el pedido?")) return;
       state.cart = {}; state.extras = []; save(); render("all"); toast("Pedido vaciado");
     });
     // Campos de texto compartidos entre el carrito y "Mis datos" (Mi cuenta):
@@ -861,9 +863,6 @@
       var el = document.getElementById(id);
       if(el) el.addEventListener("change", function(e){ sincronizarFacturaA(e.target.checked); });
     });
-    document.getElementById("fAceptaSustituto").addEventListener("change", function(e){
-      state.form.aceptaSustituto = e.target.checked; save(); renderCart();
-    });
     document.getElementById("cLadAdd").addEventListener("click", function(){
       var r = calcLadr();
       if(r.u > 0){ addQty(r.id, r.u); save(); render("all"); toast(fmtQty(r.u)+" ladrillones agregados ✓"); }
@@ -883,7 +882,6 @@
       });
     });
     sincronizarFacturaA(!!state.form.facturaA);
-    document.getElementById("fAceptaSustituto").checked = state.form.aceptaSustituto !== false;
     syncEntrega();
     syncPago();
 

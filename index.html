@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#e2231a">
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="estilos.css?v=26">
+<link rel="stylesheet" href="estilos.css?v=27">
 </head>
 <body>
 
@@ -190,7 +190,13 @@
       <aside id="cartPanel">
         <div class="cart-head" id="cartHead">
           <div>
-            <h2>Tu pedido</h2>
+            <div class="cart-title-row">
+              <h2>Tu pedido</h2>
+              <button type="button" class="cart-clear" id="cartClear" hidden>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2m-9 0 1 14h8l1-14M10 11v6m4-6v6"/></svg>
+                Vaciar
+              </button>
+            </div>
             <div class="cart-count" id="cartCount">0 artículos</div>
           </div>
           <button id="cartToggle" aria-label="Cerrar el pedido" aria-expanded="false">
@@ -239,19 +245,6 @@
             </div>
             <p class="pago-hint" id="pagoHint" hidden>Puede aplicar un recargo — te confirmamos el total exacto por WhatsApp.</p>
 
-            <label class="check-row">
-              <input type="checkbox" id="fFacturaA">
-              Necesito factura A
-            </label>
-            <div class="field" id="cuitField" hidden>
-              <label for="fCuit">CUIT</label>
-              <input id="fCuit" type="text" inputmode="numeric" placeholder="20-12345678-9">
-            </div>
-
-            <label class="check-row">
-              <input type="checkbox" id="fAceptaSustituto" checked>
-              Si falta algo, acepto un equivalente de otra marca
-            </label>
           </div>
         </div>
         <div class="cart-foot">
@@ -264,8 +257,7 @@
             <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.11c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.11.11-1.79-.11-.41-.13-.94-.3-1.61-.6-2.84-1.23-4.7-4.08-4.84-4.27-.14-.19-1.16-1.54-1.16-2.94s.72-2.09.98-2.38c.24-.27.53-.33.7-.33h.5c.16 0 .38-.03.58.45.24.58.81 2 .88 2.14.07.14.11.3.02.49-.09.19-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.57.16.27.71 1.18 1.53 1.91 1.05.94 1.94 1.24 2.21 1.38.27.14.43.11.59-.07.16-.19.68-.79.86-1.06.18-.27.36-.22.6-.13.24.08 1.53.72 1.79.86.27.13.44.19.51.3.07.13.07.68-.17 1.35z"/></svg>
             Enviar pedido por WhatsApp
           </a>
-          <p class="cart-note">Los precios pueden variar según stock y medio de pago. Confirmamos todo por WhatsApp.</p>
-          <button class="cart-clear" id="cartClear" hidden>Vaciar pedido</button>
+          <p class="cart-note">Confirmamos stock y precio final por WhatsApp.</p>
         </div>
       </aside>
     </div>
@@ -520,6 +512,6 @@
   <button type="button" class="install-close" id="installBannerClose" aria-label="Cerrar aviso">×</button>
 </div>
 
-<script src="app.js?v=29"></script>
+<script src="app.js?v=30"></script>
 </body>
 </html>
