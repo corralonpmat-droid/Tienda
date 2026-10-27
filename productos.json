@@ -848,14 +848,6 @@
     "frac": false
   },
   {
-    "cod": "1578",
-    "desc": "MANIJA MINISTERIO BRONCE PULIDO P/MEDIO",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 13087.22,
-    "frac": false
-  },
-  {
     "cod": "EWHT0102",
     "desc": "MASCARA FOTOSENSIBLE PARA SOLDAR EMTOP",
     "cat": "ferreteria",
@@ -1244,7 +1236,7 @@
     "desc": "PERFIL C 100X50X15X1.6  X 12 MTS.",
     "cat": "hierros",
     "unit": "unidad",
-    "price": 114968.0,
+    "price": 118894.34,
     "frac": false
   },
   {
