@@ -453,32 +453,15 @@
       return {id:id, desc:it.desc, unit:it.unit, price:it.price, qty:qty, subtotal:Math.round(it.price*qty*100)/100};
     });
   }
-  // Todos los precios publicados son de lista. Efectivo paga 9,09% menos (el
-  // precio de contado), transferencia 5% menos — NO se acumulan, cada medio
-  // tiene el suyo — y tarjeta paga lista. Definido por Marcos (2026-10-27).
-  var DESC_PAGO = {efectivo:9.09, transferencia:5, tarjeta:0};
-  var DESC_PAGO_LABEL = {efectivo:"efectivo", transferencia:"transferencia"};
-  function pctTxt(p){ return String(p).replace(".", ","); }
-  function calcTotales(subtotal, pago){
-    var pct = DESC_PAGO[pago] || 0;
-    var desc = Math.round(subtotal * pct) / 100;
-    return {pct:pct, desc:desc, total:Math.round((subtotal - desc) * 100) / 100,
-            label:"Descuento " + (DESC_PAGO_LABEL[pago] || "") + " " + pctTxt(pct) + "%"};
-  }
+  // Sin descuento por medio de pago (se sacó el 2026-10-27): el total es la
+  // suma de los precios publicados, sea cual sea el medio elegido.
   function buildMessage(lines, total){
     var f = state.form;
     var msg = "Hola! " + (f.nombre ? "Soy " + f.nombre + ". " : "") + "Quiero hacer este pedido:\n\n*MATERIALES*\n";
     lines.forEach(function(l){
       msg += "• " + l.desc + " — *" + fmtQty(l.qty) + "* x " + fmt(l.price) + " = " + fmt(l.subtotal) + "\n";
     });
-    var t = calcTotales(total, f.pago);
-    if(t.desc > 0){
-      msg += "\n*SUBTOTAL (precio de lista):* " + fmt(total) +
-             "\n*" + t.label.toUpperCase() + ":* -" + fmt(t.desc) +
-             "\n*TOTAL ESTIMADO:* " + fmt(t.total) + "\n";
-    } else {
-      msg += "\n*TOTAL ESTIMADO:* " + fmt(total) + "\n";
-    }
+    msg += "\n*TOTAL ESTIMADO:* " + fmt(total) + "\n";
     if(f.entrega === "envio"){
       msg += "\n*ENTREGA:* Envío a obra\n";
       if(f.direccion)  msg += "Dirección: " + f.direccion + "\n";
@@ -583,13 +566,7 @@
 
     var n = lines.length + (state.extras.length ? 1 : 0);
     document.getElementById("cartCount").textContent = n + (n===1 ? " artículo" : " artículos");
-    var tot = calcTotales(total, state.form.pago);
-    document.getElementById("cartTotal").textContent = fmt(tot.total);
-    var descBox = document.getElementById("cartDesc");
-    descBox.hidden = !(lines.length && tot.desc > 0);
-    document.getElementById("cartSub").textContent = fmt(total);
-    document.getElementById("cartDescLabel").textContent = tot.label;
-    document.getElementById("cartDescMonto").textContent = "−" + fmt(tot.desc);
+    document.getElementById("cartTotal").textContent = fmt(total);
     document.getElementById("headCartLabel").textContent = n ? ("Mi pedido · " + n) : "Mi pedido";
     document.getElementById("cartClear").hidden = !n;
 
@@ -953,7 +930,7 @@
       var pedidoLocal = {
         fecha: new Date().toISOString(),
         items: lines.length + (state.extras.length ? 1 : 0),
-        total: calcTotales(total, state.form.pago).total,
+        total: total,
         estado: "Enviado",
         cart: JSON.parse(JSON.stringify(state.cart)),
         extras: state.extras.slice()
