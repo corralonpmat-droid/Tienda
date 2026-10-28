@@ -20,9 +20,10 @@
   // real — ver PLAN_APP_TIENDA.md). Si está vacío o falla, el pedido sigue
   // saliendo SOLO por WhatsApp, exactamente como siempre — esto es un agregado
   // que nunca bloquea ni retrasa el envío por WhatsApp.
-  // 🔴 TEMPORAL (29/09/2026): apunta al túnel de prueba de Marcos, que deja de
-  // existir en cuanto cierre esa ventana. Volver a "" cuando termine la prueba.
-  var PEDIDOS_WEB_URL = "https://deeper-journey-picks-humanities.trycloudflare.com";
+  // Desde 2026-10-28 corre en la PC del local (C:\CorralonPedidosWeb) y sale a internet por el túnel de
+  // Cloudflare en pedidos.corralonpmat.com.ar (solo /api/pedido). Si esa PC está apagada o sin internet, el
+  // pedido igual sale por WhatsApp: el número de pedido web simplemente no se genera.
+  var PEDIDOS_WEB_URL = "https://pedidos.corralonpmat.com.ar";
 
   function mandarAPedidosWeb(pedidoLocal, lines){
     if(!PEDIDOS_WEB_URL) return;
