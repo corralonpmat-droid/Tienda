@@ -96,14 +96,6 @@
     "frac": true
   },
   {
-    "cod": "CINECO",
-    "desc": "CINTA TRANSPARENTE 48X 40 ECO",
-    "cat": "cemento",
-    "unit": "unidad",
-    "price": 1752.1,
-    "frac": false
-  },
-  {
     "cod": "FCWE",
     "desc": "FINO A LA CAL EXT. FORTE X 25 KG \"WEBER\"",
     "cat": "cemento",
@@ -246,14 +238,6 @@
     "unit": "metro",
     "price": 3353.18,
     "frac": true
-  },
-  {
-    "cod": "4740",
-    "desc": "CABLE UTP CAT 5E EXTERIOR",
-    "cat": "electricidad",
-    "unit": "unidad",
-    "price": 649.38,
-    "frac": false
   },
   {
     "cod": "9586",
@@ -533,30 +517,6 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 10500.0,
-    "frac": false
-  },
-  {
-    "cod": "FE3341",
-    "desc": "CINTA METRICA AUTOMATICA ECOFLEX 3 m FLEJE AMARILLO (103)",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 10560.2,
-    "frac": false
-  },
-  {
-    "cod": "FE3344",
-    "desc": "CINTA METRICA AUTOMATICA PREMIUMBLOK 5 m FLEJE AMARILLO (525 M)",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 24532.2,
-    "frac": false
-  },
-  {
-    "cod": "FE3345",
-    "desc": "CINTA METRICA AUTOMATICA PREMIUMBLOK 8 m FLEJE AMARILLO (508)",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 36211.0,
     "frac": false
   },
   {
@@ -1184,35 +1144,19 @@
     "frac": false
   },
   {
+    "cod": "CHAC4.0",
+    "desc": "CHAPA CINCALUM 27 X 4.00 MT",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 59923.44,
+    "frac": false
+  },
+  {
     "cod": "CHAC4.5",
     "desc": "CHAPA CINCALUM 27 X 4.50 MT",
     "cat": "hierros",
     "unit": "unidad",
     "price": 67413.88,
-    "frac": false
-  },
-  {
-    "cod": "CHAC5",
-    "desc": "CHAPA CINCALUM 27 X 5.00 MT",
-    "cat": "hierros",
-    "unit": "unidad",
-    "price": 74904.31,
-    "frac": false
-  },
-  {
-    "cod": "CHAC6.0",
-    "desc": "CHAPA CINCALUM 27 X 6.00 MT",
-    "cat": "hierros",
-    "unit": "unidad",
-    "price": 89885.17,
-    "frac": false
-  },
-  {
-    "cod": "CHAC7.0",
-    "desc": "CHAPA CINCALUM 27 X 7.00 MT",
-    "cat": "hierros",
-    "unit": "unidad",
-    "price": 104866.03,
     "frac": false
   },
   {
