@@ -296,22 +296,6 @@
     "frac": true
   },
   {
-    "cod": "2059-STO3045",
-    "desc": "ADHESIVO P/ZAPATILLA 9 GRS. ECCOLE",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 7649.13,
-    "frac": false
-  },
-  {
-    "cod": "POXMA38",
-    "desc": "ADHESIVO POXILINA 70ML.",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 7602.0,
-    "frac": false
-  },
-  {
     "cod": "ISO.RUFI.015",
     "desc": "AISLANTE TERMICO ALUM SIMPLE 10 MM 1X20 MT \"RUFI\"",
     "cat": "ferreteria",
@@ -988,7 +972,7 @@
     "desc": "TALADRO PERCUTOR 710W INGCO",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 89637.48,
+    "price": 92400.0,
     "frac": false
   },
   {
