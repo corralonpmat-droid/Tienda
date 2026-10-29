@@ -28,7 +28,7 @@
     "desc": "BOLSA DE CAL HID. M. VIRGINIA  ~ 23 kgs.",
     "cat": "cemento",
     "unit": "unidad",
-    "price": 8500.2,
+    "price": 9020.0,
     "frac": false
   },
   {
@@ -213,14 +213,6 @@
     "cat": "electricidad",
     "unit": "unidad",
     "price": 1204.11,
-    "frac": false
-  },
-  {
-    "cod": "6646",
-    "desc": "CABLE COAXIL CCTV 67% RG-6 NG.Epuye",
-    "cat": "electricidad",
-    "unit": "unidad",
-    "price": 903.53,
     "frac": false
   },
   {
@@ -796,7 +788,7 @@
     "desc": "MALLA Q-084 (2,00X6mts) H4",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 33727.45,
+    "price": 30450.0,
     "frac": false
   },
   {
@@ -1236,7 +1228,7 @@
     "desc": "LADRILLONES 12 X 18 X 30",
     "cat": "ladrillos",
     "unit": "unidad",
-    "price": 891.0,
+    "price": 913.0,
     "frac": false
   },
   {
