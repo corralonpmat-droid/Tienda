@@ -38,18 +38,8 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--font);
 .ic-tt{background:#111;}
 .ic-cat{background:var(--primary);}
 .ic-map{background:#4285f4;}
-.ic-wifi{background:#0e7c86;}
+.ic-share{background:#6b5b4b;}
 button.btn{font-family:inherit;text-align:left;cursor:pointer;}
-.modal{position:fixed;inset:0;z-index:10;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(32,18,7,.55);}
-.modal.show{display:flex;}
-.modal-card{position:relative;width:100%;max-width:400px;max-height:94vh;overflow:auto;padding:22px 20px 20px;border-radius:20px;background:#fff;box-shadow:0 20px 50px rgba(0,0,0,.3);}
-.modal-card h2{margin:0 0 14px;font-size:20px;}
-.modal-x{position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:10px;border:2px solid #0e7c86;background:#fff;color:#0e7c86;font-size:20px;line-height:1;cursor:pointer;}
-.wifi-et{margin:10px 0 0;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);}
-.wifi-val{margin:2px 0 0;font-size:19px;font-weight:600;word-break:break-all;}
-.wifi-copiar{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--ground);color:var(--ink);font:inherit;font-weight:600;font-size:15px;cursor:pointer;}
-.wifi-qr{display:block;width:210px;height:210px;margin:16px auto 6px;image-rendering:pixelated;}
-.wifi-nota{margin:4px 0 0;text-align:center;font-size:14px;color:var(--muted);}
 .pie{margin-top:22px;text-align:center;color:var(--muted);font-size:13px;}
 </style>
 </head>
@@ -65,10 +55,6 @@ button.btn{font-family:inherit;text-align:left;cursor:pointer;}
     <span class="ic">★</span>
     <span>Dejanos una reseña<small>Contanos cómo te atendimos en Google</small></span>
   </a>
-  <button type="button" class="btn" id="wifi-abrir" data-ev="wifi">
-    <span class="ic ic-wifi">📶</span>
-    <span>WiFi del local<small>Tocá para ver la red, la clave y el QR</small></span>
-  </button>
   <a class="btn" href="https://wa.me/5493874493082" target="_blank" rel="noopener" data-ev="wa">
     <span class="ic ic-wa">WA</span>
     <span>WhatsApp<small>Consultá precios y pedí tu presupuesto</small></span>
@@ -94,47 +80,56 @@ button.btn{font-family:inherit;text-align:left;cursor:pointer;}
     <span>Cómo llegar<small>Abrir en Google Maps</small></span>
   </a>
 
+  <button type="button" class="btn" id="compartir" data-ev="compartir">
+    <span class="ic ic-share">&#8599;</span>
+    <span>Compartir Corral&oacute;n P.MAT<small>Mand&aacute;selo a quien lo necesite</small></span>
+  </button>
+
   <p class="pie">Corralón P.MAT · Salta Capital</p>
-</div>
-<div class="modal" id="wifi-modal" role="dialog" aria-modal="true" aria-labelledby="wifi-tit">
-  <div class="modal-card">
-    <button type="button" class="modal-x" id="wifi-cerrar" aria-label="Cerrar">✕</button>
-    <h2 id="wifi-tit">WiFi del local</h2>
-    <p class="wifi-et">Red</p>
-    <p class="wifi-val">PMAT_CLIENTES</p>
-    <p class="wifi-et">Contraseña</p>
-    <p class="wifi-val" id="wifi-clave">pmat2026</p>
-    <button type="button" class="wifi-copiar" id="wifi-copiar" data-ev="wifi_copiar">📋 Copiar</button>
-    <img class="wifi-qr" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQgAAAEIAQAAAACLjVdSAAABh0lEQVR4nO1YQY4DMQjDUf//Za/A0GZPvVFUmqmSTIYDtQw4gPZmnHcG9rP4XjweZtCOBoJ6zSV26/CwCBkkAnBgfMrThXgYAhOa08N8Liw4yNPTbgGrUMFH/fg4PzRAFFFsNx6MLT1raL1hmeLpabEwFhs8a9xPfZ7i6WmxwB0ciJmqu71+nDkWyMdUWGJyZPxklqddFoQnU4ulaAKl12GedlgQIUtdfvCmyVY9Bl9TjNErbgZL7vbxgwUHVHGz5GCcp031BeKHVVlJ/ZGCfSceMag0kqI9p5X6A8EPu9hSanWj/vARf5/ODYWKh8/SemvV7kDJsrzX7awvCEQ8QIwOgf+KIxv1B4MNEqfIjOKTl5t1eBjrLhu32ni7rryb77cQIyRRubRf+Hh10qnUEdkkbzHY3F+31CA6eLbK9uFhqUipC1xV3CTOFE9PtwXVV484icSqvDrQ0x4LRMSoKxbaQ4p9oKdt/XVzQFRcct6oPzSkQ0J9KJfqdK/+GO7p+Vn8Gz14/AGgn73ymg1LgwAAAABJRU5ErkJggg==" alt="QR del WiFi">
-    <p class="wifi-nota">Compartilo con otro celular: escaneá y se conecta solo.</p>
-    <p class="wifi-nota">O copiá la contraseña y andá a Ajustes → WiFi.</p>
-  </div>
 </div>
 <script>
 // Estadisticas: avisa la visita y cada toque al POS por el tunel (sin cookies,
 // sin datos personales). Si falla, no pasa nada: la pagina anda igual.
 var STATS_URL = 'https://movil.corralonpmat.com.ar/api/offline/links-evento';
+// Origen: el QR del mostrador lleva ?o=mostrador (la etiqueta NFC, ?o=nfc); sin
+// parametro es un enlace compartido. Despues se borra de la barra de direcciones
+// para que, si el cliente reenvia la pagina desde el navegador, salga limpia.
+var ORIGEN = 'compartido';
+try {
+  var p = new URLSearchParams(location.search).get('o');
+  if (p === 'mostrador' || p === 'nfc') ORIGEN = p;
+  if (p !== null) {
+    var u = new URL(location.href); u.searchParams.delete('o');
+    history.replaceState(null, '', u.pathname + u.search + u.hash);
+  }
+} catch(e) {}
 function aviso(ev){
-  try { navigator.sendBeacon(STATS_URL, JSON.stringify({e: ev})); } catch(e) {}
+  try { navigator.sendBeacon(STATS_URL, JSON.stringify({e: ev, o: ORIGEN})); } catch(e) {}
 }
 aviso('vista');
 document.addEventListener('click', function(e){
   var el = e.target.closest ? e.target.closest('[data-ev]') : null;
   if (el) aviso(el.getAttribute('data-ev'));
 });
-var wm = document.getElementById('wifi-modal');
-if (wm) {
-  var ab = document.getElementById('wifi-abrir');
-  if (ab) ab.addEventListener('click', function(){ wm.classList.add('show'); });
-  document.getElementById('wifi-cerrar').addEventListener('click', function(){ wm.classList.remove('show'); });
-  wm.addEventListener('click', function(e){ if (e.target === wm) wm.classList.remove('show'); });
-  document.getElementById('wifi-copiar').addEventListener('click', function(){
-    var b = this, clave = document.getElementById('wifi-clave').textContent;
-    function ok(){ b.textContent = '✔ Copiada'; setTimeout(function(){ b.textContent = '📋 Copiar'; }, 2000); }
-    if (navigator.clipboard) navigator.clipboard.writeText(clave).then(ok, function(){ b.textContent = 'Mantené apretada la clave'; });
-    else b.textContent = 'Mantené apretada la clave';
-  });
-}
+var cb = document.getElementById('compartir');
+if (cb) cb.addEventListener('click', function(){
+  // Siempre la direccion limpia (sin ?o=): lo que se reenvia cuenta como "compartido"
+  var url = location.origin + location.pathname;
+  var texto = 'Corralón P.MAT — materiales de construcción en Salta. Reseñas, WhatsApp y catálogo:';
+  var etiqueta = cb.querySelector('span:last-child');
+  function aviso_copiado(){
+    var antes = etiqueta.innerHTML;
+    etiqueta.innerHTML = '✔ Enlace copiado';
+    setTimeout(function(){ etiqueta.innerHTML = antes; }, 2000);
+  }
+  if (navigator.share) {
+    navigator.share({title: 'Corralón P.MAT', text: texto, url: url}).catch(function(){});
+  } else if (navigator.clipboard) {
+    navigator.clipboard.writeText(texto + ' ' + url).then(aviso_copiado, function(){ prompt('Copiá el enlace:', url); });
+  } else {
+    prompt('Copiá el enlace:', url);
+  }
+});
 </script>
 </body>
 </html>

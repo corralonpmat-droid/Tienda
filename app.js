@@ -82,16 +82,29 @@
     try{ localStorage.setItem("pmat_instalar_avisado", "1"); }catch(e){}
   }
 
+  // Rubros: se editan desde el POS (Tablas generales → Rubros de la web) y
+  // llegan en rubros.json. Estos 8 son solo el respaldo si ese archivo no está
+  // o no se puede leer.
   var CATS = [
-    {key:"cemento",      label:"Cemento y Áridos"},
-    {key:"ladrillos",    label:"Ladrillos y Bloques"},
-    {key:"hierros",      label:"Hierros y Alambres"},
-    {key:"plomeria",     label:"Sanitarios y Plomería"},
-    {key:"electricidad", label:"Electricidad"},
-    {key:"pinturas",     label:"Pinturas"},
-    {key:"ceramicos",    label:"Cerámicos y Pisos"},
-    {key:"ferreteria",   label:"Ferretería y Bulonería"}
+    {key:"cemento",      label:"Cemento y Áridos",       icon:"cemento"},
+    {key:"ladrillos",    label:"Ladrillos y Bloques",    icon:"ladrillos"},
+    {key:"hierros",      label:"Hierros y Alambres",     icon:"hierros"},
+    {key:"plomeria",     label:"Sanitarios y Plomería",  icon:"plomeria"},
+    {key:"electricidad", label:"Electricidad",           icon:"electricidad"},
+    {key:"pinturas",     label:"Pinturas",               icon:"pinturas"},
+    {key:"ceramicos",    label:"Cerámicos y Pisos",      icon:"ceramicos"},
+    {key:"ferreteria",   label:"Ferretería y Bulonería", icon:"ferreteria"}
   ];
+
+  function cargarRubros(){
+    return fetch("rubros.json", {cache:"no-store"})
+      .then(function(res){ if(!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
+      .then(function(data){
+        if(!Array.isArray(data) || !data.length) return;
+        CATS = data.map(function(r){ return {key:r.key, label:r.label, icon:r.icon || "ferreteria"}; });
+      })
+      .catch(function(e){ console.warn("Sin rubros.json, uso los de siempre:", e); });
+  }
 
   // Catálogo: ya NO se escribe a mano acá. Lo genera publicar_catalogo_web.py
   // (corre en la PC servidor, 1-2 veces al día) leyendo de corralon.db los
@@ -106,7 +119,7 @@
       .then(function(res){ if(!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
       .then(function(data){
         ITEMS = (Array.isArray(data) ? data : []).map(function(r){
-          return {id:r.cod, cod:r.cod, cat:r.cat, desc:r.desc, unit:r.unit, price:Number(r.price)||0, frac:!!r.frac};
+          return {id:r.cod, cod:r.cod, cat:r.cat, desc:r.desc, unit:r.unit, price:Number(r.price)||0, frac:!!r.frac, sinstock:!!r.sinstock};
         });
         // Saca del carrito guardado los artículos que ya no están en el catálogo.
         Object.keys(state.cart).forEach(function(id){
@@ -150,8 +163,13 @@
     ferreteria:'<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2z"/>'
   };
 
+  // `cat` es la clave del rubro; el dibujo sale del `icon` que se le eligió en el
+  // POS (o el de ferretería si el rubro es nuevo y no se eligió ninguno).
   function iconSvg(cat, size){
-    return '<svg width="'+size+'" height="'+size+'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'+ICONS[cat]+'</svg>';
+    var rubro = null;
+    for(var i=0;i<CATS.length;i++){ if(CATS[i].key===cat){ rubro = CATS[i]; break; } }
+    var dibujo = ICONS[rubro ? rubro.icon : cat] || ICONS.ferreteria;
+    return '<svg width="'+size+'" height="'+size+'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'+dibujo+'</svg>';
   }
   function escAttr(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
@@ -303,6 +321,18 @@
     });
   }
 
+  // Artículo marcado "avisar sin stock" que hoy no tiene: sigue visible, pero en vez
+  // de "Agregar" ofrece consultar por WhatsApp. El dato llega con la última
+  // publicación (13:45 / 19:45), por eso el texto dice "por ahora" y no "agotado".
+  function consultaStockUrl(item){
+    return "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(
+      "Hola! Quería consultar si tienen disponible: " + item.desc);
+  }
+  function botonConsultar(item, chico){
+    return '<a class="btn btn-outline'+(chico?' btn-sm':'')+' btn-block" href="'+consultaStockUrl(item)+
+      '" target="_blank" rel="noopener">Consultar por WhatsApp</a>';
+  }
+
   function itemCard(item){
     var qty = PEDIDO_ACTIVO ? state.cart[item.id] : null;
     var on = qty != null;
@@ -315,9 +345,11 @@
           '<button type="button" data-act="inc" aria-label="Sumar">+</button>' +
         '</div>' +
         '<button type="button" class="item-quit" data-quit="'+item.id+'">Quitar</button>'
+      : item.sinstock ? botonConsultar(item, true)
       : '<button type="button" class="btn btn-yellow btn-sm btn-block" data-add="'+item.id+'">Agregar</button>';
-    return '<article class="item'+(on?' in-cart':'')+'">' +
-      (on ? '<span class="item-flag">En tu pedido</span>' : '') +
+    if(item.sinstock && !PEDIDO_ACTIVO) acciones = botonConsultar(item, true);
+    return '<article class="item'+(on?' in-cart':'')+(item.sinstock&&!on?' sin-stock':'')+'">' +
+      (on ? '<span class="item-flag">En tu pedido</span>' : item.sinstock ? '<span class="item-flag item-flag-sin">Sin stock por ahora</span>' : '') +
       '<div class="item-photo" data-open="'+item.id+'">'+fotoHtml(item,44)+'</div>' +
       '<div class="item-body">' +
         '<p class="item-desc">'+item.desc+'</p>' +
@@ -688,7 +720,7 @@
   // adentro de iniciarPedido().
   var fichaAbierta = null;
   function fichaAcciones(item){
-    if(!PEDIDO_ACTIVO) return "";
+    if(!PEDIDO_ACTIVO) return item.sinstock ? botonConsultar(item, false) : "";
     var qty = state.cart[item.id];
     var on = qty != null;
     var mn = minQty(item);
@@ -700,6 +732,7 @@
         '</div>' +
         '<button type="button" class="btn btn-outline" data-quit="'+item.id+'">Quitar</button>';
     }
+    if(item.sinstock) return '<p class="ficha-sin-stock">Sin stock por ahora — consultanos y te confirmamos cuándo entra.</p>' + botonConsultar(item, false);
     return '<button type="button" class="btn btn-yellow btn-block" data-add="'+item.id+'">Agregar</button>';
   }
   function renderFicha(){
@@ -968,7 +1001,7 @@
   renderBrandTicker();
   renderBrandsGrid();
   showView((location.hash || "#inicio").replace("#",""));
-  cargarCatalogo().then(function(){
+  Promise.all([cargarRubros(), cargarCatalogo()]).then(function(){
     render("all");
     calcLadr();
     calcCer();

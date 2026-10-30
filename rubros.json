@@ -1,0 +1,62 @@
+[
+  {
+    "key": "aridos",
+    "label": "ARIDOS",
+    "icon": "cemento"
+  },
+  {
+    "key": "cemento",
+    "label": "CEMENTOS Y CALES",
+    "icon": "cemento"
+  },
+  {
+    "key": "ladrillos",
+    "label": "LADRILLONES",
+    "icon": "ladrillos"
+  },
+  {
+    "key": "hierros",
+    "label": "HIERROS Y MALLAS",
+    "icon": "hierros"
+  },
+  {
+    "key": "alambres",
+    "label": "ALAMBRES",
+    "icon": "hierros"
+  },
+  {
+    "key": "plomeria",
+    "label": "SANITARIOS",
+    "icon": "plomeria"
+  },
+  {
+    "key": "electricidad",
+    "label": "ELECTRICIDAD",
+    "icon": "electricidad"
+  },
+  {
+    "key": "pinturas",
+    "label": "PINTURAS",
+    "icon": "pinturas"
+  },
+  {
+    "key": "impermeabilizantes",
+    "label": "IMPERMEABILIZANTES",
+    "icon": "ferreteria"
+  },
+  {
+    "key": "ferreteria",
+    "label": "FERRETERIA",
+    "icon": "ferreteria"
+  },
+  {
+    "key": "herramientas-electricas",
+    "label": "HERRAMIENTAS ELECTRICAS",
+    "icon": "ferreteria"
+  },
+  {
+    "key": "ceramicos",
+    "label": "CERAMICOS Y PISOS",
+    "icon": "ceramicos"
+  }
+]

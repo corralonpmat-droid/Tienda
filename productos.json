@@ -2,18 +2,56 @@
   {
     "cod": "BF",
     "desc": "BOLSA DE  ARENA FINA",
-    "cat": "cemento",
+    "cat": "aridos",
     "unit": "unidad",
     "price": 1000.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "BM",
     "desc": "BOLSA DE ARENA MEDIANA",
-    "cat": "cemento",
+    "cat": "aridos",
     "unit": "unidad",
     "price": 1000.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "CA",
+    "desc": "CAMIONADA DE ARENA COMUN MEDIANA",
+    "cat": "aridos",
+    "unit": "unidad",
+    "price": 176000.0,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "CAL",
+    "desc": "CAMIONADA DE ARENA LAVADA MEDIANA",
+    "cat": "aridos",
+    "unit": "unidad",
+    "price": 247500.0,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "CRQ",
+    "desc": "CAMIONADA RIPIOSA QUIJANO",
+    "cat": "aridos",
+    "unit": "unidad",
+    "price": 170500.0,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "A3",
+    "desc": "MT. DE ARENA ENTREVERADA M.",
+    "cat": "aridos",
+    "unit": "metro",
+    "price": 48400.0,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CHN",
@@ -21,7 +59,8 @@
     "cat": "cemento",
     "unit": "unidad",
     "price": 6600.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CH",
@@ -29,7 +68,8 @@
     "cat": "cemento",
     "unit": "unidad",
     "price": 9020.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CHS",
@@ -37,7 +77,8 @@
     "cat": "cemento",
     "unit": "unidad",
     "price": 7040.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "C",
@@ -45,7 +86,8 @@
     "cat": "cemento",
     "unit": "unidad",
     "price": 2880.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CHO",
@@ -53,7 +95,8 @@
     "cat": "cemento",
     "unit": "unidad",
     "price": 7700.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CLN",
@@ -61,7 +104,8 @@
     "cat": "cemento",
     "unit": "unidad",
     "price": 8030.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "BMS",
@@ -69,15 +113,17 @@
     "cat": "cemento",
     "unit": "unidad",
     "price": 8030.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
-    "cod": "CAL",
-    "desc": "CAMIONADA DE ARENA LAVADA MEDIANA",
+    "cod": "BPL",
+    "desc": "BOLSA DE PLASTICOR x 25 KGS.",
     "cat": "cemento",
     "unit": "unidad",
-    "price": 247500.0,
-    "frac": false
+    "price": 7990.53,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CRL",
@@ -85,7 +131,8 @@
     "cat": "cemento",
     "unit": "unidad",
     "price": 236500.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "6470",
@@ -93,7 +140,8 @@
     "cat": "cemento",
     "unit": "unidad",
     "price": 3184.22,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "FCWE",
@@ -101,7 +149,8 @@
     "cat": "cemento",
     "unit": "unidad",
     "price": 11789.17,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "FCW",
@@ -109,15 +158,8 @@
     "cat": "cemento",
     "unit": "unidad",
     "price": 10550.0,
-    "frac": false
-  },
-  {
-    "cod": "A3",
-    "desc": "MT. DE ARENA ENTREVERADA M.",
-    "cat": "cemento",
-    "unit": "metro",
-    "price": 48400.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "R1",
@@ -125,7 +167,17 @@
     "cat": "cemento",
     "unit": "metro",
     "price": 46200.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWAR",
+    "desc": "PASTINA X 2 KG ARENA WEBER",
+    "cat": "cemento",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "16216",
@@ -133,7 +185,8 @@
     "cat": "cemento",
     "unit": "unidad",
     "price": 14403.14,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "VY",
@@ -141,7 +194,8 @@
     "cat": "cemento",
     "unit": "kg",
     "price": 760.0,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "BPWS",
@@ -149,7 +203,8 @@
     "cat": "ceramicos",
     "unit": "unidad",
     "price": 7706.44,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "BPWA",
@@ -157,7 +212,8 @@
     "cat": "ceramicos",
     "unit": "unidad",
     "price": 14731.71,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "BPC",
@@ -165,7 +221,8 @@
     "cat": "ceramicos",
     "unit": "unidad",
     "price": 8214.66,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "130030",
@@ -173,7 +230,8 @@
     "cat": "ceramicos",
     "unit": "unidad",
     "price": 26316.48,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "PIS.AL.3636.1.060",
@@ -181,7 +239,8 @@
     "cat": "ceramicos",
     "unit": "unidad",
     "price": 9480.93,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "598",
@@ -189,7 +248,26 @@
     "cat": "ceramicos",
     "unit": "unidad",
     "price": 4155.66,
-    "frac": false
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "2364-147126",
+    "desc": "PASTINA X 1 KG. BOREAL \" KLAUKOL\"",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 3078.0,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "2364-147125",
+    "desc": "PASTINA X 1 KG. BRUMA \" KLAUKOL\"",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 3360.6,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "PWTC",
@@ -197,7 +275,8 @@
     "cat": "ceramicos",
     "unit": "unidad",
     "price": 6162.28,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "JM1002C",
@@ -205,7 +284,8 @@
     "cat": "electricidad",
     "unit": "unidad",
     "price": 1204.11,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "JM1002M",
@@ -213,7 +293,8 @@
     "cat": "electricidad",
     "unit": "unidad",
     "price": 1204.11,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "F4005N",
@@ -221,7 +302,8 @@
     "cat": "electricidad",
     "unit": "metro",
     "price": 2104.32,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "CN1022",
@@ -229,7 +311,8 @@
     "cat": "electricidad",
     "unit": "metro",
     "price": 3353.18,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "9586",
@@ -237,7 +320,8 @@
     "cat": "electricidad",
     "unit": "unidad",
     "price": 475.37,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "940",
@@ -245,7 +329,8 @@
     "cat": "electricidad",
     "unit": "unidad",
     "price": 601.46,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "983E",
@@ -253,7 +338,8 @@
     "cat": "electricidad",
     "unit": "unidad",
     "price": 831.04,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "984E",
@@ -261,7 +347,8 @@
     "cat": "electricidad",
     "unit": "unidad",
     "price": 987.5,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "14120",
@@ -269,7 +356,8 @@
     "cat": "electricidad",
     "unit": "unidad",
     "price": 2805.89,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "22",
@@ -277,7 +365,8 @@
     "cat": "electricidad",
     "unit": "unidad",
     "price": 3963.17,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "04.03.02.00",
@@ -285,7 +374,8 @@
     "cat": "electricidad",
     "unit": "unidad",
     "price": 9000.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "1253",
@@ -293,7 +383,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 5073.62,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "ISO.RUFI.015",
@@ -301,15 +392,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 49773.84,
-    "frac": false
-  },
-  {
-    "cod": "2440-F0129002JR",
-    "desc": "AMOLADORA SKIL 115 MM 700 W 11000 RPM  9002",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 81543.62,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "TIPO1 125",
@@ -317,7 +401,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 151.06,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "1",
@@ -325,7 +410,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 4857.16,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "76-J77902R3",
@@ -333,7 +419,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 221.81,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "M00704RO",
@@ -341,15 +428,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 19.16,
-    "frac": false
-  },
-  {
-    "cod": "BPL",
-    "desc": "BOLSA DE PLASTICOR x 25 KGS.",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 7990.53,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "VCE",
@@ -357,7 +437,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 4900.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "VCE4",
@@ -365,7 +446,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 14366.23,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "VCE10",
@@ -373,7 +455,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 30500.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "VCE20",
@@ -381,7 +464,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 55557.6,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2747",
@@ -389,7 +473,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 11845.15,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2731",
@@ -397,7 +482,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 16101.24,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2737",
@@ -405,7 +491,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 39802.18,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2738",
@@ -413,7 +500,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 33783.69,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2740",
@@ -421,7 +509,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 30417.67,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2742",
@@ -429,7 +518,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 22635.5,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2745",
@@ -437,7 +527,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 34260.19,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "1038-214-N-C-A",
@@ -445,7 +536,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 46960.69,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2739",
@@ -453,7 +545,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 28706.43,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2741",
@@ -461,7 +554,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 22014.16,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2736",
@@ -469,7 +563,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 23702.04,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "FLG520",
@@ -477,7 +572,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 13300.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "FLG519",
@@ -485,7 +581,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 7000.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "FLG075",
@@ -493,7 +590,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 10500.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "C1.5",
@@ -501,7 +599,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 5366.21,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "C2.5",
@@ -509,7 +608,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 5423.18,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "TG051",
@@ -517,7 +617,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 7121.74,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "06-2052345",
@@ -525,7 +626,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 15514.96,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "262936",
@@ -533,7 +635,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 1000.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "EACD11011525",
@@ -541,7 +644,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 1500.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2056345",
@@ -549,7 +653,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 10007.39,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "205637",
@@ -557,7 +662,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 23820.69,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2054045",
@@ -565,7 +671,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 6331.34,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "SM649",
@@ -573,7 +680,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 9443.78,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2053045",
@@ -581,7 +689,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 7492.24,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "205307",
@@ -589,7 +698,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 18619.55,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "PYS-4.5",
@@ -597,7 +707,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 5500.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2055045",
@@ -605,7 +716,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 8705.28,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "205507",
@@ -613,7 +725,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 20842.46,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "TRF-4.5-3",
@@ -621,7 +734,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 42947.49,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "TRF-7",
@@ -629,7 +743,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 87602.82,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "SM-662-46",
@@ -637,7 +752,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 19000.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "ECO2.0",
@@ -645,7 +761,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 20300.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "ECO2.5",
@@ -653,7 +770,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 14923.41,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "6800",
@@ -661,7 +779,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 4552.5,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "6801",
@@ -669,7 +788,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 14016.24,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "6802",
@@ -677,7 +797,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 31191.56,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "6803",
@@ -685,7 +806,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 59400.08,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "IF06",
@@ -693,7 +815,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 100100.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2256-H71EPU500",
@@ -701,7 +824,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 10170.49,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2256-H71EPU750",
@@ -709,23 +833,26 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 14140.49,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "6",
     "desc": "FILTRO 20 CM. \"VOSS\"",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 2845.13,
-    "frac": false
+    "price": 2900.0,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "8",
     "desc": "FILTRO 25 CM. \"VOSS\"",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 3282.9,
-    "frac": false
+    "price": 3300.0,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "GO06E",
@@ -733,7 +860,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 300.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "367-100",
@@ -741,7 +869,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 2900.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "GD0016",
@@ -749,7 +878,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 2100.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "3706",
@@ -757,7 +887,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 15712.77,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "3707",
@@ -765,7 +896,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 15712.77,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "M15",
@@ -773,7 +905,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 30450.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "1575",
@@ -781,7 +914,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 5850.8,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "EWHT0102",
@@ -789,7 +923,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 53918.24,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CHI001",
@@ -797,31 +932,8 @@
     "cat": "ferreteria",
     "unit": "metro",
     "price": 4879.85,
-    "frac": true
-  },
-  {
-    "cod": "MAL3",
-    "desc": "MEMBRANA ASFALTICA 3 MM LAMIPLAST 25KG VERDE",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 63768.19,
-    "frac": false
-  },
-  {
-    "cod": "MAL4",
-    "desc": "MEMBRANA ASFALTICA 4 MM LAMIPLAST 35KG AMARILLO",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 81625.79,
-    "frac": false
-  },
-  {
-    "cod": "5792",
-    "desc": "MEMBRANA AUTOADHESIVA 25 CM X 10 MTS.",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 44746.87,
-    "frac": false
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "MKAL1",
@@ -829,7 +941,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 51666.24,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "390",
@@ -837,7 +950,134 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 21710.95,
-    "frac": false
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "2364-147128",
+    "desc": "PASTINA X 1 KG. CAOBA \" KLAUKOL\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 3360.6,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "2364-147127",
+    "desc": "PASTINA X 1 KG. COBRE \" KLAUKOL\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 3360.6,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "2364-147124",
+    "desc": "PASTINA X 1 KG. HULLA \"KLAUKOL\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 3360.6,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "2364-147104",
+    "desc": "PASTINA X 1 KG. MERCURIO \" KLAUKOL\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 3360.6,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "2364-147101",
+    "desc": "PASTINA X 1 KG. TALCO \" KLAUKOL\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 3400.0,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "2364-147109",
+    "desc": "PASTINA X 1 KG. TEJA \" KLAUKOL\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 3360.6,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWBG",
+    "desc": "PASTINA X 2 KG BEIGE WEBER",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWCH",
+    "desc": "PASTINA X 2 KG CHAMPAGNE WEBER",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWFC",
+    "desc": "PASTINA X 2 KG FERRICO WEBER",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWGP",
+    "desc": "PASTINA X 2 KG GRIS PERLA WEBER",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWHN",
+    "desc": "PASTINA X 2 KG HABANO WEBER",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWHU",
+    "desc": "PASTINA X 2 KG HUESO WEBER",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWMD",
+    "desc": "PASTINA X 2 KG MEDANO WEBER",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWN",
+    "desc": "PASTINA X 2 KG NEGRO WEBER",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "PWNV",
@@ -845,7 +1085,80 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 6162.28,
-    "frac": false
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWPR",
+    "desc": "PASTINA X 2 KG PERLATO WEBER",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWPT",
+    "desc": "PASTINA X 2 KG PLATA WEBER",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWPL",
+    "desc": "PASTINA X 2 KG PLOMO WEBER",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "4534016",
+    "desc": "PINCEL TODO USO CERDA BLANCA  1/2\"    ESSAMET",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 860.67,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "4534021",
+    "desc": "PINCEL TODO USO CERDA BLANCA  3/4\"    ESSAMET",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 1013.75,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "4534025",
+    "desc": "PINCEL TODO USO CERDA BLANCA 1\"       ESSAMET",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 1133.25,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "4534038",
+    "desc": "PINCEL TODO USO CERDA BLANCA 11/2\"  ESSAMET",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 1500.14,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "4534050",
+    "desc": "PINCEL TODO USO CERDA BLANCA 2\"  ESSAMET",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 1968.51,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "4534063",
@@ -853,7 +1166,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 2560.69,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "4534076",
@@ -861,7 +1175,17 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 3203.32,
-    "frac": false
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "4534101",
+    "desc": "PINCEL TODO USO CERDA BLANCA 4\"       ESSAMET",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 4776.72,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "ABE.MA.25.PLA.170",
@@ -869,7 +1193,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 64028.41,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "ABE.MA.25.PLA.171",
@@ -877,7 +1202,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 64028.41,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "ABE.MA.25.PLA.18",
@@ -885,7 +1211,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 66201.16,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "ABE.MA.25.PLA.181",
@@ -893,7 +1220,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 66200.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "AW145",
@@ -901,7 +1229,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 10466.7,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "161-3028-3",
@@ -909,7 +1238,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 15383.35,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2178-2263",
@@ -917,7 +1247,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 16460.11,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2246-8424",
@@ -925,7 +1256,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 11019.59,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "SH025",
@@ -933,7 +1265,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 2841.21,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2242-0440100",
@@ -941,7 +1274,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 3500.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2242-0418440",
@@ -949,7 +1283,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 9798.5,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "E5020",
@@ -957,7 +1292,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 6412.99,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "2205",
@@ -965,15 +1301,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 29432.62,
-    "frac": false
-  },
-  {
-    "cod": "HERR.INGCO.007",
-    "desc": "TALADRO PERCUTOR 710W INGCO",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 92400.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "SANSP-1",
@@ -981,7 +1310,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 38387.07,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "6107",
@@ -989,7 +1319,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 6778.81,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "1084",
@@ -997,7 +1328,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 5702.6,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "1210",
@@ -1005,7 +1337,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 218.68,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "TFE344",
@@ -1013,7 +1346,8 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 33.39,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "10134250FIX",
@@ -1021,7 +1355,44 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 99.76,
-    "frac": true
+    "frac": true,
+    "sinstock": false
+  },
+  {
+    "cod": "HERR.INGCO.021",
+    "desc": "AMOLADORA ANGULAR 115MM 750W 12000RPM INGCO",
+    "cat": "herramientas-electricas",
+    "unit": "unidad",
+    "price": 99400.0,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "2440-F0129002JR",
+    "desc": "AMOLADORA SKIL 115 MM 700 W 11000 RPM  9002",
+    "cat": "herramientas-electricas",
+    "unit": "unidad",
+    "price": 81543.62,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "HIERR.INGCO.072",
+    "desc": "TALADRO INALAMBRICO COMPACTO 20V",
+    "cat": "herramientas-electricas",
+    "unit": "unidad",
+    "price": 204303.68,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "HERR.INGCO.007",
+    "desc": "TALADRO PERCUTOR 710W INGCO",
+    "cat": "herramientas-electricas",
+    "unit": "unidad",
+    "price": 92400.0,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "KA14",
@@ -1029,7 +1400,8 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 4400.14,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "KA16",
@@ -1037,7 +1409,8 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 4400.14,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "AG20",
@@ -1045,7 +1418,8 @@
     "cat": "hierros",
     "unit": "100 g",
     "price": 1155.19,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "KA14G",
@@ -1053,7 +1427,8 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 5177.59,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "AR8",
@@ -1061,7 +1436,8 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 4340.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "TIPO1 123",
@@ -1069,7 +1445,8 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 127.5,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "-4.2",
@@ -1077,7 +1454,8 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 3813.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "-6",
@@ -1085,7 +1463,8 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 6160.05,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "-8",
@@ -1093,7 +1472,8 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 10780.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "-10",
@@ -1101,7 +1481,8 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 16829.9,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "-12",
@@ -1109,7 +1490,8 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 23540.48,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CHAC3.5",
@@ -1117,7 +1499,8 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 52433.01,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CHAC4.0",
@@ -1125,7 +1508,8 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 59923.44,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CHAC4.5",
@@ -1133,7 +1517,8 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 67413.88,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "C2",
@@ -1141,7 +1526,8 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 5374.26,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "M515",
@@ -1149,7 +1535,8 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 85400.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "PC100",
@@ -1157,7 +1544,8 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 118894.34,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "PC80",
@@ -1165,7 +1553,8 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 94220.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "HIE.TUB.EST.594",
@@ -1173,7 +1562,8 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 38259.42,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "HIE.TUB.EST.599",
@@ -1181,7 +1571,80 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 43803.76,
-    "frac": false
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "MAL3",
+    "desc": "MEMBRANA ASFALTICA 3 MM LAMIPLAST 25KG VERDE",
+    "cat": "impermeabilizantes",
+    "unit": "unidad",
+    "price": 63768.19,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "MAL4",
+    "desc": "MEMBRANA ASFALTICA 4 MM LAMIPLAST 35KG AMARILLO",
+    "cat": "impermeabilizantes",
+    "unit": "unidad",
+    "price": 81625.79,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "5791",
+    "desc": "MEMBRANA AUTOADHESIVA 15 CM X 10 MTS.",
+    "cat": "impermeabilizantes",
+    "unit": "unidad",
+    "price": 26850.38,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "5792",
+    "desc": "MEMBRANA AUTOADHESIVA 25 CM X 10 MTS.",
+    "cat": "impermeabilizantes",
+    "unit": "unidad",
+    "price": 44746.87,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "3010",
+    "desc": "MEMBRANA LIQUIDA BLANCA X  1LT VENTO",
+    "cat": "impermeabilizantes",
+    "unit": "unidad",
+    "price": 6683.69,
+    "frac": true,
+    "sinstock": false
+  },
+  {
+    "cod": "3011",
+    "desc": "MEMBRANA LIQUIDA BLANCA X  4LTS VENTO",
+    "cat": "impermeabilizantes",
+    "unit": "unidad",
+    "price": 23522.7,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "3012",
+    "desc": "MEMBRANA LIQUIDA BLANCA X 10 LTS VENTO",
+    "cat": "impermeabilizantes",
+    "unit": "unidad",
+    "price": 52935.45,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "3013",
+    "desc": "MEMBRANA LIQUIDA BLANCA X 20 LTS VENTO",
+    "cat": "impermeabilizantes",
+    "unit": "unidad",
+    "price": 99944.26,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "4509801",
@@ -1189,7 +1652,8 @@
     "cat": "ladrillos",
     "unit": "unidad",
     "price": 6090.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "SK",
@@ -1197,7 +1661,8 @@
     "cat": "ladrillos",
     "unit": "unidad",
     "price": 2530.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "L8",
@@ -1205,7 +1670,8 @@
     "cat": "ladrillos",
     "unit": "unidad",
     "price": 704.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "L12",
@@ -1213,7 +1679,8 @@
     "cat": "ladrillos",
     "unit": "unidad",
     "price": 913.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "L18",
@@ -1221,7 +1688,8 @@
     "cat": "ladrillos",
     "unit": "unidad",
     "price": 1243.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "1252",
@@ -1229,7 +1697,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 3700.0,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "1512",
@@ -1237,7 +1706,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 11774.22,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "1511",
@@ -1245,7 +1715,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 7126.52,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "9917",
@@ -1253,7 +1724,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 13241.59,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "9917M",
@@ -1261,7 +1733,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 14196.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "9916",
@@ -1269,7 +1742,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 7688.58,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "9918",
@@ -1277,7 +1751,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 47430.31,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "1418S",
@@ -1285,7 +1760,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 12453.49,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "1417",
@@ -1293,7 +1769,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 7218.36,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "1974",
@@ -1301,7 +1778,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 4415.83,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "1975",
@@ -1309,7 +1787,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 14029.93,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "1976",
@@ -1317,7 +1796,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 30706.87,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "1194",
@@ -1325,7 +1805,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 11970.06,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "1182I",
@@ -1333,7 +1814,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 11970.06,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "1555",
@@ -1341,7 +1823,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 53246.43,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "1176",
@@ -1349,7 +1832,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 4703.44,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "1170L",
@@ -1357,7 +1841,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 14865.65,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "1171L",
@@ -1365,47 +1850,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 32637.44,
-    "frac": false
-  },
-  {
-    "cod": "AGU003",
-    "desc": "LATEX INTERIOR/EXTERIOR X 20 LITROS SAN AGUSTIN",
-    "cat": "pinturas",
-    "unit": "unidad",
-    "price": 59016.14,
-    "frac": false
-  },
-  {
-    "cod": "3011",
-    "desc": "MEMBRANA LIQUIDA BLANCA X  4LTS VENTO",
-    "cat": "pinturas",
-    "unit": "unidad",
-    "price": 23522.7,
-    "frac": false
-  },
-  {
-    "cod": "3012",
-    "desc": "MEMBRANA LIQUIDA BLANCA X 10 LTS VENTO",
-    "cat": "pinturas",
-    "unit": "unidad",
-    "price": 52935.45,
-    "frac": false
-  },
-  {
-    "cod": "3013",
-    "desc": "MEMBRANA LIQUIDA BLANCA X 20 LTS VENTO",
-    "cat": "pinturas",
-    "unit": "unidad",
-    "price": 99944.26,
-    "frac": false
-  },
-  {
-    "cod": "4534050",
-    "desc": "PINCEL TODO USO CERDA BLANCA 2\"  ESSAMET",
-    "cat": "pinturas",
-    "unit": "unidad",
-    "price": 1968.51,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "9808",
@@ -1413,7 +1859,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 7424.86,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "PINT.CLIP.001",
@@ -1421,7 +1868,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 6805.07,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "PINT.KOVER.003",
@@ -1429,7 +1877,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 71840.43,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "PINT.CLIP.002",
@@ -1437,7 +1886,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 20758.88,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "4699F",
@@ -1445,7 +1895,8 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 10811.16,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "AL050",
@@ -1453,7 +1904,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 4767.84,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "AL125",
@@ -1461,7 +1913,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 10751.42,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CIVM1-2",
@@ -1469,7 +1922,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 11557.68,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CIV1-2E",
@@ -1477,7 +1931,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 6843.12,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CIV1-2",
@@ -1485,7 +1940,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 13479.23,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CIV3-4",
@@ -1493,7 +1949,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 20013.23,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "GIN1",
@@ -1501,7 +1958,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 2598.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "ITE1-A",
@@ -1509,7 +1967,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 4500.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "AWC160",
@@ -1517,7 +1976,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 34460.72,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "AWC080",
@@ -1525,7 +1985,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 14620.56,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "AWC120",
@@ -1533,87 +1994,98 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 18631.9,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CA035",
     "desc": "CAÑO HIDRO 3 1/2\"",
     "cat": "plomeria",
-    "unit": "metro",
-    "price": 2837.1,
-    "frac": true
+    "unit": "entero",
+    "price": 15887.79,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CA040",
     "desc": "CAÑO HIDRO 3 3/4\"",
     "cat": "plomeria",
-    "unit": "metro",
-    "price": 4258.09,
-    "frac": true
+    "unit": "entero",
+    "price": 23845.3,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CA020",
     "desc": "CAÑO IPS 4X4 1/2\"",
     "cat": "plomeria",
-    "unit": "metro",
-    "price": 2810.26,
-    "frac": true
+    "unit": "entero",
+    "price": 15737.44,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CA025",
     "desc": "CAÑO IPS 4X4 3/4\" ",
     "cat": "plomeria",
-    "unit": "metro",
-    "price": 4392.03,
-    "frac": true
+    "unit": "entero",
+    "price": 24595.39,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CP040",
     "desc": "CAÑO PVC 040  \"BOSTICO\"",
     "cat": "plomeria",
-    "unit": "metro",
-    "price": 2594.15,
-    "frac": true
+    "unit": "entero x 4 mts",
+    "price": 9684.82,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CP050",
     "desc": "CAÑO PVC 050 \"BOSTICO\"",
     "cat": "plomeria",
-    "unit": "metro",
-    "price": 3349.39,
-    "frac": true
+    "unit": "entero x 4 mts",
+    "price": 12504.39,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CP060",
     "desc": "CAÑO PVC 060 \"BOSTICO\"",
     "cat": "plomeria",
-    "unit": "metro",
-    "price": 3651.11,
-    "frac": true
+    "unit": "entero x 4 mts",
+    "price": 13630.82,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CP063",
     "desc": "CAÑO PVC 063 \"BOSTICO\"",
     "cat": "plomeria",
-    "unit": "metro",
-    "price": 5102.31,
-    "frac": true
+    "unit": "entero x 4 mts",
+    "price": 19048.62,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CP100",
     "desc": "CAÑO PVC 100 BOSTICO",
     "cat": "plomeria",
-    "unit": "metro",
-    "price": 5639.17,
-    "frac": true
+    "unit": "entero x 4 mts",
+    "price": 21052.9,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CP110S",
     "desc": "CAÑO PVC 110 STD \"BOSTICO\"",
     "cat": "plomeria",
-    "unit": "metro",
-    "price": 7193.17,
-    "frac": true
+    "unit": "entero x 4mts",
+    "price": 26854.5,
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CP160P",
@@ -1621,7 +2093,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 62365.71,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CN040",
@@ -1629,7 +2102,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 14409.3,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CN063",
@@ -1637,7 +2111,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 23770.5,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CN110",
@@ -1645,7 +2120,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 38701.17,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "TF20004",
@@ -1653,7 +2129,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 7150.89,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "TF25004",
@@ -1661,7 +2138,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 10763.08,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "TF32004",
@@ -1669,7 +2147,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 17477.02,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "N1040",
@@ -1677,7 +2156,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 4738.56,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "DM016",
@@ -1685,7 +2165,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 43774.63,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "FGA110",
@@ -1693,7 +2174,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 20958.67,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "E3000",
@@ -1701,7 +2183,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 11789.78,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "E3100",
@@ -1709,7 +2192,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 15310.48,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "FG07M",
@@ -1717,7 +2201,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 4756.04,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "VTC09",
@@ -1725,7 +2210,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 16701.26,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "GRI.FVB1.427",
@@ -1733,7 +2219,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 94796.31,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "LF030",
@@ -1741,7 +2228,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 121365.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "LF010",
@@ -1749,7 +2237,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 123550.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "LF020",
@@ -1757,7 +2246,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 69545.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "VD1-2",
@@ -1765,7 +2255,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 3927.11,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "VI1-2",
@@ -1773,7 +2264,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 11365.06,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "F103",
@@ -1781,7 +2273,8 @@
     "cat": "plomeria",
     "unit": "metro",
     "price": 787.79,
-    "frac": true
+    "frac": true,
+    "sinstock": false
   },
   {
     "cod": "CANTF005",
@@ -1789,7 +2282,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 39418.25,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CANTF015",
@@ -1797,7 +2291,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 12439.96,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CANTF085",
@@ -1805,7 +2300,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 3946.5,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "CANTF025",
@@ -1813,7 +2309,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 4267.33,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "VQ039",
@@ -1821,7 +2318,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 7321.35,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "E5010",
@@ -1829,7 +2327,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 5857.83,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "TIA",
@@ -1837,7 +2336,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 17500.0,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "TIFA",
@@ -1845,7 +2345,8 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 24215.61,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   },
   {
     "cod": "FU625",
@@ -1853,6 +2354,7 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 16420.81,
-    "frac": false
+    "frac": false,
+    "sinstock": false
   }
 ]
