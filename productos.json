@@ -1,5 +1,50 @@
 [
   {
+    "cod": "KA14",
+    "desc": "ALAMBRE 14x KG",
+    "cat": "alambres",
+    "unit": "unidad",
+    "price": 4400.14,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "KA16",
+    "desc": "ALAMBRE 16xKG",
+    "cat": "alambres",
+    "unit": "unidad",
+    "price": 4400.14,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "AG20",
+    "desc": "ALAMBRE GALVANIZADO N° 20",
+    "cat": "alambres",
+    "unit": "100 g",
+    "price": 1155.19,
+    "frac": true,
+    "sinstock": false
+  },
+  {
+    "cod": "KA14G",
+    "desc": "ALAMBRE GALVANIZANDO 14 X KG",
+    "cat": "alambres",
+    "unit": "unidad",
+    "price": 5177.59,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "AR8",
+    "desc": "ALAMBRE NEGRO 8",
+    "cat": "alambres",
+    "unit": "unidad",
+    "price": 4340.0,
+    "frac": false,
+    "sinstock": false
+  },
+  {
     "cod": "BF",
     "desc": "BOLSA DE  ARENA FINA",
     "cat": "aridos",
@@ -261,8 +306,170 @@
     "sinstock": false
   },
   {
+    "cod": "2364-147128",
+    "desc": "PASTINA X 1 KG. CAOBA \" KLAUKOL\"",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 3360.6,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "2364-147127",
+    "desc": "PASTINA X 1 KG. COBRE \" KLAUKOL\"",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 3360.6,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "2364-147124",
+    "desc": "PASTINA X 1 KG. HULLA \"KLAUKOL\"",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 3360.6,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "2364-147104",
+    "desc": "PASTINA X 1 KG. MERCURIO \" KLAUKOL\"",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 3360.6,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "2364-147101",
+    "desc": "PASTINA X 1 KG. TALCO \" KLAUKOL\"",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 3400.0,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "2364-147109",
+    "desc": "PASTINA X 1 KG. TEJA \" KLAUKOL\"",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 3360.6,
+    "frac": false,
+    "sinstock": false
+  },
+  {
     "cod": "PWAR",
     "desc": "PASTINA X 2 KG ARENA WEBER",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWBG",
+    "desc": "PASTINA X 2 KG BEIGE WEBER",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWCH",
+    "desc": "PASTINA X 2 KG CHAMPAGNE WEBER",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWFC",
+    "desc": "PASTINA X 2 KG FERRICO WEBER",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWGP",
+    "desc": "PASTINA X 2 KG GRIS PERLA WEBER",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWHN",
+    "desc": "PASTINA X 2 KG HABANO WEBER",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWHU",
+    "desc": "PASTINA X 2 KG HUESO WEBER",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWMD",
+    "desc": "PASTINA X 2 KG MEDANO WEBER",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWN",
+    "desc": "PASTINA X 2 KG NEGRO WEBER",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWNV",
+    "desc": "PASTINA X 2 KG NIEVE WEBER",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWPR",
+    "desc": "PASTINA X 2 KG PERLATO WEBER",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWPT",
+    "desc": "PASTINA X 2 KG PLATA WEBER",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 6162.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWPL",
+    "desc": "PASTINA X 2 KG PLOMO WEBER",
     "cat": "ceramicos",
     "unit": "unidad",
     "price": 6162.28,
@@ -774,42 +981,6 @@
     "sinstock": false
   },
   {
-    "cod": "6800",
-    "desc": "ENDUIDO PLASTICO X  1 LT. \"VENTO\"",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 4552.5,
-    "frac": true,
-    "sinstock": false
-  },
-  {
-    "cod": "6801",
-    "desc": "ENDUIDO PLASTICO X  4 LTS. \"VENTO\"",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 14016.24,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "6802",
-    "desc": "ENDUIDO PLASTICO X 10 LTS. \"VENTO\"",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 31191.56,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "6803",
-    "desc": "ENDUIDO PLASTICO X 20 LTS. \"VENTO\"",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 59400.08,
-    "frac": false,
-    "sinstock": false
-  },
-  {
     "cod": "IF06",
     "desc": "ESCALERA PINTOR 9 PELDAÑOS 3.05 MTS.",
     "cat": "ferreteria",
@@ -900,15 +1071,6 @@
     "sinstock": false
   },
   {
-    "cod": "M15",
-    "desc": "MALLA Q-084 (2,00X6mts) H4",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 30450.0,
-    "frac": false,
-    "sinstock": false
-  },
-  {
     "cod": "1575",
     "desc": "MANIJA MINISTERIO ALUMINIO PULIDO P/MEDIO",
     "cat": "ferreteria",
@@ -950,168 +1112,6 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 21710.95,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "2364-147128",
-    "desc": "PASTINA X 1 KG. CAOBA \" KLAUKOL\"",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 3360.6,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "2364-147127",
-    "desc": "PASTINA X 1 KG. COBRE \" KLAUKOL\"",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 3360.6,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "2364-147124",
-    "desc": "PASTINA X 1 KG. HULLA \"KLAUKOL\"",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 3360.6,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "2364-147104",
-    "desc": "PASTINA X 1 KG. MERCURIO \" KLAUKOL\"",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 3360.6,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "2364-147101",
-    "desc": "PASTINA X 1 KG. TALCO \" KLAUKOL\"",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 3400.0,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "2364-147109",
-    "desc": "PASTINA X 1 KG. TEJA \" KLAUKOL\"",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 3360.6,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "PWBG",
-    "desc": "PASTINA X 2 KG BEIGE WEBER",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 6162.28,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "PWCH",
-    "desc": "PASTINA X 2 KG CHAMPAGNE WEBER",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 6162.28,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "PWFC",
-    "desc": "PASTINA X 2 KG FERRICO WEBER",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 6162.28,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "PWGP",
-    "desc": "PASTINA X 2 KG GRIS PERLA WEBER",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 6162.28,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "PWHN",
-    "desc": "PASTINA X 2 KG HABANO WEBER",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 6162.28,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "PWHU",
-    "desc": "PASTINA X 2 KG HUESO WEBER",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 6162.28,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "PWMD",
-    "desc": "PASTINA X 2 KG MEDANO WEBER",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 6162.28,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "PWN",
-    "desc": "PASTINA X 2 KG NEGRO WEBER",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 6162.28,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "PWNV",
-    "desc": "PASTINA X 2 KG NIEVE WEBER",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 6162.28,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "PWPR",
-    "desc": "PASTINA X 2 KG PERLATO WEBER",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 6162.28,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "PWPT",
-    "desc": "PASTINA X 2 KG PLATA WEBER",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 6162.28,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "PWPL",
-    "desc": "PASTINA X 2 KG PLOMO WEBER",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 6162.28,
     "frac": false,
     "sinstock": false
   },
@@ -1224,15 +1224,6 @@
     "sinstock": false
   },
   {
-    "cod": "AW145",
-    "desc": "RAMAL AW 45° MH 110",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 10466.7,
-    "frac": false,
-    "sinstock": false
-  },
-  {
     "cod": "161-3028-3",
     "desc": "REGULADOR P/GAS X 1.5 MT  R/BRONCE",
     "cat": "ferreteria",
@@ -1256,15 +1247,6 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 11019.59,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "SH025",
-    "desc": "SELLAROSCA HIDRO 3 X 25 CC",
-    "cat": "ferreteria",
-    "unit": "unidad",
-    "price": 2841.21,
     "frac": false,
     "sinstock": false
   },
@@ -1395,51 +1377,6 @@
     "sinstock": false
   },
   {
-    "cod": "KA14",
-    "desc": "ALAMBRE 14x KG",
-    "cat": "hierros",
-    "unit": "unidad",
-    "price": 4400.14,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "KA16",
-    "desc": "ALAMBRE 16xKG",
-    "cat": "hierros",
-    "unit": "unidad",
-    "price": 4400.14,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "AG20",
-    "desc": "ALAMBRE GALVANIZADO N° 20",
-    "cat": "hierros",
-    "unit": "100 g",
-    "price": 1155.19,
-    "frac": true,
-    "sinstock": false
-  },
-  {
-    "cod": "KA14G",
-    "desc": "ALAMBRE GALVANIZANDO 14 X KG",
-    "cat": "hierros",
-    "unit": "unidad",
-    "price": 5177.59,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "AR8",
-    "desc": "ALAMBRE NEGRO 8",
-    "cat": "hierros",
-    "unit": "unidad",
-    "price": 4340.0,
-    "frac": false,
-    "sinstock": false
-  },
-  {
     "cod": "TIPO1 123",
     "desc": "AUTOPER. T1- 14X2\" C/AR VUL \"S/M\"",
     "cat": "hierros",
@@ -1526,6 +1463,15 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 5374.26,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "M15",
+    "desc": "MALLA Q-084 (2,00X6mts) H4",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 30450.0,
     "frac": false,
     "sinstock": false
   },
@@ -1751,6 +1697,42 @@
     "cat": "pinturas",
     "unit": "unidad",
     "price": 47430.31,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "6800",
+    "desc": "ENDUIDO PLASTICO X  1 LT. \"VENTO\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 4552.5,
+    "frac": true,
+    "sinstock": false
+  },
+  {
+    "cod": "6801",
+    "desc": "ENDUIDO PLASTICO X  4 LTS. \"VENTO\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 14016.24,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "6802",
+    "desc": "ENDUIDO PLASTICO X 10 LTS. \"VENTO\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 31191.56,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "6803",
+    "desc": "ENDUIDO PLASTICO X 20 LTS. \"VENTO\"",
+    "cat": "pinturas",
+    "unit": "unidad",
+    "price": 59400.08,
     "frac": false,
     "sinstock": false
   },
@@ -2313,11 +2295,29 @@
     "sinstock": false
   },
   {
+    "cod": "AW145",
+    "desc": "RAMAL AW 45° MH 110",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 10466.7,
+    "frac": false,
+    "sinstock": false
+  },
+  {
     "cod": "VQ039",
     "desc": "RAMAL PVC 45° MH 110",
     "cat": "plomeria",
     "unit": "unidad",
     "price": 7321.35,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "SH025",
+    "desc": "SELLAROSCA HIDRO 3 X 25 CC",
+    "cat": "plomeria",
+    "unit": "unidad",
+    "price": 2841.21,
     "frac": false,
     "sinstock": false
   },
