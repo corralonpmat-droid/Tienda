@@ -36,6 +36,15 @@
     "sinstock": false
   },
   {
+    "cod": "CRL",
+    "desc": "CAMIONADA RIPIOSA LAVADA",
+    "cat": "aridos",
+    "unit": "unidad",
+    "price": 236500.0,
+    "frac": false,
+    "sinstock": false
+  },
+  {
     "cod": "CRQ",
     "desc": "CAMIONADA RIPIOSA QUIJANO",
     "cat": "aridos",
@@ -50,6 +59,15 @@
     "cat": "aridos",
     "unit": "metro",
     "price": 48400.0,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "R1",
+    "desc": "MT. DE RIPIOSA",
+    "cat": "aridos",
+    "unit": "metro",
+    "price": 46200.0,
     "frac": false,
     "sinstock": false
   },
@@ -126,15 +144,6 @@
     "sinstock": false
   },
   {
-    "cod": "CRL",
-    "desc": "CAMIONADA RIPIOSA LAVADA",
-    "cat": "cemento",
-    "unit": "unidad",
-    "price": 236500.0,
-    "frac": false,
-    "sinstock": false
-  },
-  {
     "cod": "6470",
     "desc": "CEMENTO BLANCO X KG. PREGO",
     "cat": "cemento",
@@ -148,7 +157,7 @@
     "desc": "FINO A LA CAL EXT. FORTE X 25 KG \"WEBER\"",
     "cat": "cemento",
     "unit": "unidad",
-    "price": 11789.17,
+    "price": 12438.57,
     "frac": false,
     "sinstock": false
   },
@@ -158,24 +167,6 @@
     "cat": "cemento",
     "unit": "unidad",
     "price": 10550.0,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "R1",
-    "desc": "MT. DE RIPIOSA",
-    "cat": "cemento",
-    "unit": "metro",
-    "price": 46200.0,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "PWAR",
-    "desc": "PASTINA X 2 KG ARENA WEBER",
-    "cat": "cemento",
-    "unit": "unidad",
-    "price": 6162.28,
     "frac": false,
     "sinstock": false
   },
@@ -202,7 +193,7 @@
     "desc": "BOLSA PEGAMENTO ESTANDAR X 25 KGS. WEBER",
     "cat": "ceramicos",
     "unit": "unidad",
-    "price": 7706.44,
+    "price": 7790.2,
     "frac": false,
     "sinstock": false
   },
@@ -266,6 +257,15 @@
     "cat": "ceramicos",
     "unit": "unidad",
     "price": 3360.6,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "PWAR",
+    "desc": "PASTINA X 2 KG ARENA WEBER",
+    "cat": "ceramicos",
+    "unit": "unidad",
+    "price": 6162.28,
     "frac": false,
     "sinstock": false
   },
@@ -1876,7 +1876,7 @@
     "desc": "PINTURA ASFALTICA X 18 LTS \"CLIPERFLEX\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 71840.43,
+    "price": 73933.03,
     "frac": false,
     "sinstock": false
   },
