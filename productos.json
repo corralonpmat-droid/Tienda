@@ -603,6 +603,15 @@
     "sinstock": false
   },
   {
+    "cod": "TIPO1 123",
+    "desc": "AUTOPER. T1- 14X2\" C/AR VUL \"S/M\"",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 127.5,
+    "frac": false,
+    "sinstock": false
+  },
+  {
     "cod": "TIPO1 125",
     "desc": "AUTOPER. T1- 14X2,5\" C/AR VUL \"S/M\"",
     "cat": "ferreteria",
@@ -806,6 +815,15 @@
     "cat": "ferreteria",
     "unit": "unidad",
     "price": 5366.21,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "C2",
+    "desc": "CLAVO 2 \" X KG.",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 5374.26,
     "frac": false,
     "sinstock": false
   },
@@ -1377,15 +1395,6 @@
     "sinstock": false
   },
   {
-    "cod": "TIPO1 123",
-    "desc": "AUTOPER. T1- 14X2\" C/AR VUL \"S/M\"",
-    "cat": "hierros",
-    "unit": "unidad",
-    "price": 127.5,
-    "frac": false,
-    "sinstock": false
-  },
-  {
     "cod": "-4.2",
     "desc": "BARRA DE HIERRO  4",
     "cat": "hierros",
@@ -1454,15 +1463,6 @@
     "cat": "hierros",
     "unit": "unidad",
     "price": 67413.88,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "C2",
-    "desc": "CLAVO 2 \" X KG.",
-    "cat": "hierros",
-    "unit": "unidad",
-    "price": 5374.26,
     "frac": false,
     "sinstock": false
   },
@@ -1983,7 +1983,7 @@
     "cod": "CA035",
     "desc": "CAÑO HIDRO 3 1/2\"",
     "cat": "plomeria",
-    "unit": "entero",
+    "unit": "entero x 6 mts",
     "price": 15887.79,
     "frac": false,
     "sinstock": false
@@ -1992,7 +1992,7 @@
     "cod": "CA040",
     "desc": "CAÑO HIDRO 3 3/4\"",
     "cat": "plomeria",
-    "unit": "entero",
+    "unit": "entero x 6 mts",
     "price": 23845.3,
     "frac": false,
     "sinstock": false
@@ -2001,7 +2001,7 @@
     "cod": "CA020",
     "desc": "CAÑO IPS 4X4 1/2\"",
     "cat": "plomeria",
-    "unit": "entero",
+    "unit": "entero x 6 mts",
     "price": 15737.44,
     "frac": false,
     "sinstock": false
@@ -2010,7 +2010,7 @@
     "cod": "CA025",
     "desc": "CAÑO IPS 4X4 3/4\" ",
     "cat": "plomeria",
-    "unit": "entero",
+    "unit": "entero x 6 mts",
     "price": 24595.39,
     "frac": false,
     "sinstock": false

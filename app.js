@@ -6,7 +6,7 @@
   // Se apagó unas horas el 2026-09-21 y Marcos pidió que vuelva. Para apagarlo
   // de nuevo (catálogo solo para mirar precios y consultar por WhatsApp): poner
   // false ACÁ y comentar en index.html el botón #headCart, el panel #cartPanel
-  // (con #cartBackdrop) y los botones cLadAdd / cCerAdd de las calculadoras.
+  // (con #cartBackdrop) y los botones cLadAdd de las calculadoras.
   // Quedan afuera a propósito (comentados en index.html): el bloque hero "Armá
   // tu pedido / Cómo funciona" y la sección "Pegá tu lista" (con su tarjeta y
   // su link del menú) — por eso iniciarPedido() no da por hecho que el botón
@@ -439,7 +439,7 @@
   }
 
   /* ---------- calculadoras ---------- */
-  var LADR_POR_M2 = 16, LADR_DESP = 1.05, CER_DESP = 1.08, M2_POR_CAJA = 20;
+  var LADR_POR_M2 = 16, LADR_DESP = 1.05;
   function calcLadr(){
     var m2 = parseFloat(document.getElementById("cLadM2").value) || 0;
     var id = document.getElementById("cLadTipo").value;
@@ -454,25 +454,6 @@
       '<div>Necesitás <b>'+fmtQty(u)+'</b> ladrillones</div>' +
       '<div class="sub">'+it.desc+' · <b>'+fmt(Math.round(u*it.price*100)/100)+'</b></div>';
     return {id:id, u:u};
-  }
-  // Ceramico Mapuche + crucetas: ids fijos (cod real de corralon.db) — si
-  // alguno de los dos no está tildado "🌐 Web" en el sistema interno, la
-  // calculadora se apaga sola en vez de romper (byId devuelve null).
-  function calcCer(){
-    var m2 = parseFloat(document.getElementById("cCerM2").value) || 0;
-    var it = byId("PIS.AL.3636.1.060"), cru = byId("598");
-    var out = document.getElementById("cCerOut");
-    if(!it || !cru){
-      out.innerHTML = '<div class="sub">Este cálculo no está disponible por ahora — consultanos por WhatsApp.</div>';
-      return {m2:0, cajas:0};
-    }
-    var comprar = Math.ceil(m2 * CER_DESP * 100) / 100;
-    var cajas = Math.max(1, Math.ceil(m2 / M2_POR_CAJA));
-    var tot = comprar*it.price + cajas*cru.price;
-    out.innerHTML =
-      '<div>Comprá <b>'+fmtQty(comprar)+' m²</b> de cerámico y <b>'+cajas+'</b> caja'+(cajas>1?'s':'')+' de crucetas</div>' +
-      '<div class="sub">Total estimado · <b>'+fmt(Math.round(tot*100)/100)+'</b></div>';
-    return {m2:comprar, cajas:cajas};
   }
 
   /* ---------- pedido / WhatsApp ---------- */
@@ -903,13 +884,6 @@
       var r = calcLadr();
       if(r.u > 0){ addQty(r.id, r.u); save(); render("all"); toast(fmtQty(r.u)+" ladrillones agregados ✓"); }
     });
-    document.getElementById("cCerAdd").addEventListener("click", function(){
-      var r = calcCer();
-      if(r.m2 > 0){
-        addQty("PIS.AL.3636.1.060", r.m2); addQty("598", r.cajas);
-        save(); render("all"); toast("Cerámico y crucetas agregados ✓");
-      }
-    });
     CAMPOS_TEXTO.forEach(function(campo){
       var idCampo = campo.charAt(0).toUpperCase() + campo.slice(1);
       var valor = state.form[campo] || "";
@@ -996,7 +970,6 @@
   // Las calculadoras siguen andando sin el pedido: solo calculan y muestran el total.
   document.getElementById("cLadM2").addEventListener("input", calcLadr);
   document.getElementById("cLadTipo").addEventListener("change", calcLadr);
-  document.getElementById("cCerM2").addEventListener("input", calcCer);
 
   renderBrandTicker();
   renderBrandsGrid();
@@ -1004,7 +977,6 @@
   Promise.all([cargarRubros(), cargarCatalogo()]).then(function(){
     render("all");
     calcLadr();
-    calcCer();
   });
   cargarSugeridos().then(function(){
     if(PEDIDO_ACTIVO) renderCart(); // por si el carrito ya traía ítems restaurados de localStorage
