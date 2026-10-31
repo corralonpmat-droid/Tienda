@@ -150,7 +150,7 @@
     "unit": "unidad",
     "price": 2880.0,
     "frac": false,
-    "sinstock": false
+    "sinstock": true
   },
   {
     "cod": "CHO",
@@ -778,7 +778,7 @@
     "desc": "CERRADURA PRIVE Nº200",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 23702.04,
+    "price": 24000.0,
     "frac": false,
     "sinstock": false
   },
