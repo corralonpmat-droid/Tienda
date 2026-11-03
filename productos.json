@@ -823,7 +823,7 @@
     "desc": "CLAVO 2 \" X KG.",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 5374.26,
+    "price": 5542.7,
     "frac": false,
     "sinstock": false
   },
@@ -1210,7 +1210,7 @@
     "desc": "PUERTA PLACA MAD. PINO PARANA 700X20 D",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 64028.41,
+    "price": 66080.0,
     "frac": false,
     "sinstock": false
   },
@@ -1219,7 +1219,7 @@
     "desc": "PUERTA PLACA MAD. PINO PARANA 700X20 I",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 64028.41,
+    "price": 66080.0,
     "frac": false,
     "sinstock": false
   },
@@ -1228,7 +1228,7 @@
     "desc": "PUERTA PLACA MAD. PINO PARANA 800X20 D",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 66201.16,
+    "price": 66080.0,
     "frac": false,
     "sinstock": false
   },
@@ -1237,7 +1237,7 @@
     "desc": "PUERTA PLACA MAD. PINO PARANA 800X20 I",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 66200.0,
+    "price": 66080.0,
     "frac": false,
     "sinstock": false
   },
@@ -1912,7 +1912,7 @@
     "desc": "CANILLA METAL ESFERICA PALANCA 1/2  LT100 P ECO \"VALFORTE\"",
     "cat": "plomeria",
     "unit": "unidad",
-    "price": 7000.0,
+    "price": 6843.12,
     "frac": false,
     "sinstock": false
   },
@@ -2218,7 +2218,7 @@
     "desc": "LB INODORO CORTO FERRUM ANDINA",
     "cat": "plomeria",
     "unit": "unidad",
-    "price": 123550.0,
+    "price": 127991.82,
     "frac": false,
     "sinstock": false
   },
@@ -2308,7 +2308,7 @@
     "desc": "RAMAL PVC 45° MH 110",
     "cat": "plomeria",
     "unit": "unidad",
-    "price": 7321.35,
+    "price": 7706.44,
     "frac": false,
     "sinstock": false
   },
