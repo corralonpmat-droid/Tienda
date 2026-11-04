@@ -150,7 +150,7 @@
     "unit": "unidad",
     "price": 2880.0,
     "frac": false,
-    "sinstock": true
+    "sinstock": false
   },
   {
     "cod": "CHO",
