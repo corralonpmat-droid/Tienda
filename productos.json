@@ -1327,7 +1327,7 @@
     "desc": "THINNER X 0,90 LT. ENVASADO \"S10\"",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 5702.6,
+    "price": 5738.49,
     "frac": true,
     "sinstock": false
   },
@@ -1570,7 +1570,7 @@
     "desc": "MEMBRANA LIQUIDA BLANCA X  4LTS VENTO",
     "cat": "impermeabilizantes",
     "unit": "unidad",
-    "price": 23522.7,
+    "price": 23662.3,
     "frac": false,
     "sinstock": false
   },
@@ -1642,7 +1642,7 @@
     "desc": "AGUARRAS X 900CC \"SOLAR\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 3700.0,
+    "price": 3701.71,
     "frac": true,
     "sinstock": false
   },
@@ -1714,7 +1714,7 @@
     "desc": "ENDUIDO PLASTICO X  4 LTS. \"VENTO\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 14016.24,
+    "price": 14097.75,
     "frac": false,
     "sinstock": false
   },
@@ -1723,7 +1723,7 @@
     "desc": "ENDUIDO PLASTICO X 10 LTS. \"VENTO\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 31191.56,
+    "price": 31368.65,
     "frac": false,
     "sinstock": false
   },
@@ -1741,7 +1741,7 @@
     "desc": "ESMALTE SINTETICO X 1 LT. BLANCO VENTO\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 12453.49,
+    "price": 12529.55,
     "frac": true,
     "sinstock": false
   },
