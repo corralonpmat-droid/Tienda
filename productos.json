@@ -22,7 +22,7 @@
     "desc": "ALAMBRE GALVANIZADO N° 20",
     "cat": "alambres",
     "unit": "100 g",
-    "price": 1155.19,
+    "price": 1162.64,
     "frac": true,
     "sinstock": false
   },
@@ -157,7 +157,7 @@
     "desc": "BOLSA DE CEMENTO HOLCIM x 25 KGS.",
     "cat": "cemento",
     "unit": "unidad",
-    "price": 7700.0,
+    "price": 8030.0,
     "frac": false,
     "sinstock": false
   },
@@ -193,7 +193,7 @@
     "desc": "CEMENTO BLANCO X KG. PREGO",
     "cat": "cemento",
     "unit": "unidad",
-    "price": 3184.22,
+    "price": 3203.65,
     "frac": true,
     "sinstock": false
   },
@@ -202,7 +202,7 @@
     "desc": "FINO A LA CAL EXT. FORTE X 25 KG \"WEBER\"",
     "cat": "cemento",
     "unit": "unidad",
-    "price": 12438.57,
+    "price": 12100.0,
     "frac": false,
     "sinstock": false
   },
@@ -211,7 +211,7 @@
     "desc": "FINO A LA CAL INTERIOR X 25 KG \"WEBER\"",
     "cat": "cemento",
     "unit": "unidad",
-    "price": 10550.0,
+    "price": 10340.0,
     "frac": false,
     "sinstock": false
   },
@@ -238,7 +238,7 @@
     "desc": "BOLSA PEGAMENTO ESTANDAR X 25 KGS. WEBER",
     "cat": "ceramicos",
     "unit": "unidad",
-    "price": 7790.2,
+    "price": 7700.0,
     "frac": false,
     "sinstock": false
   },
@@ -256,7 +256,7 @@
     "desc": "BOLSA PEGAMENTO IMPERMEABLE X 25 KGS. \"CONSTRUKOR\"",
     "cat": "ceramicos",
     "unit": "unidad",
-    "price": 8214.66,
+    "price": 7920.0,
     "frac": false,
     "sinstock": false
   },
@@ -589,7 +589,7 @@
     "desc": "ACEITE P/MADERA LINO X LT. S10",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 5073.62,
+    "price": 5103.71,
     "frac": true,
     "sinstock": false
   },
@@ -1318,7 +1318,7 @@
     "desc": "THINNER SELLO DE ORO X 900CC \"S10\"",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 6778.81,
+    "price": 6774.31,
     "frac": true,
     "sinstock": false
   },
@@ -1561,7 +1561,7 @@
     "desc": "MEMBRANA LIQUIDA BLANCA X  1LT VENTO",
     "cat": "impermeabilizantes",
     "unit": "unidad",
-    "price": 6683.69,
+    "price": 6723.28,
     "frac": true,
     "sinstock": false
   },
@@ -1579,7 +1579,7 @@
     "desc": "MEMBRANA LIQUIDA BLANCA X 10 LTS VENTO",
     "cat": "impermeabilizantes",
     "unit": "unidad",
-    "price": 52935.45,
+    "price": 51665.26,
     "frac": false,
     "sinstock": false
   },
@@ -1588,7 +1588,7 @@
     "desc": "MEMBRANA LIQUIDA BLANCA X 20 LTS VENTO",
     "cat": "impermeabilizantes",
     "unit": "unidad",
-    "price": 99944.26,
+    "price": 103673.44,
     "frac": false,
     "sinstock": false
   },
@@ -1651,7 +1651,7 @@
     "desc": "BARNIZ X 1 LT VENTO",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 11774.22,
+    "price": 11843.9,
     "frac": true,
     "sinstock": false
   },
@@ -1660,7 +1660,7 @@
     "desc": "BARNIZ X 1/2 LT VENTO",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 7126.52,
+    "price": 7166.91,
     "frac": true,
     "sinstock": false
   },
@@ -1669,7 +1669,7 @@
     "desc": "CONVERTIDOR X 1 LT. NEGRO \"VENTO\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 13241.59,
+    "price": 13322.51,
     "frac": true,
     "sinstock": false
   },
@@ -1687,7 +1687,7 @@
     "desc": "CONVERTIDOR X 1/2 LT. NEGRO  \"VENTO\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 7688.58,
+    "price": 7734.33,
     "frac": true,
     "sinstock": false
   },
@@ -1696,7 +1696,7 @@
     "desc": "CONVERTIDOR X 4 LTS. NEGRO \"VENTO\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 47430.31,
+    "price": 49045.89,
     "frac": false,
     "sinstock": false
   },
@@ -1705,7 +1705,7 @@
     "desc": "ENDUIDO PLASTICO X  1 LT. \"VENTO\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 4552.5,
+    "price": 4577.4,
     "frac": true,
     "sinstock": false
   },
@@ -1723,7 +1723,7 @@
     "desc": "ENDUIDO PLASTICO X 10 LTS. \"VENTO\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 31368.65,
+    "price": 31368.64,
     "frac": false,
     "sinstock": false
   },
@@ -1732,7 +1732,7 @@
     "desc": "ENDUIDO PLASTICO X 20 LTS. \"VENTO\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 59400.08,
+    "price": 59734.21,
     "frac": false,
     "sinstock": false
   },
@@ -1750,7 +1750,7 @@
     "desc": "ESMALTE SINTETICO X 1/2 LT. BLANCO VENTO",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 7218.36,
+    "price": 7261.43,
     "frac": true,
     "sinstock": false
   },
@@ -1759,7 +1759,7 @@
     "desc": "FIJADOR SELLADOR X  1 LT. \"VENTO\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 4415.83,
+    "price": 4440.85,
     "frac": true,
     "sinstock": false
   },
@@ -1768,7 +1768,7 @@
     "desc": "FIJADOR SELLADOR X  4 LTS. \"VENTO\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 14029.93,
+    "price": 13550.26,
     "frac": false,
     "sinstock": false
   },
@@ -1777,7 +1777,7 @@
     "desc": "FIJADOR SELLADOR X 10 LTS. \"VENTO\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 30706.87,
+    "price": 30886.52,
     "frac": false,
     "sinstock": false
   },
@@ -1786,7 +1786,7 @@
     "desc": "IMPREGNANTE BRILLANTE X 1 LT. ALGARROBO \"VENTO\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 11970.06,
+    "price": 12042.26,
     "frac": true,
     "sinstock": false
   },
@@ -1795,7 +1795,7 @@
     "desc": "IMPREGNANTE BRILLANTE X 1 LT. NOGAL \"VENTO\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 11970.06,
+    "price": 12042.26,
     "frac": true,
     "sinstock": false
   },
@@ -1804,7 +1804,7 @@
     "desc": "LATEX EXTERIOR X 10 LTS. \"VENTO\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 53246.43,
+    "price": 53571.67,
     "frac": false,
     "sinstock": false
   },
@@ -1813,7 +1813,7 @@
     "desc": "LATEX INTERIOR X  1 LT. \"SOLAR\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 4703.44,
+    "price": 4730.04,
     "frac": true,
     "sinstock": false
   },
@@ -1822,7 +1822,7 @@
     "desc": "LATEX INTERIOR X  4 LTS. \"SOLAR\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 14865.65,
+    "price": 14952.45,
     "frac": false,
     "sinstock": false
   },
@@ -1831,7 +1831,7 @@
     "desc": "LATEX INTERIOR X 10 LTS. \"SOLAR\"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 32637.44,
+    "price": 32827.5,
     "frac": false,
     "sinstock": false
   },
@@ -1840,7 +1840,7 @@
     "desc": "PINTURA AL AGUA BLANCA \" VENTO \"",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 7424.86,
+    "price": 7466.53,
     "frac": true,
     "sinstock": false
   },
