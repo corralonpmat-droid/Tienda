@@ -1291,7 +1291,7 @@
     "desc": "SOPAPA COCINA 50 ERREDE",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 6412.99,
+    "price": 6500.0,
     "frac": false,
     "sinstock": false
   },
@@ -2326,7 +2326,7 @@
     "desc": "SOPAPA LAVATORIO 40 ERREDE",
     "cat": "plomeria",
     "unit": "unidad",
-    "price": 5857.83,
+    "price": 5900.0,
     "frac": false,
     "sinstock": false
   },
