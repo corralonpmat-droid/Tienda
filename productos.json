@@ -301,7 +301,7 @@
     "desc": "PASTINA X 1 KG. BRUMA \" KLAUKOL\"",
     "cat": "ceramicos",
     "unit": "unidad",
-    "price": 3360.6,
+    "price": 3174.12,
     "frac": false,
     "sinstock": false
   },
@@ -310,7 +310,7 @@
     "desc": "PASTINA X 1 KG. CAOBA \" KLAUKOL\"",
     "cat": "ceramicos",
     "unit": "unidad",
-    "price": 3360.6,
+    "price": 3174.12,
     "frac": false,
     "sinstock": false
   },
@@ -319,7 +319,7 @@
     "desc": "PASTINA X 1 KG. COBRE \" KLAUKOL\"",
     "cat": "ceramicos",
     "unit": "unidad",
-    "price": 3360.6,
+    "price": 3174.12,
     "frac": false,
     "sinstock": false
   },
@@ -328,7 +328,7 @@
     "desc": "PASTINA X 1 KG. HULLA \"KLAUKOL\"",
     "cat": "ceramicos",
     "unit": "unidad",
-    "price": 3360.6,
+    "price": 3174.12,
     "frac": false,
     "sinstock": false
   },
@@ -337,7 +337,7 @@
     "desc": "PASTINA X 1 KG. MERCURIO \" KLAUKOL\"",
     "cat": "ceramicos",
     "unit": "unidad",
-    "price": 3360.6,
+    "price": 3174.12,
     "frac": false,
     "sinstock": false
   },
@@ -346,7 +346,7 @@
     "desc": "PASTINA X 1 KG. TALCO \" KLAUKOL\"",
     "cat": "ceramicos",
     "unit": "unidad",
-    "price": 3400.0,
+    "price": 3174.12,
     "frac": false,
     "sinstock": false
   },
@@ -355,7 +355,7 @@
     "desc": "PASTINA X 1 KG. TEJA \" KLAUKOL\"",
     "cat": "ceramicos",
     "unit": "unidad",
-    "price": 3360.6,
+    "price": 3174.12,
     "frac": false,
     "sinstock": false
   },
@@ -508,7 +508,7 @@
     "desc": "CABLE T/TALLER 2X1.5 IRAM NEGRO FONSECA",
     "cat": "electricidad",
     "unit": "metro",
-    "price": 2104.32,
+    "price": 1987.56,
     "frac": true,
     "sinstock": false
   },
@@ -517,7 +517,7 @@
     "desc": "CABLE T/TALLER 2X2.5 MM FONSECA",
     "cat": "electricidad",
     "unit": "metro",
-    "price": 3353.18,
+    "price": 3167.11,
     "frac": true,
     "sinstock": false
   },
@@ -625,7 +625,7 @@
     "desc": "BALDE PLASTICO VOSS 2000",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 4857.16,
+    "price": 4587.63,
     "frac": false,
     "sinstock": false
   },
@@ -634,7 +634,7 @@
     "desc": "BISAGRA LIBRO ZINC 25 MM FUMACA",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 221.81,
+    "price": 209.5,
     "frac": true,
     "sinstock": false
   },
@@ -688,7 +688,7 @@
     "desc": "CERRADURA PRIVE N 105 Z5 BAÑO FRENTE ANG",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 11845.15,
+    "price": 11187.86,
     "frac": false,
     "sinstock": false
   },
@@ -697,7 +697,7 @@
     "desc": "CERRADURA PRIVE N 120 - PUERTA CORREDIZA",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 16101.24,
+    "price": 15207.79,
     "frac": false,
     "sinstock": false
   },
@@ -706,7 +706,7 @@
     "desc": "CERRADURA PRIVE N 201- DOBLE PERNO NIQU",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 39802.18,
+    "price": 37593.56,
     "frac": false,
     "sinstock": false
   },
@@ -715,7 +715,7 @@
     "desc": "CERRADURA PRIVE N 204 - ANGOSTA DOBLE PERNO",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 33783.69,
+    "price": 31909.04,
     "frac": false,
     "sinstock": false
   },
@@ -724,7 +724,7 @@
     "desc": "CERRADURA PRIVE N 206 - SEGURIDAD ANGOST",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 30417.67,
+    "price": 28729.79,
     "frac": false,
     "sinstock": false
   },
@@ -733,7 +733,7 @@
     "desc": "CERRADURA PRIVE N 208 FRENTE ANCHO",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 22635.5,
+    "price": 21379.46,
     "frac": false,
     "sinstock": false
   },
@@ -742,7 +742,7 @@
     "desc": "CERRADURA PRIVE N 212 - PARA PUERTA CORREDIZA",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 34260.19,
+    "price": 32359.1,
     "frac": false,
     "sinstock": false
   },
@@ -751,7 +751,7 @@
     "desc": "CERRADURA PRIVE N 214 ANGOSTA PUERTA CORREDIZA",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 46960.69,
+    "price": 44354.84,
     "frac": false,
     "sinstock": false
   },
@@ -760,7 +760,7 @@
     "desc": "CERRADURA PRIVE Nº 205 - SEG DOBLE PERNO",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 28706.43,
+    "price": 27113.51,
     "frac": false,
     "sinstock": false
   },
@@ -769,7 +769,7 @@
     "desc": "CERRADURA PRIVE Nº 207",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 22014.16,
+    "price": 20792.6,
     "frac": false,
     "sinstock": false
   },
@@ -778,7 +778,7 @@
     "desc": "CERRADURA PRIVE Nº200",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 24000.0,
+    "price": 22386.81,
     "frac": false,
     "sinstock": false
   },
@@ -850,7 +850,7 @@
     "desc": "DISCO CORTE MADERA 4.5\"  RHEIN",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 15514.96,
+    "price": 14654.04,
     "frac": false,
     "sinstock": false
   },
@@ -877,7 +877,7 @@
     "desc": "DISCO DIAMANTADO 3 EN 1 SG/TB/C 4,5\" RHEIN",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 10007.39,
+    "price": 9452.08,
     "frac": false,
     "sinstock": false
   },
@@ -886,7 +886,7 @@
     "desc": "DISCO DIAMANTADO 3 EN 1 SG/TB/C 7\" RHEIN",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 23820.69,
+    "price": 22498.88,
     "frac": false,
     "sinstock": false
   },
@@ -895,7 +895,7 @@
     "desc": "DISCO DIAMANTADO CONTINUO 4.5\" RHEIN",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 6331.34,
+    "price": 5980.02,
     "frac": false,
     "sinstock": false
   },
@@ -913,7 +913,7 @@
     "desc": "DISCO DIAMANTADO SEGMENTADO  LASER   4.5\" RHEIN",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 7492.24,
+    "price": 7076.5,
     "frac": false,
     "sinstock": false
   },
@@ -922,7 +922,7 @@
     "desc": "DISCO DIAMANTADO SEGMENTADO  LASER   7\" RHEIN",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 18619.55,
+    "price": 17586.35,
     "frac": false,
     "sinstock": false
   },
@@ -940,7 +940,7 @@
     "desc": "DISCO DIAMANTADO TURBO 4,5\" RHEIN",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 8705.28,
+    "price": 8222.22,
     "frac": false,
     "sinstock": false
   },
@@ -949,7 +949,7 @@
     "desc": "DISCO DIAMANTADO TURBO 7\" RHEIN",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 20842.46,
+    "price": 19685.92,
     "frac": false,
     "sinstock": false
   },
@@ -958,7 +958,7 @@
     "desc": "DISCO DIAMANTADO TURBO FINO 4.5\" ALIAFOR",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 42947.49,
+    "price": 41862.4,
     "frac": false,
     "sinstock": false
   },
@@ -967,7 +967,7 @@
     "desc": "DISCO DIAMANTADO TURBO FINO 7\" ALIAFOR",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 87602.82,
+    "price": 85389.48,
     "frac": false,
     "sinstock": false
   },
@@ -1012,7 +1012,7 @@
     "desc": "ESPUMA  POLIURETANO HOMEY 500 ML",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 10170.49,
+    "price": 9606.13,
     "frac": false,
     "sinstock": false
   },
@@ -1021,7 +1021,7 @@
     "desc": "ESPUMA  POLIURETANO HOMEY 750 ML",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 14140.49,
+    "price": 13355.83,
     "frac": false,
     "sinstock": false
   },
@@ -1030,7 +1030,7 @@
     "desc": "FILTRO 20 CM. \"VOSS\"",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 2900.0,
+    "price": 2687.25,
     "frac": false,
     "sinstock": false
   },
@@ -1039,7 +1039,7 @@
     "desc": "FILTRO 25 CM. \"VOSS\"",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 3300.0,
+    "price": 3100.73,
     "frac": false,
     "sinstock": false
   },
@@ -1075,7 +1075,7 @@
     "desc": "HERRADURA Nº 1-24 MUSTAD",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 15712.77,
+    "price": 14840.87,
     "frac": false,
     "sinstock": false
   },
@@ -1084,7 +1084,7 @@
     "desc": "HERRADURA Nº 2-26 MUSTAD",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 15712.77,
+    "price": 14840.87,
     "frac": false,
     "sinstock": false
   },
@@ -1093,7 +1093,7 @@
     "desc": "MANIJA MINISTERIO ALUMINIO PULIDO P/MEDIO",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 5850.8,
+    "price": 5526.14,
     "frac": false,
     "sinstock": false
   },
@@ -1129,7 +1129,7 @@
     "desc": "PALA CUADRADA C/CORTO \"APACHE\"",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 21710.95,
+    "price": 20506.21,
     "frac": false,
     "sinstock": false
   },
@@ -1138,7 +1138,7 @@
     "desc": "PINCEL TODO USO CERDA BLANCA  1/2\"    ESSAMET",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 860.67,
+    "price": 812.91,
     "frac": false,
     "sinstock": false
   },
@@ -1147,7 +1147,7 @@
     "desc": "PINCEL TODO USO CERDA BLANCA  3/4\"    ESSAMET",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 1013.75,
+    "price": 957.5,
     "frac": false,
     "sinstock": false
   },
@@ -1156,7 +1156,7 @@
     "desc": "PINCEL TODO USO CERDA BLANCA 1\"       ESSAMET",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 1133.25,
+    "price": 1070.36,
     "frac": false,
     "sinstock": false
   },
@@ -1165,7 +1165,7 @@
     "desc": "PINCEL TODO USO CERDA BLANCA 11/2\"  ESSAMET",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 1500.14,
+    "price": 1416.9,
     "frac": false,
     "sinstock": false
   },
@@ -1174,7 +1174,7 @@
     "desc": "PINCEL TODO USO CERDA BLANCA 2\"  ESSAMET",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 1968.51,
+    "price": 1859.28,
     "frac": false,
     "sinstock": false
   },
@@ -1183,7 +1183,7 @@
     "desc": "PINCEL TODO USO CERDA BLANCA 21/2\"   ESSAMET",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 2560.69,
+    "price": 2418.6,
     "frac": false,
     "sinstock": false
   },
@@ -1192,7 +1192,7 @@
     "desc": "PINCEL TODO USO CERDA BLANCA 3\"       ESSAMET",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 3203.32,
+    "price": 3025.57,
     "frac": false,
     "sinstock": false
   },
@@ -1201,7 +1201,7 @@
     "desc": "PINCEL TODO USO CERDA BLANCA 4\"       ESSAMET",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 4776.72,
+    "price": 4511.66,
     "frac": false,
     "sinstock": false
   },
@@ -1246,7 +1246,7 @@
     "desc": "REGULADOR P/GAS X 1.5 MT  R/BRONCE",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 15383.35,
+    "price": 14529.73,
     "frac": false,
     "sinstock": false
   },
@@ -1255,7 +1255,7 @@
     "desc": "REGULADOR P/GAS X 2.0 MT  R/BRONCE",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 16460.11,
+    "price": 15546.74,
     "frac": false,
     "sinstock": false
   },
@@ -1264,7 +1264,7 @@
     "desc": "RESISTENCIA PULMON COBREADA P/CALEFON FEMSAL",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 11019.59,
+    "price": 10408.11,
     "frac": false,
     "sinstock": false
   },
@@ -1300,7 +1300,7 @@
     "desc": "SOPLETE TECHISTA  A5000 X 10 KG. ALIGAS",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 29500.0,
+    "price": 27799.41,
     "frac": false,
     "sinstock": false
   },
@@ -1309,7 +1309,7 @@
     "desc": "TERRAJA PVC 1/2-3/4-1\" SANOGAS",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 38387.07,
+    "price": 38070.31,
     "frac": false,
     "sinstock": false
   },
@@ -1336,7 +1336,7 @@
     "desc": "TIRAFONDOS  5/16\"(7.9MM) X 2\"",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 218.68,
+    "price": 206.54,
     "frac": true,
     "sinstock": false
   },
@@ -1345,7 +1345,7 @@
     "desc": "TORNILLO FIX 18 X 19",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 33.39,
+    "price": 31.54,
     "frac": true,
     "sinstock": false
   },
@@ -1354,7 +1354,7 @@
     "desc": "TORNILLO FIX 22 X 44",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 99.76,
+    "price": 94.22,
     "frac": true,
     "sinstock": false
   },
@@ -1372,7 +1372,7 @@
     "desc": "AMOLADORA SKIL 115 MM 700 W 11000 RPM  9002",
     "cat": "herramientas-electricas",
     "unit": "unidad",
-    "price": 81543.62,
+    "price": 77018.77,
     "frac": false,
     "sinstock": false
   },
@@ -1543,7 +1543,7 @@
     "desc": "MEMBRANA AUTOADHESIVA 15 CM X 10 MTS.",
     "cat": "impermeabilizantes",
     "unit": "unidad",
-    "price": 26850.38,
+    "price": 25360.45,
     "frac": false,
     "sinstock": false
   },
@@ -1552,7 +1552,7 @@
     "desc": "MEMBRANA AUTOADHESIVA 25 CM X 10 MTS.",
     "cat": "impermeabilizantes",
     "unit": "unidad",
-    "price": 44746.87,
+    "price": 42263.87,
     "frac": false,
     "sinstock": false
   },
@@ -1876,7 +1876,7 @@
     "desc": "RODILLOS LANA 22 CM  ANTARTIDA",
     "cat": "pinturas",
     "unit": "unidad",
-    "price": 10900.0,
+    "price": 10211.25,
     "frac": false,
     "sinstock": false
   },
@@ -2236,7 +2236,7 @@
     "desc": "LLAVE DE PASO DUKE PLASTICA 1/2",
     "cat": "plomeria",
     "unit": "unidad",
-    "price": 3927.11,
+    "price": 4123.48,
     "frac": false,
     "sinstock": false
   },
@@ -2254,7 +2254,7 @@
     "desc": "MANGUERA RIEGO 1/2\" REFORZADA FAMA",
     "cat": "plomeria",
     "unit": "metro",
-    "price": 787.79,
+    "price": 744.08,
     "frac": true,
     "sinstock": false
   },
