@@ -1116,6 +1116,15 @@
     "sinstock": false
   },
   {
+    "cod": "CHI03",
+    "desc": "MEDIA SOMBRA VERDE 80% (2.10 MTS)",
+    "cat": "ferreteria",
+    "unit": "metro",
+    "price": 4879.85,
+    "frac": true,
+    "sinstock": false
+  },
+  {
     "cod": "MKAL1",
     "desc": "MUROKAL X 1 LT.",
     "cat": "ferreteria",
@@ -1912,7 +1921,7 @@
     "desc": "CANILLA METAL ESFERICA PALANCA 1/2  LT100 P ECO \"VALFORTE\"",
     "cat": "plomeria",
     "unit": "unidad",
-    "price": 6843.12,
+    "price": 7000.0,
     "frac": false,
     "sinstock": false
   },
