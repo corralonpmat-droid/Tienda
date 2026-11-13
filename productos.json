@@ -1476,6 +1476,15 @@
     "sinstock": false
   },
   {
+    "cod": "CHAC5",
+    "desc": "CHAPA CINCALUM 27 X 5.00 MT",
+    "cat": "hierros",
+    "unit": "unidad",
+    "price": 74904.31,
+    "frac": false,
+    "sinstock": false
+  },
+  {
     "cod": "M15",
     "desc": "MALLA Q-084 (2,00X6mts) H4",
     "cat": "hierros",
