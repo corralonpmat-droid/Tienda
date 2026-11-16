@@ -211,7 +211,7 @@
     "desc": "FINO A LA CAL INTERIOR X 25 KG \"WEBER\"",
     "cat": "cemento",
     "unit": "unidad",
-    "price": 10340.0,
+    "price": 10574.94,
     "frac": false,
     "sinstock": false
   },
@@ -238,7 +238,7 @@
     "desc": "BOLSA PEGAMENTO ESTANDAR X 25 KGS. WEBER",
     "cat": "ceramicos",
     "unit": "unidad",
-    "price": 7700.0,
+    "price": 7776.4,
     "frac": false,
     "sinstock": false
   },
@@ -274,7 +274,7 @@
     "desc": "CERAMICO PISO MAPUCHE ALL 1° 36X36 x m2",
     "cat": "ceramicos",
     "unit": "unidad",
-    "price": 9480.93,
+    "price": 10266.97,
     "frac": false,
     "sinstock": false
   },
@@ -445,7 +445,7 @@
     "desc": "PASTINA X 2 KG NIEVE WEBER",
     "cat": "ceramicos",
     "unit": "unidad",
-    "price": 6162.28,
+    "price": 6257.17,
     "frac": false,
     "sinstock": false
   },
@@ -1300,7 +1300,7 @@
     "desc": "SOPAPA COCINA 50 ERREDE",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 6500.0,
+    "price": 6412.99,
     "frac": false,
     "sinstock": false
   },
@@ -1543,7 +1543,7 @@
     "desc": "MEMBRANA ASFALTICA 3 MM LAMIPLAST 25KG VERDE",
     "cat": "impermeabilizantes",
     "unit": "unidad",
-    "price": 63768.19,
+    "price": 70305.73,
     "frac": false,
     "sinstock": false
   },
@@ -1552,7 +1552,7 @@
     "desc": "MEMBRANA ASFALTICA 4 MM LAMIPLAST 35KG AMARILLO",
     "cat": "impermeabilizantes",
     "unit": "unidad",
-    "price": 84853.65,
+    "price": 104539.69,
     "frac": false,
     "sinstock": false
   },
@@ -1930,7 +1930,7 @@
     "desc": "CANILLA METAL ESFERICA PALANCA 1/2  LT100 P ECO \"VALFORTE\"",
     "cat": "plomeria",
     "unit": "unidad",
-    "price": 7000.0,
+    "price": 6843.12,
     "frac": false,
     "sinstock": false
   },
@@ -2254,7 +2254,7 @@
     "desc": "LLAVE DE PASO DUKE PLASTICA 1/2",
     "cat": "plomeria",
     "unit": "unidad",
-    "price": 4123.48,
+    "price": 4123.47,
     "frac": false,
     "sinstock": false
   },
@@ -2344,7 +2344,7 @@
     "desc": "SOPAPA LAVATORIO 40 ERREDE",
     "cat": "plomeria",
     "unit": "unidad",
-    "price": 5900.0,
+    "price": 5857.83,
     "frac": false,
     "sinstock": false
   },
