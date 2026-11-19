@@ -476,6 +476,77 @@
     return {id:id, u:u};
   }
 
+  // Cerámico: pegamento Weber (bolsa 25 kg) + pastina Weber Classic (bolsa 2 kg).
+  // Rendimiento por bolsa, tal cual figura impreso en las bolsas (estándar y
+  // impermeable con Ceresita; la llana N° 10 solo está en la del impermeable).
+  var CER_PEG_M2 = {BPWS:{6:8.25, 8:6.25}, BPWA:{6:8.25, 8:6.25, 10:5}};
+  // Pastina Classic, kg/m² por tamaño de pieza y ancho de junta (ficha técnica Weber).
+  var CER_PASTINA = {
+    "10x10":{2:0.433, 3:0.650, 4:0.866, 5:1.083},
+    "20x25":{2:0.173, 3:0.260, 4:0.347, 5:0.433},
+    "45x45":{2:0.108, 3:0.162, 4:0.216, 5:0.270}
+  };
+  // "Otra medida": consumo = K × junta(mm) × (largo+ancho)/(largo×ancho). K sale
+  // de ajustar la tabla de arriba; se usa el mayor (45x45) para no quedarse corto.
+  var CER_K_OTRA = 1.215, CER_PASTINA_KG = 2;
+  function cerCargarColores(){
+    var sel = document.getElementById("cCerColor"), prev = sel.value, html = "";
+    ITEMS.forEach(function(it){
+      var m = /^PASTINA X 2 KG (.+) WEBER$/i.exec(it.desc || "");
+      if(m) html += '<option value="'+it.id+'">'+m[1].charAt(0)+m[1].slice(1).toLowerCase()+'</option>';
+    });
+    sel.innerHTML = html;
+    if(prev) sel.value = prev;
+  }
+  function calcCer(){
+    var m2 = parseFloat(document.getElementById("cCerM2").value) || 0;
+    var pieza = document.getElementById("cCerPieza").value;
+    var junta = parseInt(document.getElementById("cCerJunta").value, 10);
+    var pegId = document.getElementById("cCerPeg").value;
+    var llana = parseInt(document.getElementById("cCerLlana").value, 10);
+    var colorId = document.getElementById("cCerColor").value;
+    var out = document.getElementById("cCerOut");
+    document.getElementById("cCerOtraWrap").hidden = (pieza !== "otra");
+    var peg = byId(pegId), pas = colorId ? byId(colorId) : null;
+    var rend = CER_PEG_M2[pegId] && CER_PEG_M2[pegId][llana];
+    if(!peg){
+      out.innerHTML = '<div class="sub">Este cálculo no está disponible por ahora — consultanos por WhatsApp.</div>';
+      return {items:[]};
+    }
+    if(!rend){
+      out.innerHTML = '<div class="sub">La llana N° 10 es solo para el pegamento impermeable. Elegí otra llana.</div>';
+      return {items:[]};
+    }
+    var items = [], html = "", total = 0;
+    var uPeg = Math.ceil(m2 / rend);
+    if(uPeg > 0){
+      items.push({id:pegId, u:uPeg});
+      total += uPeg * peg.price;
+      html += '<div>Pegamento: <b>'+fmtQty(uPeg)+'</b> '+(uPeg === 1 ? 'bolsa' : 'bolsas')+' de 25 kg</div>' +
+              '<div class="sub">'+peg.desc+' · <b>'+fmt(Math.round(uPeg*peg.price*100)/100)+'</b></div>';
+    }
+    if(pas && m2 > 0){
+      var kg;
+      if(pieza === "otra"){
+        var L = parseFloat(document.getElementById("cCerLargo").value) || 0;
+        var A = parseFloat(document.getElementById("cCerAncho").value) || 0;
+        kg = (L > 0 && A > 0) ? CER_K_OTRA * junta * (L + A) / (L * A) : 0;
+      } else {
+        kg = CER_PASTINA[pieza][junta];
+      }
+      var uPas = Math.ceil(m2 * kg / CER_PASTINA_KG);
+      if(uPas > 0){
+        items.push({id:colorId, u:uPas});
+        total += uPas * pas.price;
+        html += '<div>Pastina: <b>'+fmtQty(uPas)+'</b> '+(uPas === 1 ? 'bolsa' : 'bolsas')+' de 2 kg</div>' +
+                '<div class="sub">'+pas.desc+' · <b>'+fmt(Math.round(uPas*pas.price*100)/100)+'</b></div>';
+      }
+    }
+    if(items.length > 1) html += '<div class="sub">Total estimado · <b>'+fmt(Math.round(total*100)/100)+'</b></div>';
+    out.innerHTML = html;
+    return {items:items};
+  }
+
   /* ---------- pedido / WhatsApp ---------- */
   function cartLines(){
     // Ignora lo que quedó guardado en el carrito de un artículo que ya no está
@@ -908,6 +979,13 @@
       var r = calcLosa();
       if(r.u > 0){ addQty(r.id, r.u); save(); render("all"); toast(fmtQty(r.u)+(r.id === "SK" ? " ladrillones" : " bovedillas")+" agregados ✓"); }
     });
+    document.getElementById("cCerAdd").addEventListener("click", function(){
+      var r = calcCer();
+      if(r.items.length){
+        r.items.forEach(function(x){ addQty(x.id, x.u); });
+        save(); render("all"); toast("Pegamento y pastina agregados ✓");
+      }
+    });
     CAMPOS_TEXTO.forEach(function(campo){
       var idCampo = campo.charAt(0).toUpperCase() + campo.slice(1);
       var valor = state.form[campo] || "";
@@ -996,6 +1074,8 @@
   document.getElementById("cLadTipo").addEventListener("change", calcLadr);
   document.getElementById("cLosaM2").addEventListener("input", calcLosa);
   document.getElementById("cLosaTipo").addEventListener("change", calcLosa);
+  ["cCerM2","cCerLargo","cCerAncho"].forEach(function(id){ document.getElementById(id).addEventListener("input", calcCer); });
+  ["cCerPieza","cCerJunta","cCerColor","cCerPeg","cCerLlana"].forEach(function(id){ document.getElementById(id).addEventListener("change", calcCer); });
 
   renderBrandTicker();
   renderBrandsGrid();
@@ -1004,6 +1084,8 @@
     render("all");
     calcLadr();
     calcLosa();
+    cerCargarColores();
+    calcCer();
   });
   cargarSugeridos().then(function(){
     if(PEDIDO_ACTIVO) renderCart(); // por si el carrito ya traía ítems restaurados de localStorage

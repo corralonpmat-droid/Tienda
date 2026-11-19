@@ -396,6 +396,69 @@
         <button class="btn btn-primary" id="cLosaAdd">Agregar al pedido</button>
         <small>Calculado con viguetas cada 52 cm entre ejes y 5% de desperdicio. Las viguetas y la malla las calculamos con vos por WhatsApp.</small>
       </div>
+      <div class="calc">
+        <h3>Pegamento y pastina para cerámico</h3>
+        <div class="calc-row">
+          <div class="field">
+            <label for="cCerM2">Metros² a colocar</label>
+            <input id="cCerM2" type="number" min="1" step="1" value="20">
+          </div>
+          <div class="field">
+            <label for="cCerPieza">Tamaño de la pieza</label>
+            <select id="cCerPieza">
+              <option value="10x10">10 x 10 cm</option>
+              <option value="20x25" selected>20 x 25 cm</option>
+              <option value="45x45">45 x 45 cm</option>
+              <option value="otra">Otra medida (estimado)</option>
+            </select>
+          </div>
+        </div>
+        <div class="calc-row" id="cCerOtraWrap" hidden>
+          <div class="field">
+            <label for="cCerLargo">Largo (cm)</label>
+            <input id="cCerLargo" type="number" min="5" step="1" value="60">
+          </div>
+          <div class="field">
+            <label for="cCerAncho">Ancho (cm)</label>
+            <input id="cCerAncho" type="number" min="5" step="1" value="60">
+          </div>
+        </div>
+        <div class="calc-row">
+          <div class="field">
+            <label for="cCerJunta">Ancho de junta</label>
+            <select id="cCerJunta">
+              <option value="2">2 mm</option>
+              <option value="3" selected>3 mm</option>
+              <option value="4">4 mm</option>
+              <option value="5">5 mm</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cCerColor">Color de pastina</label>
+            <select id="cCerColor"></select>
+          </div>
+        </div>
+        <div class="calc-row">
+          <div class="field">
+            <label for="cCerPeg">Pegamento</label>
+            <select id="cCerPeg">
+              <option value="BPWS" selected>Weber estándar</option>
+              <option value="BPWA">Weber impermeable con Ceresita</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cCerLlana">Llana</label>
+            <select id="cCerLlana">
+              <option value="6" selected>N° 6</option>
+              <option value="8">N° 8</option>
+              <option value="10">N° 10 (solo impermeable)</option>
+            </select>
+          </div>
+        </div>
+        <div class="calc-out" id="cCerOut"></div>
+        <button class="btn btn-primary" id="cCerAdd">Agregar al pedido</button>
+        <small>Rendimientos aproximados de las bolsas y fichas Weber (pegamento de 25 kg, pastina Classic de 2 kg). Cada pieza y cada colocación es distinta: en piezas grandes o de mucho peso conviene doble encolado y sumar más pegamento. Es una estimación, no un cálculo de obra.</small>
+      </div>
     </div>
   </div>
 </section>
@@ -519,6 +582,6 @@
   <button type="button" class="install-close" id="installBannerClose" aria-label="Cerrar aviso">×</button>
 </div>
 
-<script src="app.js?v=38"></script>
+<script src="app.js?v=39"></script>
 </body>
 </html>
