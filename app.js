@@ -456,6 +456,26 @@
     return {id:id, u:u};
   }
 
+  // Losa de viguetas: unidades de relleno por m². Entre ejes de vigueta 52 cm
+  // (40 cm de ladrillón + 12 cm de vigueta). SCAC: 25 cm de largo por pieza →
+  // 1/(0,52×0,25) ≈ 7,7. Bovedilla de telgopor: 1 m de largo → 1/(0,52×1) ≈ 1,92.
+  var LOSA_POR_M2 = {"SK":1/(0.52*0.25), "4509801":1/(0.52*1)}, LOSA_DESP = 1.05;
+  function calcLosa(){
+    var m2 = parseFloat(document.getElementById("cLosaM2").value) || 0;
+    var id = document.getElementById("cLosaTipo").value;
+    var it = byId(id);
+    var out = document.getElementById("cLosaOut");
+    if(!it){
+      out.innerHTML = '<div class="sub">Este cálculo no está disponible por ahora — consultanos por WhatsApp.</div>';
+      return {id:id, u:0};
+    }
+    var u = Math.ceil(m2 * LOSA_POR_M2[id] * LOSA_DESP);
+    out.innerHTML =
+      '<div>Necesitás <b>'+fmtQty(u)+'</b> '+(id === "SK" ? 'ladrillones' : 'bovedillas')+'</div>' +
+      '<div class="sub">'+it.desc+' · <b>'+fmt(Math.round(u*it.price*100)/100)+'</b></div>';
+    return {id:id, u:u};
+  }
+
   /* ---------- pedido / WhatsApp ---------- */
   function cartLines(){
     // Ignora lo que quedó guardado en el carrito de un artículo que ya no está
@@ -884,6 +904,10 @@
       var r = calcLadr();
       if(r.u > 0){ addQty(r.id, r.u); save(); render("all"); toast(fmtQty(r.u)+" ladrillones agregados ✓"); }
     });
+    document.getElementById("cLosaAdd").addEventListener("click", function(){
+      var r = calcLosa();
+      if(r.u > 0){ addQty(r.id, r.u); save(); render("all"); toast(fmtQty(r.u)+(r.id === "SK" ? " ladrillones" : " bovedillas")+" agregados ✓"); }
+    });
     CAMPOS_TEXTO.forEach(function(campo){
       var idCampo = campo.charAt(0).toUpperCase() + campo.slice(1);
       var valor = state.form[campo] || "";
@@ -970,6 +994,8 @@
   // Las calculadoras siguen andando sin el pedido: solo calculan y muestran el total.
   document.getElementById("cLadM2").addEventListener("input", calcLadr);
   document.getElementById("cLadTipo").addEventListener("change", calcLadr);
+  document.getElementById("cLosaM2").addEventListener("input", calcLosa);
+  document.getElementById("cLosaTipo").addEventListener("change", calcLosa);
 
   renderBrandTicker();
   renderBrandsGrid();
@@ -977,6 +1003,7 @@
   Promise.all([cargarRubros(), cargarCatalogo()]).then(function(){
     render("all");
     calcLadr();
+    calcLosa();
   });
   cargarSugeridos().then(function(){
     if(PEDIDO_ACTIVO) renderCart(); // por si el carrito ya traía ítems restaurados de localStorage

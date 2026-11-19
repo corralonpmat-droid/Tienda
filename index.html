@@ -377,6 +377,25 @@
         <button class="btn btn-primary" id="cLadAdd">Agregar al pedido</button>
         <small>Calculado con 16 ladrillones por m² y 5% de desperdicio. El mortero lo calculamos con vos por WhatsApp.</small>
       </div>
+      <div class="calc">
+        <h3>Relleno de losa (viguetas)</h3>
+        <div class="calc-row">
+          <div class="field">
+            <label for="cLosaM2">Metros² de losa</label>
+            <input id="cLosaM2" type="number" min="1" step="1" value="20">
+          </div>
+          <div class="field">
+            <label for="cLosaTipo">Relleno</label>
+            <select id="cLosaTipo">
+              <option value="SK" selected>Ladrillón SCAC 12,5x40x25</option>
+              <option value="4509801">Bovedilla de telgopor 12 cm x 1 m</option>
+            </select>
+          </div>
+        </div>
+        <div class="calc-out" id="cLosaOut"></div>
+        <button class="btn btn-primary" id="cLosaAdd">Agregar al pedido</button>
+        <small>Calculado con viguetas cada 52 cm entre ejes y 5% de desperdicio. Las viguetas y la malla las calculamos con vos por WhatsApp.</small>
+      </div>
     </div>
   </div>
 </section>
@@ -500,6 +519,6 @@
   <button type="button" class="install-close" id="installBannerClose" aria-label="Cerrar aviso">×</button>
 </div>
 
-<script src="app.js?v=37"></script>
+<script src="app.js?v=38"></script>
 </body>
 </html>
