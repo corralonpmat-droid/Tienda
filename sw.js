@@ -5,7 +5,7 @@
 // Subir CACHE_VERSION cuando cambie algo en ARCHIVOS_PRECACHE (mismo criterio
 // que el "?v=16" de estilos.css en index.html) para que los celulares con la
 // versión anterior instalada bajen la nueva.
-var CACHE_VERSION = "pmat-v21";
+var CACHE_VERSION = "pmat-v22";
 
 // Los nombres de estilos.css/app.js llevan el mismo "?v=N" que pide
 // index.html — si no coinciden exacto, cachea una URL que la página nunca
@@ -40,6 +40,12 @@ self.addEventListener("activate", function(event){
                .map(function(n){ return caches.delete(n); })
       );
     }).then(function(){ return self.clients.claim(); })
+      // Recarga las pestañas abiertas una vez, para que dejen de mostrar la
+      // copia vieja que tenían en pantalla.
+      .then(function(){ return self.clients.matchAll({type:"window"}); })
+      .then(function(clientes){
+        clientes.forEach(function(c){ if(c.navigate) c.navigate(c.url); });
+      })
   );
 });
 
@@ -65,17 +71,20 @@ self.addEventListener("fetch", function(event){
     return;
   }
 
-  // Resto del shell: cache-first, y de paso actualiza la copia guardada.
+  // Resto del shell: network-first (cambiado en pmat-v22). Antes era
+  // cache-first y tras cada publicación el celular/PC seguía mostrando la
+  // versión vieja (se vio con la calculadora de cerámico que ya no existía).
+  // Ahora siempre intenta la red y guarda la copia; la copia guardada solo
+  // se usa si no hay señal, así la app sigue abriendo sin conexión.
   event.respondWith(
-    caches.match(req).then(function(cacheado){
-      var red = fetch(req).then(function(res){
-        if(res && res.ok){
-          var copia = res.clone();
-          caches.open(CACHE_VERSION).then(function(cache){ cache.put(req, copia); });
-        }
-        return res;
-      }).catch(function(){ return cacheado; });
-      return cacheado || red;
+    fetch(req).then(function(res){
+      if(res && res.ok){
+        var copia = res.clone();
+        caches.open(CACHE_VERSION).then(function(cache){ cache.put(req, copia); });
+      }
+      return res;
+    }).catch(function(){
+      return caches.match(req).then(function(c){ return c || caches.match("index.html"); });
     })
   );
 });
