@@ -1453,7 +1453,7 @@
     "desc": "CHAPA CINCALUM 27 X 3.50 MT",
     "cat": "hierros",
     "unit": "unidad",
-    "price": 52433.01,
+    "price": 53654.71,
     "frac": false,
     "sinstock": false
   },
@@ -1462,7 +1462,7 @@
     "desc": "CHAPA CINCALUM 27 X 4.00 MT",
     "cat": "hierros",
     "unit": "unidad",
-    "price": 59923.44,
+    "price": 61319.66,
     "frac": false,
     "sinstock": false
   },
@@ -1471,7 +1471,7 @@
     "desc": "CHAPA CINCALUM 27 X 4.50 MT",
     "cat": "hierros",
     "unit": "unidad",
-    "price": 67413.88,
+    "price": 68984.62,
     "frac": false,
     "sinstock": false
   },
@@ -1480,7 +1480,7 @@
     "desc": "CHAPA CINCALUM 27 X 5.00 MT",
     "cat": "hierros",
     "unit": "unidad",
-    "price": 74904.31,
+    "price": 76649.58,
     "frac": false,
     "sinstock": false
   },
@@ -1607,6 +1607,816 @@
     "cat": "impermeabilizantes",
     "unit": "unidad",
     "price": 103673.44,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP485",
+    "desc": "ADAPTADOR P/TANQUE C/BRIDA IPS  1/2\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 4242.29,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP500",
+    "desc": "ADAPTADOR P/TANQUE C/BRIDA IPS 1 1/4\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 6109.85,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP495",
+    "desc": "ADAPTADOR P/TANQUE C/BRIDA IPS 1\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 5445.43,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP490",
+    "desc": "ADAPTADOR P/TANQUE C/BRIDA IPS 3/4\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 4828.38,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP430",
+    "desc": "BUJE REDUCCION  IPS 1 1/4\" X 1\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 592.13,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP445",
+    "desc": "BUJE REDUCCION IPS 1 1/2\"X1\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1028.02,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP435",
+    "desc": "BUJE REDUCCION IPS 1 1/2\"X1/2\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1142.34,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP440",
+    "desc": "BUJE REDUCCION IPS 1 1/2\"X3/4\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1057.91,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP425",
+    "desc": "BUJE REDUCCION IPS 1 1/4\" X 3/4\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 928.83,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP410",
+    "desc": "BUJE REDUCCION IPS 1\" X 1/2\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 351.58,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP415",
+    "desc": "BUJE REDUCCION IPS 1\" x 3/4\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 472.56,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP395",
+    "desc": "BUJE REDUCCION IPS 1/2\"x3/8\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 222.82,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP400",
+    "desc": "BUJE REDUCCION IPS 3/4X1/2",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 257.11,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "CA030",
+    "desc": "CAÑO IPS 4X4 1\" ",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "metro",
+    "price": 7008.76,
+    "frac": true,
+    "sinstock": false
+  },
+  {
+    "cod": "CA020",
+    "desc": "CAÑO IPS 4X4 1/2\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "entero x 6 mts",
+    "price": 15737.44,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "CA025",
+    "desc": "CAÑO IPS 4X4 3/4\" ",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "entero x 6 mts",
+    "price": 24595.39,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP345",
+    "desc": "CODO IPS 45° HH  1\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 2231.52,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP335",
+    "desc": "CODO IPS 45º HH 1/2",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 934.29,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP340",
+    "desc": "CODO IPS 45º HH 3/4",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1230.75,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP050",
+    "desc": "CODO IPS 90° HH 1\" X 1/2",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1969.37,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP045",
+    "desc": "CODO IPS 90° HH 1\" X 3/4",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1623.27,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP040",
+    "desc": "CODO IPS 90° HH 3/4 X 1/2",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1221.97,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP015",
+    "desc": "CODO IPS 90º HH 1\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1521.42,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP005",
+    "desc": "CODO IPS 90º HH 1/2",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 435.26,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP051",
+    "desc": "CODO IPS 90º HH 1/2 INS. METALICO",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 4038.9,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP010",
+    "desc": "CODO IPS 90º HH 3/4",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 692.34,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP053",
+    "desc": "CODO IPS 90º HH 3/4 INS. METALICO",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 5969.41,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP054",
+    "desc": "CODO IPS 90º HH 3/4 X 1/2 INS. METALICO",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 4206.47,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP055",
+    "desc": "CODO IPS 90º MH 1/2",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 453.67,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP060",
+    "desc": "CODO IPS 90º MH 3/4",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 718.16,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP095",
+    "desc": "CUPLA IPS HH 1\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1110.78,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP120",
+    "desc": "CUPLA IPS HH 1\" X 1/2\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1091.89,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP125",
+    "desc": "CUPLA IPS HH 1\" X 3/4\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 934.29,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP085",
+    "desc": "CUPLA IPS HH 1/2",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 351.58,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP133",
+    "desc": "CUPLA IPS HH 1/2 ROSCA METAL",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 4038.9,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP126",
+    "desc": "CUPLA IPS HH 1/2X3/8",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 525.57,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP132",
+    "desc": "CUPLA IPS HH 1/2X3/8 ROSCA METAL",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 3554.91,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP090",
+    "desc": "CUPLA IPS HH 3/4",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 505.83,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP134",
+    "desc": "CUPLA IPS HH 3/4\" ROSCA METAL",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 5388.97,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP131",
+    "desc": "CUPLA IPS HH 3/4\" X 1/2\"  ROSCA METAL",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 3858.48,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP115",
+    "desc": "CUPLA IPS HH 3/4X1/2",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 525.57,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP130",
+    "desc": "CUPLA IPS MH 1/2",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 719.18,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP129",
+    "desc": "CUPLA IPS MH 3/4",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 928.58,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP128",
+    "desc": "CUPLA IPS MH 3/4X1/2",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1091.89,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP393",
+    "desc": "CURVA IPS 90° MH 1\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 2571.98,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP375",
+    "desc": "CURVA IPS 90º HH 1 \"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 2263.46,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP365",
+    "desc": "CURVA IPS 90º HH 1/2",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1015.99,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP370",
+    "desc": "CURVA IPS 90º HH 3/4",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1295.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP391",
+    "desc": "CURVA IPS 90º MH 1/2",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1180.92,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP392",
+    "desc": "CURVA IPS 90º MH 3/4",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1499.22,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP220",
+    "desc": "ENTREROSCA IPS 1\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 598.17,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP245",
+    "desc": "ENTREROSCA IPS 1\" X 1/2\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 821.0,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP250",
+    "desc": "ENTREROSCA IPS 1\" X 3/4\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 759.17,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP210",
+    "desc": "ENTREROSCA IPS 1/2",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 260.44,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP215",
+    "desc": "ENTREROSCA IPS 3/4",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 375.37,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP240",
+    "desc": "ENTREROSCA IPS 3/4X1/2",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 482.94,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP586",
+    "desc": "NIPLE IPS 1\" 10 CM.",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1146.66,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP560",
+    "desc": "NIPLE IPS 1\" 6 CM.",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 848.64,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP575",
+    "desc": "NIPLE IPS 1\" 8 CM.",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1117.39,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP580",
+    "desc": "NIPLE IPS 1/2 10CM.",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 475.87,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP592",
+    "desc": "NIPLE IPS 1/2 12CM.",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 724.79,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP595",
+    "desc": "NIPLE IPS 1/2 15CM.",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 819.39,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP550",
+    "desc": "NIPLE IPS 1/2 6 CM.",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 337.76,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP565",
+    "desc": "NIPLE IPS 1/2 8 CM.",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 457.0,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP555",
+    "desc": "NIPLE IPS 3/4  6 CM.",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 423.44,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP570",
+    "desc": "NIPLE IPS 3/4  8 CM.",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 628.44,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP585",
+    "desc": "NIPLE IPS 3/4 10CM.",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 666.73,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP593",
+    "desc": "NIPLE IPS 3/4 12CM.",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 886.22,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP596",
+    "desc": "NIPLE IPS 3/4 15CM",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1091.2,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP670",
+    "desc": "SOBREPASO IPS 1/2",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 2512.04,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP675",
+    "desc": "SOBREPASO IPS 3/4\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 4279.66,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP295",
+    "desc": "TAPA IPS 1\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 633.5,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP285",
+    "desc": "TAPA IPS 1/2\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 243.26,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP290",
+    "desc": "TAPA IPS 3/4\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 339.47,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP270",
+    "desc": "TAPON IPS 1 1/4\" ",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 801.89,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP265",
+    "desc": "TAPON IPS 1\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 510.86,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP255",
+    "desc": "TAPON IPS 1/2",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 278.97,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP260",
+    "desc": "TAPON IPS 3/4",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 303.49,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP176",
+    "desc": "TEE IPS 1/2 HH ROSCA METAL",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 4522.21,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP177",
+    "desc": "TEE IPS 3/4 ROSCA METAL",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 6146.64,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP178",
+    "desc": "TEE IPS 3/4\" X 1/2\" ROSCA METAL",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 5092.92,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP145",
+    "desc": "TEE IPS HHH 1\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1869.24,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP175",
+    "desc": "TEE IPS HHH 1\" X 1/2",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 2176.75,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP170",
+    "desc": "TEE IPS HHH 1\" X 3/4\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 2176.75,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP135",
+    "desc": "TEE IPS HHH 1/2",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 598.17,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP140",
+    "desc": "TEE IPS HHH 3/4",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 955.79,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP165",
+    "desc": "TEE IPS HHH 3/4X1/2X3/4",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1953.95,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP190",
+    "desc": "UNION DOBLE IPS HH 1\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 3059.65,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP180",
+    "desc": "UNION DOBLE IPS HH 1/2",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1416.85,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP185",
+    "desc": "UNION DOBLE IPS HH 3/4",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1811.76,
     "frac": false,
     "sinstock": false
   },
@@ -2012,24 +2822,6 @@
     "cat": "plomeria",
     "unit": "entero x 6 mts",
     "price": 23845.3,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "CA020",
-    "desc": "CAÑO IPS 4X4 1/2\"",
-    "cat": "plomeria",
-    "unit": "entero x 6 mts",
-    "price": 15737.44,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "CA025",
-    "desc": "CAÑO IPS 4X4 3/4\" ",
-    "cat": "plomeria",
-    "unit": "entero x 6 mts",
-    "price": 24595.39,
     "frac": false,
     "sinstock": false
   },

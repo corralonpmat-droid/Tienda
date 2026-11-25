@@ -58,5 +58,10 @@
     "key": "ceramicos",
     "label": "CERAMICOS Y PISOS",
     "icon": "ceramicos"
+  },
+  {
+    "key": "instalacion-de-agua-a-rosca",
+    "label": "INSTALACION DE AGUA A ROSCA",
+    "icon": "plomeria"
   }
 ]
