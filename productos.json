@@ -2439,6 +2439,510 @@
     "sinstock": false
   },
   {
+    "cod": "TF20004",
+    "desc": "CAÑO TUBOFUSION 20 MM x 4 M (PN 20)",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 7150.89,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF25004",
+    "desc": "CAÑO TUBOFUSION 25 MM x 4 M (PN 20)",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 10763.08,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF32004",
+    "desc": "CAÑO TUBOFUSION 32 MM x 4 m (PN20)",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 17477.02,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF420",
+    "desc": "CODO TUBOFU 45º HH 20 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 433.44,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF425",
+    "desc": "CODO TUBOFU 45º HH 25 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 693.5,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF432",
+    "desc": "CODO TUBOFU 45º HH 32 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 1300.3,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF520",
+    "desc": "CODO TUBOFU 90º HH 20 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 384.66,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF525",
+    "desc": "CODO TUBOFU 90º HH 25 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 603.92,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF532",
+    "desc": "CODO TUBOFU 90º HH 32 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 1063.89,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF72012",
+    "desc": "CODO TUBOFU 90º ROSCA H 20MM x 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 3077.21,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF72512",
+    "desc": "CODO TUBOFU 90º ROSCA H 25MM x 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 4334.35,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF72534",
+    "desc": "CODO TUBOFU 90º ROSCA H 25MM x 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 4413.15,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF73210",
+    "desc": "CODO TUBOFU 90º ROSCA H 32MM x 1\"",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 8329.85,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF73234",
+    "desc": "CODO TUBOFU 90º ROSCA H 32MM x 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 7234.47,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF62512",
+    "desc": "CODO TUBOFU 90º ROSCA M 25MM x 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 5043.6,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "LF12038",
+    "desc": "CUPLA FUSION HH ROSCA METAL 20 MM x 3/8\"",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 2641.82,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF820",
+    "desc": "CUPLA TUBOFU HH 20 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 351.23,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF825",
+    "desc": "CUPLA TUBOFU HH 25 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 496.48,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF832",
+    "desc": "CUPLA TUBOFU HH 32 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 751.5,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF92020",
+    "desc": "CUPLA TUBOFU MH 25 x 20 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 531.94,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF93220",
+    "desc": "CUPLA TUBOFU MH 32 x 20 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 785.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF93225",
+    "desc": "CUPLA TUBOFU MH 32 x 25 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 785.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF12012",
+    "desc": "CUPLA TUBOFU ROSCA H 20 MM x 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 3034.0,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF12512",
+    "desc": "CUPLA TUBOFU ROSCA H 25MM X 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 3546.29,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF12534",
+    "desc": "CUPLA TUBOFU ROSCA H 25MM X 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 4413.15,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF13210",
+    "desc": "CUPLA TUBOFU ROSCA H 32MM X 1\"",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 7880.67,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF13234",
+    "desc": "CUPLA TUBOFU ROSCA H 32MM X 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 6777.36,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF02012",
+    "desc": "CUPLA TUBOFU ROSCA M 20 MM x 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 3782.72,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF02534",
+    "desc": "CUPLA TUBOFU ROSCA M 25 MM x3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 4886.02,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF03210",
+    "desc": "CUPLA TUBOFU ROSCA M 32 MM x1\"",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 10008.43,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF0220",
+    "desc": "CURVA TUBOFU 90º HH 20 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 1536.74,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF0225",
+    "desc": "CURVA TUBOFU 90º HH 25 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 2048.96,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF0232",
+    "desc": "CURVA TUBOFU 90º HH 32 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 3388.71,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF3125",
+    "desc": "LLAVE DE PASO TUBOFU 25 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 20095.67,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF4020",
+    "desc": "SOBREPASO TUBOFU 20 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 2068.66,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF4025",
+    "desc": "SOBREPASO TUBOFU 25 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 2976.37,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF4032",
+    "desc": "SOBREPASO TUBOFU 32 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 4643.95,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF220",
+    "desc": "TAPA TUBOFU 20 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 320.84,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF225",
+    "desc": "TAPA TUBOFU 25 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 481.25,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF232",
+    "desc": "TAPA TUBOFU 32 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 591.06,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF620",
+    "desc": "TEE TUBOFU 20 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 675.49,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF625",
+    "desc": "TEE TUBOFU 25 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 1112.75,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF632",
+    "desc": "TEE TUBOFU 32 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 1730.94,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF252025",
+    "desc": "TEE TUBOFU RED. 25x20x25 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 1008.73,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF322032",
+    "desc": "TEE TUBOFU RED. 32x20x32 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 2026.45,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF322532",
+    "desc": "TEE TUBOFU RED. 32x25x32 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 1773.17,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF82012",
+    "desc": "TEE TUBOFU ROSCA H 20MM X 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 4137.34,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF82512",
+    "desc": "TEE TUBOFU ROSCA H 25MM X 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 4886.02,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF82534",
+    "desc": "TEE TUBOFU ROSCA H 25MM X 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 6383.34,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF83210",
+    "desc": "TEE TUBOFU ROSCA H 32MM X 1\"",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 9850.82,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF83234",
+    "desc": "TEE TUBOFU ROSCA H 32MM X 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 7486.62,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF2120",
+    "desc": "UNION DOBLE TUBOFU HH 20 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 1654.96,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF2125",
+    "desc": "UNION DOBLE TUBOFU HH 25 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 2285.4,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF2132",
+    "desc": "UNION DOBLE TUBOFU HH 32 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 3625.1,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF5020",
+    "desc": "VALVULA ESFERICA TUBOFU PALANCA 20 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 26605.08,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "TF5025",
+    "desc": "VALVULA ESFERICA TUBOFU PALANCA 25 MM",
+    "cat": "instalacion-de-agua-a-fusion-verde",
+    "unit": "unidad",
+    "price": 29304.19,
+    "frac": false,
+    "sinstock": false
+  },
+  {
     "cod": "IP485",
     "desc": "ADAPTADOR P/TANQUE C/BRIDA IPS  1/2\"",
     "cat": "instalacion-de-agua-a-rosca",
@@ -3776,33 +4280,6 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 38701.17,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "TF20004",
-    "desc": "CAÑO TUBOFUSION 20 MM x 4 M (PN 20)",
-    "cat": "plomeria",
-    "unit": "unidad",
-    "price": 7150.89,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "TF25004",
-    "desc": "CAÑO TUBOFUSION 25 MM x 4 M (PN 20)",
-    "cat": "plomeria",
-    "unit": "unidad",
-    "price": 10763.08,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "TF32004",
-    "desc": "CAÑO TUBOFUSION 32 MM x 4 m (PN20)",
-    "cat": "plomeria",
-    "unit": "unidad",
-    "price": 17477.02,
     "frac": false,
     "sinstock": false
   },
