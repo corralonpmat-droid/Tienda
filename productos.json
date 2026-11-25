@@ -202,7 +202,7 @@
     "desc": "FINO A LA CAL EXT. FORTE X 25 KG \"WEBER\"",
     "cat": "cemento",
     "unit": "unidad",
-    "price": 12100.0,
+    "price": 10857.49,
     "frac": false,
     "sinstock": false
   },
@@ -832,7 +832,7 @@
     "desc": "CLAVO 2 1/2\"",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 5423.18,
+    "price": 5628.81,
     "frac": false,
     "sinstock": false
   },
@@ -1643,6 +1643,42 @@
     "cat": "instalacion-de-agua-a-fusion-rojo",
     "unit": "unidad",
     "price": 515.25,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "CA045",
+    "desc": "CAÑO HIDRO 3  1\" ",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "entero",
+    "price": 36141.99,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "CA035",
+    "desc": "CAÑO HIDRO 3 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "entero x 6 mts",
+    "price": 15887.79,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "CA040",
+    "desc": "CAÑO HIDRO 3 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "entero x 6 mts",
+    "price": 23845.3,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "CA050",
+    "desc": "CAÑO HIDRO 3 X 1 1/4\" ",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "entero",
+    "price": 56729.01,
     "frac": false,
     "sinstock": false
   },
@@ -3063,9 +3099,9 @@
     "cod": "CA030",
     "desc": "CAÑO IPS 4X4 1\" ",
     "cat": "instalacion-de-agua-a-rosca",
-    "unit": "metro",
-    "price": 7008.76,
-    "frac": true,
+    "unit": "entero",
+    "price": 39249.03,
+    "frac": false,
     "sinstock": false
   },
   {
@@ -4172,24 +4208,6 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 18631.9,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "CA035",
-    "desc": "CAÑO HIDRO 3 1/2\"",
-    "cat": "plomeria",
-    "unit": "entero x 6 mts",
-    "price": 15887.79,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "CA040",
-    "desc": "CAÑO HIDRO 3 3/4\"",
-    "cat": "plomeria",
-    "unit": "entero x 6 mts",
-    "price": 23845.3,
     "frac": false,
     "sinstock": false
   },
