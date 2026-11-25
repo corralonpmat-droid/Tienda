@@ -1611,6 +1611,834 @@
     "sinstock": false
   },
   {
+    "cod": "FU695",
+    "desc": "BUJE FU 1 1/4\" X 1\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 904.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU694",
+    "desc": "BUJE FU 1\" X 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 890.66,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU693",
+    "desc": "BUJE FU 1\" X 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 651.96,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU692",
+    "desc": "BUJE FU 3/4 X 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 515.25,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU094",
+    "desc": "CODO FU 45° HH 1\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 2315.8,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU092",
+    "desc": "CODO FU 45° HH 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 1228.14,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU093",
+    "desc": "CODO FU 45° HH 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 1551.36,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU751",
+    "desc": "CODO FU 45° MH 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 1471.28,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU752",
+    "desc": "CODO FU 45° MH 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 1858.47,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU004",
+    "desc": "CODO FU 90° HH 1\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 1445.95,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU002",
+    "desc": "CODO FU 90° HH 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 597.65,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU003",
+    "desc": "CODO FU 90° HH 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 949.83,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU052",
+    "desc": "CODO FU 90° HH 3/4\" x 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 1399.33,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU053",
+    "desc": "CODO FU 90° HH H3 1\" X 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 2150.96,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU023",
+    "desc": "CODO FU 90° HH R/METAL 1\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 8938.2,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU064",
+    "desc": "CODO FU 90° HH R/METAL 1\" x 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 7606.36,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU021",
+    "desc": "CODO FU 90° HH R/METAL 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 3069.79,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU062",
+    "desc": "CODO FU 90° HH R/METAL 1/2\" X  3/8\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 4455.57,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU022",
+    "desc": "CODO FU 90° HH R/METAL 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 4598.98,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU063",
+    "desc": "CODO FU 90° HH R/METAL 3/4\" x 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 5129.68,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU031",
+    "desc": "CODO FU 90° HH R/METAL PROLONG. 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 4947.63,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU013",
+    "desc": "CODO FU 90° HH R/PVC 1\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 2799.34,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU011",
+    "desc": "CODO FU 90° HH R/PVC 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 1124.63,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU012",
+    "desc": "CODO FU 90° HH R/PVC 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 1813.94,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU043",
+    "desc": "CODO FU 90° MH R/METAL 1\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 15745.05,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU041",
+    "desc": "CODO FU 90° MH R/METAL 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 4042.8,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU042",
+    "desc": "CODO FU 90° MH R/METAL 3/4",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 6795.8,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU081",
+    "desc": "CODO FU 90° MH R/METAL 3/4\" x 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 6594.68,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU364",
+    "desc": "CUPLA FU HH 1\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 1134.79,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU419",
+    "desc": "CUPLA FU HH 1\" x 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 2881.11,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU413",
+    "desc": "CUPLA FU HH 1\" x 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 2437.26,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU362",
+    "desc": "CUPLA FU HH 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 462.27,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU411",
+    "desc": "CUPLA FU HH 1/2\" x 3/8\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 1099.65,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU363",
+    "desc": "CUPLA FU HH 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 779.89,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU412",
+    "desc": "CUPLA FU HH 3/4\" x 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 1104.19,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU421",
+    "desc": "CUPLA FU HH R/ METAL 1/2\" x 3/8\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 3172.54,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU394",
+    "desc": "CUPLA FU HH ROSCA METAL 1\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 7672.69,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU392",
+    "desc": "CUPLA FU HH ROSCA METAL 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 3069.6,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU422",
+    "desc": "CUPLA FU HH ROSCA METAL 3/4 x1/2",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 4443.8,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU393",
+    "desc": "CUPLA FU HH ROSCA METAL 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 4473.39,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU383",
+    "desc": "CUPLA FU HH ROSCA PVC 1\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 2194.13,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU381",
+    "desc": "CUPLA FU HH ROSCA PVC 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 805.22,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU382",
+    "desc": "CUPLA FU HH ROSCA PVC 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 1392.55,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU803",
+    "desc": "CUPLA FU M ROSCA PVC 1\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 2277.38,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU801",
+    "desc": "CUPLA FU M ROSCA PVC 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 903.52,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU802",
+    "desc": "CUPLA FU M ROSCA PVC 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 1592.3,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU403",
+    "desc": "CUPLA FU MH ROSCA METAL 1\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 9718.3,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU401",
+    "desc": "CUPLA FU MH ROSCA METAL 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 4008.43,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU402",
+    "desc": "CUPLA FU MH ROSCA METAL 3/4",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 5815.35,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU104",
+    "desc": "CURVA FU 90° HH 1\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 2900.97,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU102",
+    "desc": "CURVA FU 90° HH 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 1447.87,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU103",
+    "desc": "CURVA FU 90° HH 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 2045.19,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU653",
+    "desc": "LLAVE DE PASO CROMO 1\" FUSION",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 21362.52,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU651",
+    "desc": "LLAVE DE PASO CROMO 1/2\" FUSION",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 17516.88,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU652",
+    "desc": "LLAVE DE PASO CROMO 3/4\" FUSION",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 18413.02,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU673",
+    "desc": "SOBREPASO FU 1\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 5065.68,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU671",
+    "desc": "SOBREPASO FU 1/2 \"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 2864.06,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU672",
+    "desc": "SOBREPASO FU 3/4",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 3456.65,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU676",
+    "desc": "SOBREPASO FU CORTO INYECT. 1/2",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 2127.31,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU677",
+    "desc": "SOBREPASO FU CORTO INYECT. 3/4",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 3080.76,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU683",
+    "desc": "TAPA FU 1\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 1866.36,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU681",
+    "desc": "TAPA FU 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 546.76,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU682",
+    "desc": "TAPA FU 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 1076.42,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU164",
+    "desc": "TEE FU 1\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 2173.82,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU234",
+    "desc": "TEE FU 1\" X 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 2799.65,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU233",
+    "desc": "TEE FU 1\"X 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 2799.65,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU162",
+    "desc": "TEE FU 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 750.2,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU163",
+    "desc": "TEE FU 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 1468.94,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU232",
+    "desc": "TEE FU 3/4\" x 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 1671.54,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU331",
+    "desc": "TEE FU HH R/METAL PROLONG. 3/4\" X 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 6767.98,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU183",
+    "desc": "TEE FU ROSCA METAL 1\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 9466.93,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU315",
+    "desc": "TEE FU ROSCA METAL 1\" x 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 7859.08,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU314",
+    "desc": "TEE FU ROSCA METAL 1\" x 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 8326.35,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU181",
+    "desc": "TEE FU ROSCA METAL 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 4792.45,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU182",
+    "desc": "TEE FU ROSCA METAL 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 6519.13,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU313",
+    "desc": "TEE FU ROSCA METAL 3/4\" x 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 5528.65,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU174",
+    "desc": "TEE FU ROSCA PVC 1\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 3808.03,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU171",
+    "desc": "TEE FU ROSCA PVC 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 1766.52,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU172",
+    "desc": "TEE FU ROSCA PVC 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 2632.25,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU494",
+    "desc": "UNION DOBLE FU HH 1\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 6984.39,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU492",
+    "desc": "UNION DOBLE FU HH 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 4338.7,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU493",
+    "desc": "UNION DOBLE FU HH 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 5066.69,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU602",
+    "desc": "VALVULA ESFERICA EMBUTIR 1/2\" CAPUCHON CROMO",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 25943.54,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU603",
+    "desc": "VALVULA ESFERICA EMBUTIR 3/4\" CAPUCHON CROMO",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 31809.09,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU661",
+    "desc": "VALVULA ESFERICA FU DBL MEDIA UNION 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 20494.45,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU662",
+    "desc": "VALVULA ESFERICA FU DBL MEDIA UNION 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 25543.01,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU633",
+    "desc": "VALVULA ESFERICA FU EMB 1\" MAN C/CAMPANA",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 36380.68,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU631",
+    "desc": "VALVULA ESFERICA FU EMB 1/2\" MAN C/CAMPANA",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 25984.95,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU632",
+    "desc": "VALVULA ESFERICA FU EMB 3/4\" MAN C/CAMPANA",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 29187.01,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU627",
+    "desc": "VALVULA ESFERICA FU PALANCA 1\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 29213.18,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU625",
+    "desc": "VALVULA ESFERICA FU PALANCA 1/2\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 16420.81,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "FU626",
+    "desc": "VALVULA ESFERICA FU PALANCA 3/4\"",
+    "cat": "instalacion-de-agua-a-fusion-rojo",
+    "unit": "unidad",
+    "price": 20695.24,
+    "frac": false,
+    "sinstock": false
+  },
+  {
     "cod": "IP485",
     "desc": "ADAPTADOR P/TANQUE C/BRIDA IPS  1/2\"",
     "cat": "instalacion-de-agua-a-rosca",
@@ -1805,6 +2633,15 @@
     "cat": "instalacion-de-agua-a-rosca",
     "unit": "unidad",
     "price": 1221.97,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "IP065",
+    "desc": "CODO IPS 90° MH 1\"",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 1230.75,
     "frac": false,
     "sinstock": false
   },
@@ -2228,6 +3065,33 @@
     "cat": "instalacion-de-agua-a-rosca",
     "unit": "unidad",
     "price": 1091.2,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "SH125",
+    "desc": "SELLAROSCA HIDRO 3 X 125 CC",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 7924.78,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "SH025",
+    "desc": "SELLAROSCA HIDRO 3 X 25 CC",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 2841.21,
+    "frac": false,
+    "sinstock": false
+  },
+  {
+    "cod": "SH050",
+    "desc": "SELLAROSCA HIDRO 3 X 50 CC",
+    "cat": "instalacion-de-agua-a-rosca",
+    "unit": "unidad",
+    "price": 4992.86,
     "frac": false,
     "sinstock": false
   },
@@ -3123,15 +3987,6 @@
     "sinstock": false
   },
   {
-    "cod": "SH025",
-    "desc": "SELLAROSCA HIDRO 3 X 25 CC",
-    "cat": "plomeria",
-    "unit": "unidad",
-    "price": 2841.21,
-    "frac": false,
-    "sinstock": false
-  },
-  {
     "cod": "E5010",
     "desc": "SOPAPA LAVATORIO 40 ERREDE",
     "cat": "plomeria",
@@ -3155,15 +4010,6 @@
     "cat": "plomeria",
     "unit": "unidad",
     "price": 24215.61,
-    "frac": false,
-    "sinstock": false
-  },
-  {
-    "cod": "FU625",
-    "desc": "VALVULA ESFERICA FU PALANCA 1/2\"",
-    "cat": "plomeria",
-    "unit": "unidad",
-    "price": 16420.81,
     "frac": false,
     "sinstock": false
   }

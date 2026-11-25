@@ -63,5 +63,15 @@
     "key": "instalacion-de-agua-a-rosca",
     "label": "INSTALACION DE AGUA A ROSCA",
     "icon": "plomeria"
+  },
+  {
+    "key": "instalacion-de-agua-a-fusion-rojo",
+    "label": "INSTALACION DE AGUA A FUSION ROJO",
+    "icon": "plomeria"
+  },
+  {
+    "key": "instalacion-de-agua-a-fusion-verde",
+    "label": "INSTALACION DE AGUA A FUSION VERDE",
+    "icon": "plomeria"
   }
 ]
