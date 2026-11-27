@@ -594,6 +594,15 @@
     "sinstock": false
   },
   {
+    "cod": "5729",
+    "desc": "ADHESIVO FASTIX TRANSPARENTE  X 25 ML",
+    "cat": "ferreteria",
+    "unit": "unidad",
+    "price": 6381.48,
+    "frac": false,
+    "sinstock": false
+  },
+  {
     "cod": "ISO.RUFI.015",
     "desc": "AISLANTE TERMICO ALUM SIMPLE 10 MM 1X20 MT \"RUFI\"",
     "cat": "ferreteria",
@@ -1300,7 +1309,7 @@
     "desc": "SOPAPA COCINA 50 ERREDE",
     "cat": "ferreteria",
     "unit": "unidad",
-    "price": 6412.99,
+    "price": 6500.0,
     "frac": false,
     "sinstock": false
   },
